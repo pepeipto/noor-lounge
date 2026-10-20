@@ -41,30 +41,69 @@
   // ---------- Menú móvil ----------
   const botonMenu = document.querySelector('.boton-menu');
   const menu = document.querySelector('.menu');
+  const cerrarMenu = () => {
+    menu.classList.remove('abierto');
+    botonMenu.setAttribute('aria-expanded', 'false');
+    botonMenu.setAttribute('aria-label', 'Abrir menú');
+  };
   botonMenu?.addEventListener('click', () => {
     const abierto = menu.classList.toggle('abierto');
     botonMenu.setAttribute('aria-expanded', String(abierto));
+    botonMenu.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
+    if (abierto) menu.querySelector('a')?.focus();
   });
-  menu?.addEventListener('click', (e) => { if (e.target.closest('a')) menu.classList.remove('abierto'); });
+  menu?.addEventListener('click', (e) => { if (e.target.closest('a')) cerrarMenu(); });
+  addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menu.classList.contains('abierto')) { cerrarMenu(); botonMenu.focus(); }
+  });
 
-  // ---------- Scroll: hero pegado, cabecera, progreso y parallax ----------
+  // ---------- Mapa: el iframe de Google solo se carga al pulsar ----------
+  document.querySelector('[data-mapa]')?.addEventListener('click', (e) => {
+    const boton = e.currentTarget, marco = document.createElement('iframe');
+    Object.assign(marco, { title: 'Mapa de NOOR Lounge', src: boton.dataset.mapa, referrerPolicy: 'no-referrer-when-downgrade' });
+    boton.replaceWith(marco);
+    marco.focus();
+  });
+
+  // ---------- Scroll: cabecera con el arco, progreso y parallax ----------
   const hero = document.querySelector('.hero');
-  const fotosHero = [...document.querySelectorAll('.hero-foto')];
-  const frases = [...document.querySelectorAll('.hero-frase')];
+  const fijo = hero?.querySelector('.hero-fijo');
+  const arcoEl = document.querySelector('.arco');
+  const filo = document.querySelector('.arco-filo');
+  const fotoArco = document.querySelector('.arco-foto');
+  const finalEl = document.querySelector('.hero-final');
   const cabecera = document.querySelector('.cabecera');
   const parallax = [...document.querySelectorAll('[data-parallax]')];
   const ritual = document.querySelector('.ritual');
-  const escena = { abre: 0, brasa: 0 };
-  let objetivo = 0, suave = 0, ultimoY = scrollY;
+  // rect: zona del arco en píxeles CSS (x, y, ancho, alto) sin el recorte de la entrada; la usa el shader.
+  const escena = { abre: 0, brasa: 0, intro: sinMovimiento ? 1 : 0, inicio: 0, rect: [0, 0, 1, 1], mx: 0, my: 0 };
+  let objetivo = 0, suave = 0, ultimoY = scrollY, ratonX = 0, ratonY = 0;
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const suaviza = (x) => x * x * (3 - 2 * x);
+  const limita = (x) => Math.min(Math.max(x, 0), 1);
+
+  addEventListener('pointermove', (e) => {
+    if (e.pointerType !== 'mouse') return;
+    ratonX = e.clientX / innerWidth * 2 - 1;
+    ratonY = e.clientY / innerHeight * 2 - 1;
+  }, { passive: true });
+
+  // Arco en reposo: en escritorio, centrado y alto; en móvil, más arriba para dejar sitio al texto.
+  function arcoBase(vw, vh) {
+    const proporcion = 853 / 1280;
+    if (vw > 900) {
+      const h = Math.min(vh * .74, 800), w = h * proporcion;
+      return [(vw - w) / 2, (vh - h) / 2 + vh * .035, w, h];
+    }
+    const w = Math.min(vw * .68, vh * .5 * proporcion), h = w / proporcion;
+    return [(vw - w) / 2, vh * .2, w, h];
+  }
 
   function alHacerScroll() {
     const y = scrollY;
     const alto = document.body.scrollHeight - innerHeight;
     raiz.style.setProperty('--leido', alto > 0 ? (y / alto).toFixed(4) : 0);
-    if (hero) {
-      const r = hero.getBoundingClientRect();
-      objetivo = Math.min(Math.max(-r.top / (hero.offsetHeight - innerHeight), 0), 1);
-    }
+    if (hero) objetivo = limita(-hero.getBoundingClientRect().top / (hero.offsetHeight - fijo.clientHeight));
     cabecera.classList.toggle('con-fondo', y > 40);
     cabecera.classList.toggle('oculta', y > ultimoY && y > innerHeight * .8 && !menu.classList.contains('abierto'));
     ultimoY = y;
@@ -72,33 +111,48 @@
   addEventListener('scroll', alHacerScroll, { passive: true });
   alHacerScroll();
 
-  function bucle() {
-    suave += (objetivo - suave) * (sinMovimiento ? 1 : .1);
-    if (hero) {
-      hero.style.setProperty('--p', suave.toFixed(4));
-      hero.style.setProperty('--intro', Math.max(0, 1 - suave / .16).toFixed(3));
-      // La pieza: el arco pasa del primer plano del humo a la shisha entera, se avivan las brasas y aparece la placa.
-      const tramo = (a, b) => Math.min(Math.max((suave - a) / (b - a), 0), 1);
-      const x = tramo(.02, .7);
-      const abre = x * x * (3 - 2 * x);
-      escena.abre = abre;
-      escena.brasa = tramo(.1, .65);
-      hero.style.setProperty('--abre', abre.toFixed(4));
-      hero.style.setProperty('--brasa', escena.brasa.toFixed(4));
-      hero.style.setProperty('--placa', tramo(.78, .9).toFixed(4));
-      // Tramos del recorrido: cada frase y cada foto de fondo tiene el suyo.
-      frases.forEach((f) => {
-        const [a, b] = f.dataset.tramo.split(',').map(Number);
-        f.classList.toggle('activa', suave >= a && suave < b);
+  function bucle(ahora) {
+    suave += (objetivo - suave) * (sinMovimiento ? 1 : .12);
+    if (hero && hero.getBoundingClientRect().bottom <= 0) raiz.classList.remove('en-cabecera');
+    if (hero && hero.getBoundingClientRect().bottom > 0) {
+      if (!escena.inicio && raiz.classList.contains('cargado')) escena.inicio = ahora + 250;
+      if (escena.inicio && !sinMovimiento) escena.intro = suaviza(limita((ahora - escena.inicio) / 1500));
+      escena.mx += (ratonX - escena.mx) * .05;
+      escena.my += (ratonY - escena.my) * .05;
+      // El arco se abre a pantalla completa en el primer 80 % del recorrido; la frase final llega al final.
+      const e = suaviza(limita(suave / .8));
+      escena.abre = e;
+      escena.brasa = .45 + .55 * e;
+      const vw = fijo.clientWidth, vh = fijo.clientHeight;
+      const [bx, by, bw, bh] = arcoBase(vw, vh);
+      const x = lerp(bx, 0, e), y = lerp(by, 0, e), w = lerp(bw, vw, e), h = lerp(bh, vh, e);
+      escena.rect = [x, y, w, h];
+      const arriba = y + h - h * escena.intro; // la entrada descubre el arco de abajo arriba
+      const rt = lerp(bw / 2, 0, e), rb = lerp(18, 0, e);
+      arcoEl.style.clipPath = `inset(${arriba}px ${vw - x - w}px ${vh - y - h}px ${x}px round ${rt}px ${rt}px ${rb}px ${rb}px)`;
+      if (!arcoEl.classList.contains('gl-listo')) Object.assign(fotoArco.style, {
+        left: `${x}px`, top: `${y}px`, width: `${w}px`, height: `${h}px`, objectFit: 'cover', objectPosition: '50% 40%',
       });
-      fotosHero.forEach((f) => {
-        if (!f.dataset.desde) return;
-        f.classList.toggle('visible', suave >= Number(f.dataset.desde));
+      const m = 14;
+      Object.assign(filo.style, {
+        left: `${bx - m}px`, top: `${by - m}px`, width: `${bw + 2 * m}px`, height: `${bh + 2 * m}px`,
+        borderRadius: `${bw / 2 + m}px ${bw / 2 + m}px ${18 + m / 2}px ${18 + m / 2}px`,
+        opacity: (escena.intro * (1 - e * 3)).toFixed(3),
       });
+      const fin = limita((suave - .72) / .23);
+      hero.style.setProperty('--abre', e.toFixed(4));
+      hero.style.setProperty('--final', fin.toFixed(4));
+      hero.style.setProperty('--mx', escena.mx.toFixed(4));
+      hero.style.setProperty('--my', escena.my.toFixed(4));
+      hero.style.setProperty('--medio', `${bw / 2}px`);
+      hero.style.setProperty('--arco-arriba', `${by}px`);
+      hero.style.setProperty('--arco-abajo', `${by + bh}px`);
+      finalEl.classList.toggle('activo', fin > .5);
+      raiz.classList.toggle('en-cabecera', suave < .55);
     }
     if (ritual) {
       const r = ritual.getBoundingClientRect();
-      ritual.style.setProperty('--ritual', Math.min(Math.max(-r.top / Math.max(r.height - innerHeight, 1), 0), 1).toFixed(4));
+      ritual.style.setProperty('--ritual', limita(-r.top / Math.max(r.height - innerHeight, 1)).toFixed(4));
     }
     for (const el of parallax) {
       const r = el.getBoundingClientRect();
@@ -144,7 +198,8 @@
     gl.enableVertexAttribArray(loc);
     gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
     const uR = gl.getUniformLocation(prog, 'r'), uT = gl.getUniformLocation(prog, 't'), uS = gl.getUniformLocation(prog, 's');
-    const escala = .5; // se pinta a media resolución: el humo es borroso y así va fluido en móvil
+    const movil = innerWidth < 900;
+    const escala = movil ? .35 : .5; // el humo es borroso: se pinta a baja resolución y así va fluido en móvil
     function ajustar() {
       lienzo.width = Math.ceil(innerWidth * escala);
       lienzo.height = Math.ceil(innerHeight * escala);
@@ -152,14 +207,16 @@
     }
     addEventListener('resize', ajustar);
     ajustar();
-    let sScroll = 0;
+    let sScroll = 0, ultimo = 0;
     (function pintar(ms) {
-      sScroll += (scrollY / innerHeight - sScroll) * .06;
+      requestAnimationFrame(pintar);
+      if (document.hidden || (movil && ms - ultimo < 33)) return;
+      ultimo = ms;
+      sScroll += (scrollY / innerHeight - sScroll) * .1;
       gl.uniform2f(uR, lienzo.width, lienzo.height);
       gl.uniform1f(uT, ms / 1000);
       gl.uniform1f(uS, sScroll);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
-      requestAnimationFrame(pintar);
     })(0);
   }
 
@@ -168,8 +225,16 @@
     const lienzo = document.getElementById('ascuas');
     if (!lienzo || sinMovimiento) { lienzo?.remove(); return; }
     const ctx = lienzo.getContext('2d');
-    const dpr = Math.min(devicePixelRatio || 1, 2);
+    const dpr = 1; // las ascuas son puntos de luz: no necesitan retina
     let ancho, alto;
+    const chispa = document.createElement('canvas');
+    chispa.width = chispa.height = 32;
+    const c2 = chispa.getContext('2d'), grad = c2.createRadialGradient(16, 16, 0, 16, 16, 16);
+    grad.addColorStop(0, 'rgba(255,205,140,1)');
+    grad.addColorStop(.35, 'rgba(240,150,70,.5)');
+    grad.addColorStop(1, 'rgba(240,120,50,0)');
+    c2.fillStyle = grad;
+    c2.fillRect(0, 0, 32, 32);
     const cuantas = innerWidth < 700 ? 18 : 34;
     const nueva = (inicio) => ({
       x: Math.random() * ancho, y: inicio ? Math.random() * alto : alto + 10,
@@ -185,28 +250,24 @@
     ajustar();
     const ascuas = Array.from({ length: cuantas }, () => nueva(true));
     (function pintar(ms) {
+      requestAnimationFrame(pintar);
+      if (document.hidden) return;
       ctx.clearRect(0, 0, ancho, alto);
       ctx.globalCompositeOperation = 'lighter';
       for (const a of ascuas) {
         a.y -= a.v; a.osc += .015; a.x += Math.sin(a.osc) * .35;
         if (a.y < -10) Object.assign(a, nueva(false));
         const brillo = (.55 + .45 * Math.sin(ms / 400 + a.osc * 3)) * a.vida * Math.min(1, a.y / (alto * .4));
-        const g = ctx.createRadialGradient(a.x, a.y, 0, a.x, a.y, a.r * 5);
-        g.addColorStop(0, `rgba(255,205,140,${brillo})`);
-        g.addColorStop(.35, `rgba(240,150,70,${brillo * .5})`);
-        g.addColorStop(1, 'rgba(240,120,50,0)');
-        ctx.fillStyle = g;
-        ctx.beginPath(); ctx.arc(a.x, a.y, a.r * 5, 0, Math.PI * 2); ctx.fill();
+        ctx.globalAlpha = Math.max(0, Math.min(1, brillo));
+        ctx.drawImage(chispa, a.x - a.r * 5, a.y - a.r * 5, a.r * 10, a.r * 10);
       }
-      requestAnimationFrame(pintar);
     })(0);
   }
   // ---------- La pieza: foto real animada en WebGL ----------
-  // El humo de la foto se deforma con ruido (se mueve como humo de verdad), salen volutas nuevas
-  // de la cazoleta y las brasas laten. Coordenadas de la foto (0–1, y hacia abajo): brasas en (.54, .215),
-  // cazoleta y vástago en x≈.515, nube de humo alrededor de (.5, .42).
+  // Lienzo a pantalla completa; la foto se encaja (cover) en el rectángulo del arco (escena.rect) y el clip-path
+  // de .arco recorta el resto. El humo de la foto se deforma con ruido, salen volutas de la cazoleta y las brasas
+  // laten. Coordenadas de la foto (0–1, y hacia abajo): brasas (.54, .215), vástago x≈.515, humo hacia (.5, .42).
   function iniciarCachimba(listo) {
-    const arco = document.querySelector('.arco');
     const lienzo = document.getElementById('cachimba-gl');
     const foto = new Image();
     foto.src = 'img/cachimba-humo.webp';
@@ -215,14 +276,15 @@
     if (!gl) { lienzo?.remove(); return; }
     const vs = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
     const fs = `precision highp float;
-      uniform sampler2D img;uniform vec2 res,centro,cubre;uniform float t,zoom,brasa,luz;
+      uniform sampler2D img;uniform vec2 res,centro,cubre,raton;uniform vec4 rect;uniform float t,zoom,brasa;
       float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
       float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);
         return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}
       float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<4;i++){v+=a*n(p);p=p*2.07+vec2(1.7,9.2);a*=.5;}return v;}
       void main(){
-        vec2 uv=gl_FragCoord.xy/res;uv.y=1.-uv.y;
-        vec2 iu=(uv-.5)*cubre/zoom+centro;
+        vec2 px=vec2(gl_FragCoord.x,res.y-gl_FragCoord.y);
+        vec2 uv=(px-rect.xy)/rect.zw;
+        vec2 iu=(uv-.5)*cubre/zoom+centro+raton*.01;
         vec3 base=texture2D(img,iu).rgb;
         float lum=dot(base,vec3(.299,.587,.114));
         float sat=max(base.r,max(base.g,base.b))-min(base.r,min(base.g,base.b));
@@ -242,8 +304,7 @@
         vec2 b=(iu-vec2(.54,.215))/vec2(.05,.025);
         float parp=.75+.25*sin(t*3.1)*sin(t*1.7+1.3);
         col+=vec3(1.,.45,.12)*exp(-dot(b,b))*(.25+.6*brasa)*parp;
-        col*=luz;
-        col*=mix(.55,1.,smoothstep(1.2,.35,length(uv-vec2(.5,.45))));
+        col*=mix(.6,1.,smoothstep(1.15,.35,length((uv-vec2(.5,.45))*vec2(1.,.8))));
         gl_FragColor=vec4(col,1.);
       }`;
     const prog = gl.createProgram();
@@ -261,48 +322,49 @@
     const loc = gl.getAttribLocation(prog, 'p');
     gl.enableVertexAttribArray(loc);
     gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
-    const u = Object.fromEntries(['res', 'centro', 'cubre', 't', 'zoom', 'brasa', 'luz'].map((k) => [k, gl.getUniformLocation(prog, k)]));
+    const u = Object.fromEntries(['res', 'rect', 'centro', 'cubre', 'raton', 't', 'zoom', 'brasa'].map((k) => [k, gl.getUniformLocation(prog, k)]));
     const aspectoFoto = 853 / 1280;
 
     foto.decode().then(() => {
-      const tex = gl.createTexture();
-      gl.bindTexture(gl.TEXTURE_2D, tex);
+      gl.bindTexture(gl.TEXTURE_2D, gl.createTexture());
       gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, foto);
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-      arco.classList.add('gl-listo');
+      arcoEl.classList.add('gl-listo');
       requestAnimationFrame(pintar);
     }, () => lienzo.remove());
 
     function pintar(ms) {
       requestAnimationFrame(pintar);
-      if (hero.getBoundingClientRect().bottom < 0) return; // fuera de pantalla no se pinta
+      if (document.hidden || hero.getBoundingClientRect().bottom < 0) return; // fuera de pantalla no se pinta
       const dpr = Math.min(devicePixelRatio || 1, 1.5);
       const w = Math.round(lienzo.clientWidth * dpr), h = Math.round(lienzo.clientHeight * dpr);
       if (lienzo.width !== w || lienzo.height !== h) { lienzo.width = w; lienzo.height = h; gl.viewport(0, 0, w, h); }
-      const aspecto = w / h;
+      const [rx, ry, rw, rh] = escena.rect;
+      const aspecto = rw / rh;
       const cubre = aspecto > aspectoFoto ? [1, aspectoFoto / aspecto] : [aspecto / aspectoFoto, 1];
-      const zoom = 2 - escena.abre;
+      const zoom = 1 + escena.abre * .1;
       const medio = cubre.map((c) => c / 2 / zoom);
       const cx = Math.min(Math.max(.5, medio[0]), 1 - medio[0]);
-      const cy = Math.min(Math.max(.36 + escena.abre * .14, medio[1]), 1 - medio[1]);
+      const cy = Math.min(Math.max(.5 - escena.abre * .1, medio[1]), 1 - medio[1]);
       gl.uniform2f(u.res, w, h);
+      gl.uniform4f(u.rect, rx * dpr, ry * dpr, rw * dpr, rh * dpr);
       gl.uniform2f(u.cubre, cubre[0], cubre[1]);
       gl.uniform2f(u.centro, cx, cy);
+      gl.uniform2f(u.raton, escena.mx, escena.my);
       gl.uniform1f(u.zoom, zoom);
       gl.uniform1f(u.t, ms / 1000);
       gl.uniform1f(u.brasa, escena.brasa);
-      gl.uniform1f(u.luz, .72 + escena.abre * .33);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
     }
   }
 
-  // Pantalla de carga: se va cuando la foto de la pieza está lista (o a los 3 s como mucho).
+  // Pantalla de carga: se va cuando la foto de la pieza está lista (o a los 0,9 s como mucho).
   let cargado = false;
-  const terminarCarga = () => { if (!cargado) { cargado = true; setTimeout(() => raiz.classList.add('cargado'), 500); } };
-  setTimeout(terminarCarga, 3000);
+  const terminarCarga = () => { if (!cargado) { cargado = true; requestAnimationFrame(() => raiz.classList.add('cargado')); } };
+  setTimeout(terminarCarga, 900);
   iniciarCachimba(terminarCarga);
   iniciarHumo();
   iniciarAscuas();
@@ -380,6 +442,7 @@
     historial.push({ rol: 'usuario', texto });
     const pensando = document.createElement('li');
     pensando.className = 'burbuja asistente-msg escribiendo';
+    pensando.setAttribute('aria-label', 'El asistente está escribiendo');
     pensando.innerHTML = '<span></span><span></span><span></span>';
     lista.append(pensando);
     lista.scrollTop = lista.scrollHeight;

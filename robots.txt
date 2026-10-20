@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_fotos-originales/
+
+Sitemap: https://www.noorlounge.es/sitemap.xml

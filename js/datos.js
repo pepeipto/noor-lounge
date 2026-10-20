@@ -6,7 +6,7 @@ window.NOOR = {
   reservas: 'https://www.scennio.com/es/noor-lounge/calendar',
   carta: 'https://www.scennio.com/es/noor-lounge/menu',
   asistenteApi: '', // p. ej. 'https://servidor/api/asistente' para conectar una IA real
-  saludo: '¡Hola! Soy el asistente de NOOR Lounge ✦\nPregúntame por el horario, la carta de shishas, los cócteles, cómo reservar o cómo llegar.',
+  saludo: 'Hola, soy el asistente de NOOR. Te ayudo con el horario, la carta, las reservas o cómo llegar.',
   sugerencias: ['¿Qué horario tenéis?', 'Precios de las shishas', 'Quiero reservar', '¿Dónde estáis?'],
   respuestas: [
     {
@@ -15,15 +15,15 @@ window.NOOR = {
     },
     {
       claves: ['shisha', 'cachimba', 'hookah', 'kalyan', 'sabor', 'cazoleta', 'kazan', 'precio', 'cuesta', 'vale'],
-      texto: 'Nuestras shishas:\n· Rubio 16 € · Josh 16 €\n· Fusion 17 €\n· Full Black 19 €\n· Kazan 22 €\n· Especial 25 €\n· Kazan Especial 30 €\n· Fruta 40 €\nEl equipo te recomienda sabores en mesa según lo que te guste.',
+      texto: 'Nuestras shishas:\n· Rubio 16 € · Josh 16 €\n· Fusion 17 €\n· Full Black 19 €\n· Kazan 22 €\n· Especial 25 €\n· Kazan Especial 30 €\n· Fruta 40 €\nTe recomendamos el sabor en mesa, según tus gustos.',
     },
     {
       claves: ['coctel', 'cocktail', 'mojito', 'copa', 'beber', 'bebida', 'gin', 'margarita', 'martini', 'spritz'],
-      texto: 'Coctelería de autor desde 12 €: mojitos (clásico, fresa, mango, maracuyá), Aperol Spritz, Margarita, Negroni, Piña colada, Whiskey Sour… y a 13 € Espresso Martini, PornStar Martini, Gin Fit o Blue Whisky. Cóctel Premium 15 €.',
+      texto: 'Coctelería desde 12 €: mojitos (clásico, fresa, mango, maracuyá), Aperol Spritz, Margarita, Negroni, Piña colada, Whiskey Sour… y a 13 € Espresso Martini, PornStar Martini, Gin Fit o Blue Whisky. Cóctel Premium 15 €.',
     },
     {
       claves: ['te', 'chai', 'cafe', 'caliente', 'infusion'],
-      texto: 'Tenemos tés para compartir: chai latte, cítrico con jengibre y frutos rojos, desde 8 € (0,5 l) hasta 14 € (1,5 l). También café con leche (3,50 €) y cortado (2,50 €).',
+      texto: 'Tenemos tés para compartir: chai latte, cítrico con jengibre o frutos rojos, de 8 € (0,5 l) a 14 € (1,5 l). También café con leche (3,50 €) y cortado (2,50 €).',
     },
     {
       claves: ['cerveza', 'vino', 'cava', 'champagne', 'champan', 'refresco', 'chupito'],
@@ -40,24 +40,24 @@ window.NOOR = {
     },
     {
       claves: ['donde', 'direccion', 'llegar', 'ubicacion', 'calle', 'metro', 'aparcar', 'parking', 'zona'],
-      texto: 'Estamos en Carrer Serrano Morales, 3, L\'Eixample, 46004 València, junto a la Plaza Cánovas. Tienes el mapa más abajo en la web.',
+      texto: 'Estamos en Carrer Serrano Morales, 3, L\'Eixample, 46004 València, junto a la Plaza Cánovas. Tienes el mapa en la sección Visítanos.',
     },
     {
       claves: ['telefono', 'llamar', 'contacto', 'whatsapp', 'email', 'correo'],
-      texto: 'Llámanos al 963 12 07 54 o escríbenos por WhatsApp, te respondemos enseguida.',
+      texto: 'Llámanos al 963 12 07 54 o escríbenos por WhatsApp, te respondemos lo antes posible.',
       whatsapp: 'Hola NOOR, tengo una consulta.',
     },
     {
-      claves: ['terraza', 'fuera', 'aire libre', 'musica', 'dj', 'bailar', 'playstation', 'ps5', 'consola', 'ambiente'],
-      texto: 'Tenemos mesas al aire libre, música y buen ambiente para bailar. Y si te apetece, PlayStation 5 en tu mesa (40 €).',
+      claves: ['terraza', 'fuera', 'aire libre', 'musica', 'playstation', 'ps5', 'consola', 'ambiente'],
+      texto: 'Buena música cada noche y, si te apetece, PlayStation 5 en tu mesa (40 €). Para cualquier otra cosa, escríbenos por WhatsApp.',
     },
     {
       claves: ['comida', 'comer', 'cenar', 'picar', 'snack'],
-      texto: 'NOOR es un lounge de shisha y coctelería: para picar tenemos patatas (3 €), no servimos cocina.',
+      texto: 'Aquí mandan la shisha y la coctelería; para picar, patatas (3 €).',
     },
     {
       claves: ['precio medio', 'caro', 'barato', 'por persona', 'gastar'],
-      texto: 'El gasto medio está entre 10 y 20 € por persona.',
+      texto: 'Entre 10 y 20 € por persona, según lo que pidas.',
     },
     {
       claves: ['instagram', 'tiktok', 'redes', 'insta', 'seguir', 'video', 'fotos'],
@@ -69,7 +69,7 @@ window.NOOR = {
     },
     {
       claves: ['gracias', 'genial', 'perfecto'],
-      texto: '¡A ti! Te esperamos en NOOR ✦',
+      texto: 'Un placer. Te esperamos en NOOR.',
     },
   ],
 };
