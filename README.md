@@ -40,12 +40,12 @@ a partir de `_idiomas/plantilla.html` (español) y de los textos de `_idiomas/<i
 ## Publicación
 
 - Hosting: GitHub Pages del repositorio `pepeipto/noor-lounge` (rama `main`, carpeta raíz). Cada push a `main` publica.
-- Dominio: `www.noorlounge.es` (lo registra Carlos y se factura al cliente).
+- Dominio: `www.noorloungevalencia.com` (lo registra Carlos y se factura al cliente).
   1. Comprar el dominio en el registrador.
   2. DNS en el registrador:
      - `CNAME` `www` → `pepeipto.github.io`
      - `A` `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-  3. Crear el archivo `CNAME` con `www.noorlounge.es`, hacer push, y activar «Enforce HTTPS» en Settings → Pages cuando GitHub emita el certificado.
+  3. Crear el archivo `CNAME` con `www.noorloungevalencia.com`, hacer push, y activar «Enforce HTTPS» en Settings → Pages cuando GitHub emita el certificado.
 - Si el dominio cambia: `BASE` en `_idiomas/generar.py`, el comentario de `_idiomas/plantilla.html`, `robots.txt` y `CNAME`; después `python _idiomas/generar.py`.
 - Después: Search Console (enviar `sitemap.xml`) y enlazar la web desde la ficha de Google Business Profile.
 

@@ -10,7 +10,7 @@ from urllib.parse import quote
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(AQUI)
-BASE = 'https://www.noorlounge.es/'  # dominio: si cambia, cambiarlo también en robots.txt y CNAME
+BASE = 'https://www.noorloungevalencia.com/'  # dominio: si cambia, cambiarlo también en robots.txt y CNAME
 FECHA = '2026-10-20'
 
 # carpeta, lang de <html>, hreflang, og:locale, nombre propio, código, «Idioma» en ese idioma, <title>

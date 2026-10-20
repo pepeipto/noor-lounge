@@ -3,4 +3,4 @@ Allow: /
 Disallow: /_fotos-originales/
 Disallow: /_idiomas/
 
-Sitemap: https://www.noorlounge.es/sitemap.xml
+Sitemap: https://www.noorloungevalencia.com/sitemap.xml
