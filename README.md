@@ -54,5 +54,5 @@ a partir de `_idiomas/plantilla.html` (español) y de los textos de `_idiomas/<i
 - Confirmar el texto «Edición limitada · Cristal tallado» de la pieza del hero.
 - Permiso para usar las fotos (también el de la persona que sale en `ritual.webp`) y logo oficial en vectorial.
 - Confirmar los precios de la carta y si hay mesas al aire libre (sale en Google; el asistente ya no lo afirma).
-- Textos legales publicados (`aviso-legal.html`, `privacidad.html`, `cookies.html`; titular Ali Yalkharoev). Falta añadir un **email de contacto** (obligatorio en el aviso legal según la LSSI) en `aviso-legal.html` y `privacidad.html`.
+- Textos legales publicados (`aviso-legal.html`, `privacidad.html`, `cookies.html`; titular Ali Yalkharoev). Email de contacto: `info@noorloungevalencia.com` (buzón de IONOS). Las páginas legales se generan con `python _idiomas/legales.py .`
 - Que un nativo revise las traducciones (sobre todo árabe y ruso). La carta completa y la reserva de Scennio solo existen en español.
