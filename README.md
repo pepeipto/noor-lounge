@@ -52,7 +52,7 @@ a partir de `_idiomas/plantilla.html` (español) y de los textos de `_idiomas/<i
 
 - Confirmar que el 963 12 07 54 tiene WhatsApp (es un fijo: necesita WhatsApp Business) o darnos un móvil.
 - Confirmar el texto «Edición limitada · Cristal tallado» de la pieza del hero.
-- Permiso para usar las fotos (también el de la persona que sale en `ritual.webp`) y logo oficial en vectorial.
+- Fotos: el dueño (Ali Yalkharoev) dio permiso para usarlas el 20/10/2026. Pendiente: logo oficial en vectorial, si lo tienen.
 - Confirmar los precios de la carta y si hay mesas al aire libre (sale en Google; el asistente ya no lo afirma).
 - Textos legales publicados (`aviso-legal.html`, `privacidad.html`, `cookies.html`; titular Ali Yalkharoev). Email de contacto: `info@noorloungevalencia.com` (buzón de IONOS). Las páginas legales se generan con `python _idiomas/legales.py .`
 - Que un nativo revise las traducciones (sobre todo árabe y ruso). La carta completa y la reserva de Scennio solo existen en español.
