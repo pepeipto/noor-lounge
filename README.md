@@ -20,6 +20,18 @@ Y abrir http://localhost:8090
 - **WhatsApp**: botón flotante y botones de reserva a `wa.me/34963120754` con mensaje prerrellenado.
 - **Asistente**: chat flotante que responde con los datos del local (`js/datos.js`). Para conectar una IA real, poner la URL de un servidor en `asistenteApi` (recibe `{ mensajes }` y devuelve `{ respuesta }`).
 
+## Idiomas
+
+Ocho versiones: español (raíz), valenciano (`va/`), inglés (`en/`), francés (`fr/`), alemán (`de/`), italiano (`it/`), ruso (`ru/`) y árabe (`ar/`, de derecha a izquierda). Cada una lleva su canonical, `hreflang` hacia las ocho (más `x-default`), `og:locale`, JSON-LD y asistente propio (`js/datos-xx.js`); el selector de idioma está en la cabecera y, en móvil, dentro del menú.
+
+Las páginas **no se editan a mano**: se generan con
+
+```bash
+python _idiomas/generar.py
+```
+
+a partir de `_idiomas/plantilla.html` (español) y de los textos de `_idiomas/<idioma>.txt` (una línea por texto, con el número de `_idiomas/fuentes.txt`). El script también rehace `sitemap.xml` y avisa si un fragmento ya no se encuentra. Si cambia un precio o un dato, cambiarlo en la plantilla, en `fuentes.txt`, en cada `<idioma>.txt` y en los `js/datos*.js`.
+
 ## Fuentes de datos y fotos
 
 - Fotos: ficha de Google Maps del local e Instagram @noorloungevlc. Originales en `_fotos-originales/` (fuera de git).
@@ -27,7 +39,7 @@ Y abrir http://localhost:8090
 
 ## Antes de publicar
 
-- Sustituir el dominio provisional `https://www.noorlounge.es/` por el definitivo en `index.html` (canonical, og, JSON-LD), `robots.txt` y `sitemap.xml`.
+- Sustituir el dominio provisional `https://www.noorlounge.es/` por el definitivo en `_idiomas/generar.py` (`BASE`) y en `_idiomas/plantilla.html`, volver a generar, y cambiarlo en `robots.txt`.
 - Servir con compresión (gzip/brotli) y caché larga para `img/`, `css/` y `js/` (llevan `?v=`). No subir `_fotos-originales/`.
 - Dar de alta en Search Console y enlazar la web desde la ficha de Google Business Profile.
 
@@ -38,3 +50,4 @@ Y abrir http://localhost:8090
 - Permiso para usar las fotos (también el de la persona que sale en `ritual.webp`) y logo oficial en vectorial.
 - Confirmar los precios de la carta y si hay mesas al aire libre (sale en Google; el asistente ya no lo afirma).
 - Dominio y textos legales (aviso legal, privacidad, cookies).
+- Que un nativo revise las traducciones (sobre todo árabe y ruso). La carta completa y la reserva de Scennio solo existen en español.

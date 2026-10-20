@@ -540,17 +540,68 @@ footer { border-top: 1px solid var(--linea); padding: 54px 0 120px; color: var(-
   .tarjeta div { padding: 20px 20px 24px; }
 }
 
-/* ---------- Selector de idioma (ES · EN · RU), discreto junto a las acciones ---------- */
-.idiomas { display: flex; align-items: center; gap: 2px; margin-right: 6px; font: 600 11px/1 var(--cuerpo); letter-spacing: .14em; }
-.idiomas a { text-decoration: none; color: var(--texto-2); padding: 8px 5px; opacity: .7; transition: color .3s, opacity .3s; }
-.idiomas a:hover { color: var(--ambar-claro); opacity: 1; }
-.idiomas a[aria-current] { color: var(--ambar); opacity: 1; }
-.idiomas span { color: var(--linea); }
-@media (max-width: 360px) { .idiomas { margin-right: 0; letter-spacing: .08em; } .idiomas a { padding: 8px 3px; } }
+/* ---------- Selector de idioma: desplegable en la cabecera; en móvil, dentro del menú ---------- */
+.idiomas { position: relative; }
+.idiomas-boton {
+  display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 12px; cursor: pointer;
+  background: none; border: 1px solid transparent; border-radius: 999px; color: var(--texto-2);
+  font: 600 11px/1 var(--cuerpo); letter-spacing: .14em; transition: color .3s, border-color .3s;
+}
+.idiomas-boton:hover, .idiomas-boton[aria-expanded="true"] { color: var(--ambar-claro); border-color: var(--linea); }
+.idiomas-boton svg { transition: transform .3s var(--curva); }
+.idiomas-boton[aria-expanded="true"] svg { transform: rotate(180deg); }
+.idiomas-lista {
+  position: absolute; top: calc(100% + 8px); inset-inline-end: 0; min-width: 190px; margin: 0; padding: 8px; list-style: none;
+  background: rgba(14, 10, 8, .97); border: 1px solid var(--linea); border-radius: 16px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, .5); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+}
+.idiomas-lista[hidden] { display: none; }
+.idiomas-lista a {
+  display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 10px;
+  text-decoration: none; font-size: 14px; color: var(--texto-2); transition: background .2s, color .2s;
+}
+.idiomas-lista a:hover, .idiomas-lista a:focus-visible { background: rgba(227, 162, 79, .1); color: var(--texto); outline: none; }
+.idiomas-lista a[aria-current] { color: var(--ambar-claro); }
+.idiomas-lista b { width: 22px; font-size: 11px; letter-spacing: .1em; color: var(--ambar); }
+.menu-idiomas { display: none; }
+@media (max-width: 900px) {
+  .idiomas { display: none; }
+  .menu-idiomas { display: flex; flex-wrap: wrap; gap: 4px 2px; padding-top: 14px; }
+  .menu .menu-idiomas a { border: 0; padding: 8px 9px; font-size: 12px; letter-spacing: .12em; }
+  .menu .menu-idiomas a[aria-current] { color: var(--ambar); }
+}
 /* Entre tablet y escritorio pequeño, el menú se compacta para dejar sitio al selector de idioma */
 @media (min-width: 901px) and (max-width: 1180px) {
-  .menu { gap: 12px; }
+  .menu { gap: 18px; }
   .menu a { letter-spacing: .12em; }
-  .cabecera .acciones .boton { padding: 0 16px; letter-spacing: .12em; }
-  .idiomas { margin: 0 0 0 10px; }
+  .cabecera .acciones .boton { padding: 0 18px; letter-spacing: .12em; }
+}
+
+/* ---------- Árabe (derecha a izquierda). El logo, el «NO ∩ OR» y el arco no se invierten ---------- */
+[dir="rtl"] {
+  --titulos: "Bodoni Moda", "Noto Naskh Arabic", Georgia, serif;
+  --cuerpo: "Manrope", "Noto Sans Arabic", system-ui, sans-serif;
+}
+[dir="rtl"] .marca, [dir="rtl"] .logo, [dir="rtl"] .cargador-logo, [dir="rtl"] .cinta { direction: ltr; }
+/* El árabe es una escritura ligada: sin espaciado entre letras ni cursiva sintética */
+[dir="rtl"] :is(.menu a, .boton, .etiqueta, .nota span, .datos span, .red small, .visita dt, .reserva-rapida legend,
+  .hero-pista, .hero-meta, .mapa-fachada span, .asistente-abrir, .estado, .idiomas-lista a, .hero-final .etiqueta) { letter-spacing: 0; }
+[dir="rtl"] :is(em, .cinta span, .rr-resumen) { font-style: normal; }
+[dir="rtl"] :is(h1, h2, h3) { line-height: 1.4; }
+[dir="rtl"] .faq-lista summary { line-height: 1.6; }
+[dir="rtl"] .hero-lado-izq { left: auto; right: clamp(16px, 5vw, 80px); }
+[dir="rtl"] .hero-lado-der { right: auto; left: clamp(16px, 5vw, 80px); text-align: left; }
+[dir="rtl"] .tarjeta .num { left: auto; right: 18px; }
+[dir="rtl"] .precios li b { unicode-bidi: plaintext; } /* «8 / 14 €» se lee igual que en la carta original */
+[dir="rtl"] .horario td + td { text-align: left; }
+[dir="rtl"] .reserva-rapida { text-align: right; }
+[dir="rtl"] .faq-lista summary { padding: 24px 0 24px 44px; }
+[dir="rtl"] .faq-lista summary::after { right: auto; left: 6px; }
+[dir="rtl"] .asistente-cerrar { margin-left: 0; margin-right: auto; }
+[dir="rtl"] .burbuja.asistente-msg { border-bottom-left-radius: 16px; border-bottom-right-radius: 4px; }
+[dir="rtl"] .burbuja.usuario { border-bottom-right-radius: 16px; border-bottom-left-radius: 4px; }
+[dir="rtl"] [data-abierto].abierto::before { margin-right: 0; margin-left: 8px; }
+[dir="rtl"] .estado { margin-left: 0; margin-right: 10px; }
+@media (max-width: 900px) {
+  [dir="rtl"] .hero-lado-izq { left: 16px; right: 16px; }
 }

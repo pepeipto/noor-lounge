@@ -59,6 +59,39 @@
     if (e.key === 'Escape' && menu.classList.contains('abierto')) { cerrarMenu(); botonMenu.focus(); }
   });
 
+  // ---------- Selector de idioma: desplegable accesible (Intro/Espacio abre, flechas recorren, Escape cierra) ----------
+  const idiomas = document.querySelector('.idiomas');
+  const idiomasBoton = idiomas?.querySelector('.idiomas-boton');
+  const idiomasLista = idiomas?.querySelector('.idiomas-lista');
+  if (idiomasBoton && idiomasLista) {
+    const enlaces = [...idiomasLista.querySelectorAll('a')];
+    const mostrarIdiomas = (si, enfocar) => {
+      idiomasLista.hidden = !si;
+      idiomasBoton.setAttribute('aria-expanded', String(si));
+      if (si && enfocar) (idiomasLista.querySelector('[aria-current]') || enlaces[0]).focus();
+    };
+    idiomasBoton.addEventListener('click', (e) => mostrarIdiomas(idiomasLista.hidden, e.detail === 0));
+    idiomasBoton.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); mostrarIdiomas(true, true); }
+    });
+    idiomasLista.addEventListener('keydown', (e) => {
+      const i = enlaces.indexOf(document.activeElement);
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        enlaces[(i + (e.key === 'ArrowDown' ? 1 : -1) + enlaces.length) % enlaces.length].focus();
+      } else if (e.key === 'Home' || e.key === 'End') {
+        e.preventDefault();
+        enlaces[e.key === 'Home' ? 0 : enlaces.length - 1].focus();
+      } else if (e.key === 'Escape') {
+        e.stopPropagation();
+        mostrarIdiomas(false);
+        idiomasBoton.focus();
+      }
+    });
+    idiomas.addEventListener('focusout', (e) => { if (!idiomas.contains(e.relatedTarget)) mostrarIdiomas(false); });
+    document.addEventListener('click', (e) => { if (!idiomas.contains(e.target)) mostrarIdiomas(false); });
+  }
+
   // ---------- Abierto ahora (hora de València): abre a las 16:00 y cierra a las 04:00 ----------
   function horaValencia() {
     const partes = new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' })
