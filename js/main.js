@@ -2,6 +2,8 @@
 (() => {
   'use strict';
   const DATOS = window.NOOR || {};
+  const T = DATOS.textos || {}; // textos de la interfaz en el idioma de la página (datos.js, datos-en.js, datos-ru.js)
+  const IDIOMA = DATOS.idioma || 'es-ES';
   const sinMovimiento = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const raiz = document.documentElement;
 
@@ -44,12 +46,12 @@
   const cerrarMenu = () => {
     menu.classList.remove('abierto');
     botonMenu.setAttribute('aria-expanded', 'false');
-    botonMenu.setAttribute('aria-label', 'Abrir menú');
+    botonMenu.setAttribute('aria-label', T.abrirMenu);
   };
   botonMenu?.addEventListener('click', () => {
     const abierto = menu.classList.toggle('abierto');
     botonMenu.setAttribute('aria-expanded', String(abierto));
-    botonMenu.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
+    botonMenu.setAttribute('aria-label', abierto ? T.cerrarMenu : T.abrirMenu);
     if (abierto) menu.querySelector('a')?.focus();
   });
   menu?.addEventListener('click', (e) => { if (e.target.closest('a')) cerrarMenu(); });
@@ -67,7 +69,7 @@
   function pintarEstado() {
     const h = horaValencia();
     const abierto = h >= 16 || h < 4;
-    const texto = abierto ? 'Abierto ahora · hasta las 04:00' : 'Hoy abrimos a las 16:00';
+    const texto = abierto ? T.abiertoAhora : T.abrimosHoy;
     document.querySelectorAll('[data-abierto]').forEach((el) => {
       el.textContent = texto;
       el.classList.toggle('abierto', abierto);
@@ -82,13 +84,13 @@
     const enviarReserva = document.getElementById('rr-enviar');
     const resumen = document.getElementById('rr-resumen');
     const salida = document.getElementById('rr-personas');
-    const fmtDia = new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', weekday: 'short', day: 'numeric' });
-    const fmtLargo = new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', weekday: 'long', day: 'numeric', month: 'long' });
+    const fmtDia = new Intl.DateTimeFormat(IDIOMA, { timeZone: 'Europe/Madrid', weekday: 'short', day: 'numeric' });
+    const fmtLargo = new Intl.DateTimeFormat(IDIOMA, { timeZone: 'Europe/Madrid', ...(T.formatoDia || { weekday: 'long', day: 'numeric', month: 'long' }) });
     // Antes de las 04:00 la noche sigue siendo la de «hoy» para el local.
     const base = new Date(Date.now() - (horaValencia() < 4 ? 864e5 : 0));
     const dias = Array.from({ length: 7 }, (_, i) => {
       const d = new Date(base.getTime() + i * 864e5);
-      return { corto: i === 0 ? 'Hoy' : i === 1 ? 'Mañana' : fmtDia.format(d), largo: i === 0 ? 'hoy' : i === 1 ? 'mañana' : `el ${fmtLargo.format(d)}` };
+      return { corto: i === 0 ? T.hoy : i === 1 ? T.manana : fmtDia.format(d), largo: i === 0 ? T.hoyFrase : i === 1 ? T.mananaFrase : T.diaFrase(fmtLargo.format(d)) };
     });
     const horas = ['17:00', '19:00', '21:00', '23:00', '01:00'];
     let personas = 2;
@@ -113,9 +115,9 @@
       const dia = reserva.querySelector('input[name="rr-dia"]:checked').value;
       const hora = reserva.querySelector('input[name="rr-hora"]:checked').value;
       salida.textContent = personas;
-      const quien = personas === 1 ? '1 persona' : `${personas} personas`;
-      resumen.textContent = `Mesa para ${quien}, ${dia} a las ${hora}.`;
-      enviarReserva.href = enlaceWhatsApp(`Hola NOOR, me gustaría reservar mesa para ${quien} ${dia} a las ${hora}.`);
+      const quien = T.personas(personas);
+      resumen.textContent = T.resumen(quien, dia, hora);
+      enviarReserva.href = enlaceWhatsApp(T.mensajeReserva(quien, dia, hora));
     }
     reserva.addEventListener('change', actualizarReserva);
     reserva.querySelectorAll('[data-paso]').forEach((b) => b.addEventListener('click', () => {
@@ -129,7 +131,7 @@
   // ---------- Mapa: el iframe de Google solo se carga al pulsar ----------
   document.querySelector('[data-mapa]')?.addEventListener('click', (e) => {
     const boton = e.currentTarget, marco = document.createElement('iframe');
-    Object.assign(marco, { title: 'Mapa de NOOR Lounge', src: boton.dataset.mapa, referrerPolicy: 'no-referrer-when-downgrade' });
+    Object.assign(marco, { title: T.tituloMapa, src: boton.dataset.mapa, referrerPolicy: 'no-referrer-when-downgrade' });
     boton.replaceWith(marco);
     marco.focus();
   });
@@ -339,7 +341,7 @@
   function iniciarCachimba(listo) {
     const lienzo = document.getElementById('cachimba-gl');
     const foto = new Image();
-    foto.src = 'img/cachimba-humo.webp';
+    foto.src = fotoArco.currentSrc || fotoArco.src; // misma foto que el <img>: la ruta vale también en /en/ y /ru/
     foto.decode().then(() => listo(), () => listo());
     const gl = !sinMovimiento && lienzo?.getContext('webgl', { antialias: false, alpha: false });
     if (!gl) { lienzo?.remove(); return; }
@@ -463,7 +465,7 @@
       a.href = enlaceWhatsApp(conWhatsApp);
       a.target = '_blank';
       a.rel = 'noopener';
-      a.textContent = 'Escribir por WhatsApp →';
+      a.textContent = T.escribirWhatsApp;
       a.style.display = 'inline-block';
       a.style.marginTop = '8px';
       li.append(a);
@@ -479,13 +481,13 @@
       // Cada clave cuenta si una palabra empieza por ella («reserv» → reservar); las cortas («te») deben ser la palabra entera.
       const p = r.claves.reduce((n, c) => {
         const k = normalizar(c);
-        return n + (new RegExp(`(^|[^a-z])${k}${k.length <= 3 ? '($|[^a-z])' : ''}`).test(t) ? 1 : 0);
+        return n + (new RegExp(`(^|[^\\p{L}])${k}${k.length <= 3 ? '($|[^\\p{L}])' : ''}`, 'u').test(t) ? 1 : 0);
       }, 0);
       if (p > puntos) { mejor = r; puntos = p; }
     }
     return mejor || {
-      texto: 'Esa pregunta prefiero que te la responda el equipo directamente. Escríbenos por WhatsApp y te contestan enseguida.',
-      whatsapp: `Hola, tengo una pregunta: ${pregunta}`,
+      texto: T.sinRespuesta,
+      whatsapp: T.pregunta(pregunta),
     };
   }
 
@@ -511,7 +513,7 @@
     historial.push({ rol: 'usuario', texto });
     const pensando = document.createElement('li');
     pensando.className = 'burbuja asistente-msg escribiendo';
-    pensando.setAttribute('aria-label', 'El asistente está escribiendo');
+    pensando.setAttribute('aria-label', T.escribiendo);
     pensando.innerHTML = '<span></span><span></span><span></span>';
     lista.append(pensando);
     lista.scrollTop = lista.scrollHeight;
@@ -522,7 +524,7 @@
   }
 
   function abrirPanel() {
-    if (!lista.children.length) burbuja('asistente', DATOS.saludo || '¡Hola! ¿En qué te ayudo?');
+    if (!lista.children.length) burbuja('asistente', DATOS.saludo);
     panel.showModal ? panel.showModal() : panel.setAttribute('open', '');
     abrir.setAttribute('aria-expanded', 'true');
     campo.focus();

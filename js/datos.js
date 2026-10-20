@@ -1,11 +1,31 @@
 // Datos del local y respuestas del asistente. Fuentes: ficha de Google Maps, Instagram @noorloungevlc
 // y la carta publicada en scennio.com/es/noor-lounge/menu (octubre de 2026). Revisar con el cliente.
+// Versiones en otros idiomas: datos-en.js (/en/) y datos-ru.js (/ru/). Si cambia un dato, cambiarlo en los tres.
 window.NOOR = {
+  idioma: 'es-ES',
   whatsapp: '34963120754',
   textoWhatsApp: 'Hola NOOR, me gustaría reservar una mesa.',
   reservas: 'https://www.scennio.com/es/noor-lounge/calendar',
   carta: 'https://www.scennio.com/es/noor-lounge/menu',
   asistenteApi: '', // p. ej. 'https://servidor/api/asistente' para conectar una IA real
+  // Textos de la interfaz que pinta main.js (menú, estado, reserva rápida y asistente).
+  textos: {
+    abrirMenu: 'Abrir menú',
+    cerrarMenu: 'Cerrar menú',
+    abiertoAhora: 'Abierto ahora · hasta las 04:00',
+    abrimosHoy: 'Hoy abrimos a las 16:00',
+    hoy: 'Hoy', manana: 'Mañana',
+    hoyFrase: 'hoy', mananaFrase: 'mañana',
+    diaFrase: (fecha) => `el ${fecha}`,
+    personas: (n) => (n === 1 ? '1 persona' : `${n} personas`),
+    resumen: (quien, dia, hora) => `Mesa para ${quien}, ${dia} a las ${hora}.`,
+    mensajeReserva: (quien, dia, hora) => `Hola NOOR, me gustaría reservar mesa para ${quien} ${dia} a las ${hora}.`,
+    tituloMapa: 'Mapa de NOOR Lounge',
+    escribirWhatsApp: 'Escribir por WhatsApp →',
+    escribiendo: 'El asistente está escribiendo',
+    sinRespuesta: 'Esa pregunta prefiero que te la responda el equipo directamente. Escríbenos por WhatsApp y te contestan enseguida.',
+    pregunta: (texto) => `Hola, tengo una pregunta: ${texto}`,
+  },
   saludo: 'Hola, soy el asistente de NOOR. Te ayudo con el horario, la carta, las reservas o cómo llegar.',
   sugerencias: ['¿Qué horario tenéis?', 'Precios de las shishas', 'Quiero reservar', '¿Dónde estáis?'],
   respuestas: [

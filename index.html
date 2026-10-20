@@ -7,11 +7,17 @@
   <meta name="description" content="Shisha lounge en L'Eixample, Valencia: cachimbas de cristal tallado (Kazan, Full Black, fruta natural) y cócteles desde 12 €. Abierto todos los días de 16:00 a 04:00. Reserva tu mesa.">
   <!-- Dominio provisional (https://www.noorlounge.es/): cambiarlo aquí, en el JSON-LD, robots.txt y sitemap.xml antes de publicar -->
   <link rel="canonical" href="https://www.noorlounge.es/">
+  <link rel="alternate" hreflang="es-ES" href="https://www.noorlounge.es/">
+  <link rel="alternate" hreflang="en" href="https://www.noorlounge.es/en/">
+  <link rel="alternate" hreflang="ru" href="https://www.noorlounge.es/ru/">
+  <link rel="alternate" hreflang="x-default" href="https://www.noorlounge.es/">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#0a0706">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="NOOR КАЛЬЯН Lounge">
   <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:locale:alternate" content="ru_RU">
   <meta property="og:url" content="https://www.noorlounge.es/">
   <meta property="og:title" content="NOOR Lounge · Shisha y cócteles en Valencia">
   <meta property="og:description" content="Cachimbas de cristal tallado, coctelería y luz cálida en Carrer Serrano Morales, 3 (L'Eixample). Todos los días de 16:00 a 04:00.">
@@ -33,7 +39,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Manrope:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Manrope:wght@400;600&display=swap" rel="stylesheet"></noscript>
   <link rel="preload" as="image" href="img/cachimba-humo.webp" fetchpriority="high">
-  <link rel="stylesheet" href="css/styles.css?v=6">
+  <link rel="stylesheet" href="css/styles.css?v=9">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -70,7 +76,8 @@
           "result": { "@type": "FoodEstablishmentReservation", "name": "Reserva de mesa" }
         }
       },
-      { "@type": "WebSite", "@id": "https://www.noorlounge.es/#web", "url": "https://www.noorlounge.es/", "name": "NOOR КАЛЬЯН Lounge", "inLanguage": "es-ES", "publisher": { "@id": "https://www.noorlounge.es/#local" } },
+      { "@type": "WebSite", "@id": "https://www.noorlounge.es/#web", "url": "https://www.noorlounge.es/", "name": "NOOR КАЛЬЯН Lounge", "inLanguage": ["es-ES", "en", "ru"], "publisher": { "@id": "https://www.noorlounge.es/#local" } },
+      { "@type": "WebPage", "@id": "https://www.noorlounge.es/#pagina", "url": "https://www.noorlounge.es/", "name": "Shisha Lounge en Valencia · Cachimbas y cócteles | NOOR КАЛЬЯН Lounge", "inLanguage": "es-ES", "isPartOf": { "@id": "https://www.noorlounge.es/#web" }, "about": { "@id": "https://www.noorlounge.es/#local" } },
       {
         "@type": "FAQPage",
         "mainEntity": [
@@ -106,6 +113,9 @@
       <a href="#visitanos">Visítanos</a>
     </nav>
     <div class="acciones">
+      <nav class="idiomas" aria-label="Idioma">
+        <a href="./" hreflang="es" lang="es" aria-label="Español" aria-current="page">ES</a><span aria-hidden="true">·</span><a href="en/" hreflang="en" lang="en" aria-label="English">EN</a><span aria-hidden="true">·</span><a href="ru/" hreflang="ru" lang="ru" aria-label="Русский">RU</a>
+      </nav>
       <a class="boton boton-principal" data-whatsapp href="https://wa.me/34963120754?text=Hola%20NOOR%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa." target="_blank" rel="noopener">Reservar mesa</a>
       <button class="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
@@ -420,7 +430,7 @@
     <p class="asistente-nota">Respuestas automáticas. Para reservas, mejor por WhatsApp.</p>
   </dialog>
 
-  <script src="js/datos.js?v=6"></script>
-  <script src="js/main.js?v=6"></script>
+  <script src="js/datos.js?v=7"></script>
+  <script src="js/main.js?v=7"></script>
 </body>
 </html>

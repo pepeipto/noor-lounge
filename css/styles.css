@@ -539,3 +539,18 @@ footer { border-top: 1px solid var(--linea); padding: 54px 0 120px; color: var(-
   #carta .tarjeta img { aspect-ratio: 16 / 10; }
   .tarjeta div { padding: 20px 20px 24px; }
 }
+
+/* ---------- Selector de idioma (ES · EN · RU), discreto junto a las acciones ---------- */
+.idiomas { display: flex; align-items: center; gap: 2px; margin-right: 6px; font: 600 11px/1 var(--cuerpo); letter-spacing: .14em; }
+.idiomas a { text-decoration: none; color: var(--texto-2); padding: 8px 5px; opacity: .7; transition: color .3s, opacity .3s; }
+.idiomas a:hover { color: var(--ambar-claro); opacity: 1; }
+.idiomas a[aria-current] { color: var(--ambar); opacity: 1; }
+.idiomas span { color: var(--linea); }
+@media (max-width: 360px) { .idiomas { margin-right: 0; letter-spacing: .08em; } .idiomas a { padding: 8px 3px; } }
+/* Entre tablet y escritorio pequeño, el menú se compacta para dejar sitio al selector de idioma */
+@media (min-width: 901px) and (max-width: 1180px) {
+  .menu { gap: 12px; }
+  .menu a { letter-spacing: .12em; }
+  .cabecera .acciones .boton { padding: 0 16px; letter-spacing: .12em; }
+  .idiomas { margin: 0 0 0 10px; }
+}
