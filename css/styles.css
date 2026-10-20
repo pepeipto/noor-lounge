@@ -279,7 +279,7 @@ h2 em, h1 em { font-style: italic; color: var(--ambar-claro); }
 .foto-marco img { width: 100%; height: 115%; object-fit: cover; transform: translateY(calc(var(--desplaza, 0) * -1px)); }
 .foto-marco::after { content: ""; position: absolute; inset: 0; border: 1px solid var(--linea); border-radius: inherit; pointer-events: none; }
 .datos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--linea); }
-.datos strong { display: block; font-family: var(--titulos); font-size: clamp(30px, 3.6vw, 46px); font-weight: 400; color: var(--ambar-claro); line-height: 1.1; }
+.datos strong { display: block; white-space: nowrap; font-family: var(--titulos); font-size: clamp(26px, 2.7vw, 40px); font-weight: 400; color: var(--ambar-claro); line-height: 1.1; }
 .datos span { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--texto-2); }
 
 /* ---------- Experiencia (carta) ---------- */
