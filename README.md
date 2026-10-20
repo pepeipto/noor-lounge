@@ -46,7 +46,8 @@ a partir de `_idiomas/plantilla.html` (español) y de los textos de `_idiomas/<i
   - Los registros de correo de IONOS (MX, SPF, DKIM, DMARC) se dejaron como estaban.
 - **Dominios secundarios** redirigidos en IONOS (redirección HTTP, también con www) a `https://www.noorloungevalencia.com`: `noorloungevalencia.es`, `noorloungevalencia.info`, `noorloungevalencia.store` y `noorlounge.es`. Sin certificado SSL propio: si alguien escribe `https://` con ellos, el navegador avisará.
 - **Si el dominio cambia:** `BASE` en `_idiomas/generar.py`, el comentario de `_idiomas/plantilla.html`, `robots.txt` y `CNAME`; después `python _idiomas/generar.py`.
-- **Siguiente:** Search Console (enviar `sitemap.xml`) y enlazar la web desde la ficha de Google Business Profile.
+- **Google Search Console:** propiedad de dominio `noorloungevalencia.com` verificada el 20/10/2026 con un TXT `google-site-verification` en IONOS (no borrarlo), con la cuenta de Google de Carlos. Sitemap enviado e indexación de la portada solicitada.
+- **Siguiente:** enlazar la web desde la ficha de Google Business Profile del local (cuenta del dueño).
 
 ## Pendiente con el cliente
 
