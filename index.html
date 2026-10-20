@@ -33,7 +33,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Manrope:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Manrope:wght@400;600&display=swap" rel="stylesheet"></noscript>
   <link rel="preload" as="image" href="img/cachimba-humo.webp" fetchpriority="high">
-  <link rel="stylesheet" href="css/styles.css?v=5">
+  <link rel="stylesheet" href="css/styles.css?v=6">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -50,7 +50,9 @@
         "logo": "https://www.noorlounge.es/apple-touch-icon.png",
         "priceRange": "10-20 €",
         "currenciesAccepted": "EUR",
-        "menu": "https://www.scennio.com/es/noor-lounge/menu",
+        "menu": "https://www.noorlounge.es/#carta",
+        "hasMenu": "https://www.noorlounge.es/#carta",
+        "areaServed": { "@type": "City", "name": "València" },
         "acceptsReservations": "True",
         "address": { "@type": "PostalAddress", "streetAddress": "Carrer Serrano Morales, 3", "addressLocality": "València", "addressRegion": "Valencia", "postalCode": "46004", "addressCountry": "ES" },
         "geo": { "@type": "GeoCoordinates", "latitude": 39.4690259, "longitude": -0.3657751 },
@@ -132,6 +134,7 @@
 
         <div class="hero-lado hero-lado-izq">
           <span class="etiqueta">Shisha Lounge · València</span>
+          <p class="hero-meta"><span>4,7 ★ en Google</span><span data-abierto>Todos los días de 16:00 a 04:00</span></p>
           <p class="hero-sub">Shisha de cristal tallado, carbón natural y cócteles sin prisa. L'Eixample.</p>
           <div class="hero-botones">
             <a class="boton boton-principal" data-whatsapp href="https://wa.me/34963120754?text=Hola%20NOOR%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.5-.3.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg> Reserva tu mesa</a>
@@ -140,7 +143,7 @@
         </div>
         <div class="hero-lado hero-lado-der">
           <div class="nota"><strong>4,7 ★</strong><span>139 opiniones en Google</span></div>
-          <div class="nota"><strong>16:00 – 04:00</strong><span>Todos los días</span></div>
+          <div class="nota"><strong>16:00 – 04:00</strong><span data-abierto>Todos los días</span></div>
         </div>
 
         <div class="hero-final">
@@ -172,7 +175,7 @@
           <div class="datos aparece">
             <div><strong>4,7 ★</strong><span>139 opiniones en Google</span></div>
             <div><strong>16–04 h</strong><span>Todos los días</span></div>
-            <div><strong>10–20 €</strong><span>Gasto medio por persona</span></div>
+            <div><strong>10–20 €</strong><span>Gasto medio por persona (Google)</span></div>
           </div>
         </div>
         <div class="foto-marco aparece" data-parallax="1">
@@ -330,13 +333,13 @@
           <dl class="aparece">
             <div><dt>Dirección</dt><dd><a href="https://maps.google.com/?q=NOOR+Lounge+Carrer+Serrano+Morales+3+Valencia" target="_blank" rel="noopener">Carrer Serrano Morales, 3<br>L'Eixample · 46004 València</a></dd></div>
             <div><dt>Teléfono</dt><dd><a href="tel:+34963120754">963 12 07 54</a></dd></div>
-            <div><dt>Horario</dt><dd>
+            <div><dt>Horario <span class="estado" data-abierto></span></dt><dd>
               <table class="horario"><tr><td>Lunes a domingo</td><td>16:00 – 04:00</td></tr></table>
             </dd></div>
           </dl>
           <div class="hero-botones aparece" style="justify-content:flex-start">
             <a class="boton boton-principal" data-whatsapp href="https://wa.me/34963120754?text=Hola%20NOOR%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa." target="_blank" rel="noopener">Reservar por WhatsApp</a>
-            <a class="boton boton-secundario" href="https://www.scennio.com/es/noor-lounge/calendar" target="_blank" rel="noopener nofollow">Elegir día y hora</a>
+            <a class="boton boton-secundario" href="#reservar">Elegir día y hora</a>
           </div>
         </div>
         <div class="mapa aparece">
@@ -348,16 +351,29 @@
       </div>
     </section>
 
-    <section class="seccion reserva">
+    <section class="seccion reserva" id="reservar">
       <div class="halo" aria-hidden="true"></div>
       <div class="contenedor" style="position:relative">
         <span class="etiqueta aparece">Esta noche</span>
         <h2 class="aparece">La brasa ya está <em>encendida</em></h2>
         <p class="aparece">Reserva tu mesa con un mensaje. ¿Dudas sobre la carta o vienes en grupo? Nuestro asistente te responde al momento.</p>
+        <form class="reserva-rapida aparece" id="reserva-rapida" aria-label="Reserva rápida">
+          <fieldset><legend>Día</legend><div class="chips" data-grupo="dia"></div></fieldset>
+          <fieldset><legend>Personas</legend>
+            <div class="contador">
+              <button type="button" data-paso="-1" aria-label="Una persona menos">−</button>
+              <output id="rr-personas" aria-live="polite">2</output>
+              <button type="button" data-paso="1" aria-label="Una persona más">+</button>
+            </div>
+          </fieldset>
+          <fieldset><legend>Hora</legend><div class="chips" data-grupo="hora"></div></fieldset>
+          <p class="rr-resumen" id="rr-resumen" aria-live="polite"></p>
+        </form>
         <div class="hero-botones aparece">
-          <a class="boton boton-principal" data-whatsapp href="https://wa.me/34963120754?text=Hola%20NOOR%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa." target="_blank" rel="noopener">Reservar por WhatsApp</a>
+          <a class="boton boton-principal" id="rr-enviar" data-whatsapp href="https://wa.me/34963120754?text=Hola%20NOOR%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa." target="_blank" rel="noopener">Pedir mesa por WhatsApp</a>
           <button class="boton boton-secundario" type="button" data-abrir-asistente>Preguntar al asistente</button>
         </div>
+        <p class="rr-nota aparece">Te confirmamos la mesa por WhatsApp. ¿Prefieres elegirla online? <a href="https://www.scennio.com/es/noor-lounge/calendar" target="_blank" rel="noopener nofollow">Reserva en Scennio</a>.</p>
       </div>
     </section>
   </main>
@@ -404,7 +420,7 @@
     <p class="asistente-nota">Respuestas automáticas. Para reservas, mejor por WhatsApp.</p>
   </dialog>
 
-  <script src="js/datos.js?v=5"></script>
-  <script src="js/main.js?v=5"></script>
+  <script src="js/datos.js?v=6"></script>
+  <script src="js/main.js?v=6"></script>
 </body>
 </html>

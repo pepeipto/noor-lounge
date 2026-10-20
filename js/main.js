@@ -57,6 +57,75 @@
     if (e.key === 'Escape' && menu.classList.contains('abierto')) { cerrarMenu(); botonMenu.focus(); }
   });
 
+  // ---------- Abierto ahora (hora de València): abre a las 16:00 y cierra a las 04:00 ----------
+  function horaValencia() {
+    const partes = new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' })
+      .formatToParts(new Date());
+    const v = (t) => Number(partes.find((x) => x.type === t)?.value || 0);
+    return v('hour') + v('minute') / 60;
+  }
+  function pintarEstado() {
+    const h = horaValencia();
+    const abierto = h >= 16 || h < 4;
+    const texto = abierto ? 'Abierto ahora · hasta las 04:00' : 'Hoy abrimos a las 16:00';
+    document.querySelectorAll('[data-abierto]').forEach((el) => {
+      el.textContent = texto;
+      el.classList.toggle('abierto', abierto);
+    });
+  }
+  pintarEstado();
+  setInterval(pintarEstado, 60000);
+
+  // ---------- Reserva rápida: día, personas y hora → mensaje de WhatsApp ----------
+  const reserva = document.getElementById('reserva-rapida');
+  if (reserva) {
+    const enviarReserva = document.getElementById('rr-enviar');
+    const resumen = document.getElementById('rr-resumen');
+    const salida = document.getElementById('rr-personas');
+    const fmtDia = new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', weekday: 'short', day: 'numeric' });
+    const fmtLargo = new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', weekday: 'long', day: 'numeric', month: 'long' });
+    // Antes de las 04:00 la noche sigue siendo la de «hoy» para el local.
+    const base = new Date(Date.now() - (horaValencia() < 4 ? 864e5 : 0));
+    const dias = Array.from({ length: 7 }, (_, i) => {
+      const d = new Date(base.getTime() + i * 864e5);
+      return { corto: i === 0 ? 'Hoy' : i === 1 ? 'Mañana' : fmtDia.format(d), largo: i === 0 ? 'hoy' : i === 1 ? 'mañana' : `el ${fmtLargo.format(d)}` };
+    });
+    const horas = ['17:00', '19:00', '21:00', '23:00', '01:00'];
+    let personas = 2;
+
+    function chips(grupo, opciones) {
+      const caja = reserva.querySelector(`[data-grupo="${grupo}"]`);
+      opciones.forEach((o, i) => {
+        const etiqueta = document.createElement('label');
+        etiqueta.className = 'chip';
+        const radio = document.createElement('input');
+        Object.assign(radio, { type: 'radio', name: `rr-${grupo}`, value: o.largo ?? o, checked: i === (grupo === 'hora' ? 2 : 0) });
+        const texto = document.createElement('span');
+        texto.textContent = o.corto ?? o;
+        etiqueta.append(radio, texto);
+        caja.append(etiqueta);
+      });
+    }
+    chips('dia', dias);
+    chips('hora', horas);
+
+    function actualizarReserva() {
+      const dia = reserva.querySelector('input[name="rr-dia"]:checked').value;
+      const hora = reserva.querySelector('input[name="rr-hora"]:checked').value;
+      salida.textContent = personas;
+      const quien = personas === 1 ? '1 persona' : `${personas} personas`;
+      resumen.textContent = `Mesa para ${quien}, ${dia} a las ${hora}.`;
+      enviarReserva.href = enlaceWhatsApp(`Hola NOOR, me gustaría reservar mesa para ${quien} ${dia} a las ${hora}.`);
+    }
+    reserva.addEventListener('change', actualizarReserva);
+    reserva.querySelectorAll('[data-paso]').forEach((b) => b.addEventListener('click', () => {
+      personas = Math.min(20, Math.max(1, personas + Number(b.dataset.paso)));
+      actualizarReserva();
+    }));
+    reserva.addEventListener('submit', (e) => e.preventDefault());
+    actualizarReserva();
+  }
+
   // ---------- Mapa: el iframe de Google solo se carga al pulsar ----------
   document.querySelector('[data-mapa]')?.addEventListener('click', (e) => {
     const boton = e.currentTarget, marco = document.createElement('iframe');
@@ -115,8 +184,8 @@
     suave += (objetivo - suave) * (sinMovimiento ? 1 : .12);
     if (hero && hero.getBoundingClientRect().bottom <= 0) raiz.classList.remove('en-cabecera');
     if (hero && hero.getBoundingClientRect().bottom > 0) {
-      if (!escena.inicio && raiz.classList.contains('cargado')) escena.inicio = ahora + 250;
-      if (escena.inicio && !sinMovimiento) escena.intro = suaviza(limita((ahora - escena.inicio) / 1500));
+      if (!escena.inicio && raiz.classList.contains('cargado')) escena.inicio = ahora + 100;
+      if (escena.inicio && !sinMovimiento) escena.intro = suaviza(limita((ahora - escena.inicio) / 1000));
       escena.mx += (ratonX - escena.mx) * .05;
       escena.my += (ratonY - escena.my) * .05;
       // El arco se abre a pantalla completa en el primer 80 % del recorrido; la frase final llega al final.
@@ -361,10 +430,10 @@
     }
   }
 
-  // Pantalla de carga: se va cuando la foto de la pieza está lista (o a los 0,9 s como mucho).
+  // Pantalla de carga: se va cuando la foto de la pieza está lista (o a los 0,35 s como mucho).
   let cargado = false;
   const terminarCarga = () => { if (!cargado) { cargado = true; requestAnimationFrame(() => raiz.classList.add('cargado')); } };
-  setTimeout(terminarCarga, 900);
+  setTimeout(terminarCarga, 350);
   iniciarCachimba(terminarCarga);
   iniciarHumo();
   iniciarAscuas();
