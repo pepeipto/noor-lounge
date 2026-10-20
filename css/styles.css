@@ -498,3 +498,6 @@ footer { border-top: 1px solid var(--linea); padding: 54px 0 120px; color: var(-
   .en-cabecera .whatsapp, .en-cabecera .asistente-abrir { opacity: 0; transform: translateY(20px); pointer-events: none; }
   .hero-final .etiqueta { font-size: 10px; letter-spacing: .22em; }
 }
+
+/* Las secciones del final no se pintan hasta acercarse */
+#preguntas, #visitanos, .reserva, footer { content-visibility: auto; contain-intrinsic-size: auto 900px; }
