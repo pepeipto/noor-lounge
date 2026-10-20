@@ -37,11 +37,17 @@ a partir de `_idiomas/plantilla.html` (español) y de los textos de `_idiomas/<i
 - Fotos: ficha de Google Maps del local e Instagram @noorloungevlc. Originales en `_fotos-originales/` (fuera de git).
 - Horario, valoración (4,7 / 139 opiniones) y precio medio: Google Maps. Carta y precios: scennio.com/es/noor-lounge/menu.
 
-## Antes de publicar
+## Publicación
 
-- Sustituir el dominio provisional `https://www.noorlounge.es/` por el definitivo en `_idiomas/generar.py` (`BASE`) y en `_idiomas/plantilla.html`, volver a generar, y cambiarlo en `robots.txt`.
-- Servir con compresión (gzip/brotli) y caché larga para `img/`, `css/` y `js/` (llevan `?v=`). No subir `_fotos-originales/`.
-- Dar de alta en Search Console y enlazar la web desde la ficha de Google Business Profile.
+- Hosting: GitHub Pages del repositorio `pepeipto/noor-lounge` (rama `main`, carpeta raíz). Cada push a `main` publica.
+- Dominio: `www.noorloungevalencia.com` (lo registra Carlos y se factura al cliente).
+  1. Comprar el dominio en el registrador.
+  2. DNS en el registrador:
+     - `CNAME` `www` → `pepeipto.github.io`
+     - `A` `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+  3. Crear el archivo `CNAME` con `www.noorloungevalencia.com`, hacer push, y activar «Enforce HTTPS» en Settings → Pages cuando GitHub emita el certificado.
+- Si el dominio cambia: `BASE` en `_idiomas/generar.py`, el comentario de `_idiomas/plantilla.html`, `robots.txt` y `CNAME`; después `python _idiomas/generar.py`.
+- Después: Search Console (enviar `sitemap.xml`) y enlazar la web desde la ficha de Google Business Profile.
 
 ## Pendiente con el cliente
 

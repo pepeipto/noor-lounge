@@ -10,7 +10,7 @@ from urllib.parse import quote
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(AQUI)
-BASE = 'https://www.noorlounge.es/'  # dominio provisional: cambiarlo también en robots.txt
+BASE = 'https://www.noorloungevalencia.com/'  # dominio: si cambia, cambiarlo también en robots.txt y CNAME
 FECHA = '2026-10-20'
 
 # carpeta, lang de <html>, hreflang, og:locale, nombre propio, código, «Idioma» en ese idioma, <title>
@@ -128,7 +128,7 @@ def generar():
             s = re.sub(r'(?<=["\s(,])(img|css|js)/', r'../\1/', s)
             for f in ('favicon.ico', 'icon.svg', 'apple-touch-icon.png', 'site.webmanifest'):
                 s = cambia(s, f'href="{f}"', f'href="../{f}"', carpeta, 1)
-        s = s.replace('<!-- Dominio provisional', f'<!-- Página generada por _idiomas/generar.py ({lang}): no editar a mano.\n       Dominio provisional', 1)
+        s = s.replace('<!-- Dominio (', f'<!-- Página generada por _idiomas/generar.py ({lang}): no editar a mano.\n       Dominio (', 1)
         # Comprobaciones
         ld = re.search(r'<script type="application/ld\+json">(.*?)</script>', s, re.S).group(1)
         json.loads(ld)
