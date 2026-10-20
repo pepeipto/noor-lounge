@@ -60,6 +60,10 @@ window.NOOR = {
       texto: 'El gasto medio está entre 10 y 20 € por persona.',
     },
     {
+      claves: ['instagram', 'tiktok', 'redes', 'insta', 'seguir', 'video', 'fotos'],
+      texto: 'Síguenos en Instagram @noorloungevlc y en TikTok @noorpub: ahí subimos el ambiente de cada noche.',
+    },
+    {
       claves: ['hola', 'buenas', 'hey', 'saludos'],
       texto: '¡Hola! ¿Qué te gustaría saber? Horario, carta, reservas o cómo llegar.',
     },
