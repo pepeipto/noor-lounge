@@ -1,0 +1,126 @@
+# it: una riga per testo, «numero | testo». Il numero è quello di fuentes.txt. \n = a capo.
+0 | content="Shisha lounge nell'Eixample, Valencia: narghilè in cristallo intagliato (Kazan, Full Black, frutta fresca) e cocktail da 12 €. Aperto tutti i giorni dalle 16:00 alle 04:00. Prenota il tuo tavolo."
+1 | NOOR Lounge · Narghilè e cocktail a Valencia
+2 | content="Narghilè in cristallo intagliato, cocktail e luce calda in Carrer Serrano Morales, 3 (L'Eixample). Tutti i giorni dalle 16:00 alle 04:00."
+3 | content="Narghilè in cristallo intagliato che sprigiona fumo sul bancone del NOOR Lounge, Valencia"
+4 | content="Narghilè in cristallo intagliato e cocktail nell'Eixample. Tutti i giorni dalle 16:00 alle 04:00."
+5 | "Shisha lounge e cocktail bar nell'Eixample, Valencia. Narghilè in cristallo intagliato, cocktail, tè e vini. Aperto tutti i giorni dalle 16:00 alle 04:00."
+6 | "name": "Prenotazione del tavolo"
+7 | Che orari ha il NOOR Lounge?
+8 | Siamo aperti tutti i giorni, dal lunedì alla domenica, dalle 16:00 alle 04:00.
+9 | Dove si trova questo shisha lounge a Valencia?
+10 | In Carrer Serrano Morales, 3, L'Eixample, 46004 València, accanto a Plaza Cánovas.
+11 | Quanto costa un narghilè?
+12 | I narghilè vanno da 16 € (Rubio o Josh) a 30 € (Kazan Especial), e 40 € quello alla frutta fresca.
+13 | Come prenoto un tavolo?
+14 | Online su Scennio (da 1 a 10 persone), per telefono al +34 963 12 07 54 o su WhatsApp. Per gruppi numerosi, meglio WhatsApp.
+15 | Avete cocktail?
+16 | Sì: cocktail da 12 €, con mojito alla fragola, al mango o al frutto della passione, Espresso Martini, PornStar Martini, Negroni e altro ancora.
+17 | Qual è la spesa media a persona?
+18 | Tra 10 e 20 € a persona, a seconda di cosa ordini.
+19 | <nav class="menu" id="menu-principal" aria-label="Menu principale">
+20 | <a href="#lounge">Il lounge</a>
+21 | <a href="#ritual">Il rito</a>
+22 | <a href="#carta">Menù</a>
+23 | <a href="#preguntas">Domande</a>
+24 | <a href="#galeria">Galleria</a>
+25 | <a href="#visitanos">Dove siamo</a>
+26 | rel="noopener">Prenota</a>
+27 | aria-label="Apri il menu"
+28 | NOOR КАЛЬЯН Lounge: narghilè e cocktail a Valencia
+29 | alt="Narghilè in cristallo intagliato che sprigiona fumo sul bancone del NOOR Lounge"
+30 | <span class="etiqueta">Shisha Lounge · València</span>
+31 | <span>4,7 ★ su Google</span><span data-abierto>Tutti i giorni dalle 16:00 alle 04:00</span>
+32 | Narghilè in cristallo intagliato, carbone naturale e cocktail senza fretta. L'Eixample.
+33 |  Prenota il tuo tavolo</a>
+34 | href="#carta">Scopri il menù</a>
+35 | <div class="nota"><strong>4,7 ★</strong><span>139 recensioni su Google</span></div>
+36 | <span data-abierto>Tutti i giorni</span>
+37 | Edizione limitata · Cristallo intagliato
+38 | Qui la notte comincia <em>con la luce</em>.
+39 | <div class="hero-pista">Scorri</div>
+40 | <span>Narghilè</span><span>Kazan</span><span>Mojito</span><span>Chai latte</span><span>Espresso Martini</span><span>Buona musica</span><span>Fino alle 4:00</span>
+41 | <span class="etiqueta aparece">Il lounge</span>
+42 | Narghilè a Valencia, <em>nella luce calda</em> dell'Eixample
+43 | Noor significa luce, e qui si sente. Piastrelle color rame, divani fatti per allungare la notte, colonne che ardono come brace e un bancone dove narghilè e cocktail parlano la stessa lingua. A due passi da Plaza Cánovas.
+44 | Per festeggiare, per una lunga chiacchierata o per niente di particolare. Aperti ogni giorno, dalle 16:00 alle 04:00.
+45 | <div><strong>4,7 ★</strong><span>139 recensioni su Google</span></div>
+46 | <div><strong>16–04</strong><span>Tutti i giorni</span></div>
+47 | <div><strong>10–20 €</strong><span>Spesa media a persona (Google)</span></div>
+48 | alt="Sala del NOOR, shisha lounge a Valencia, con bancone in piastrelle color rame, sgabelli e narghilè"
+49 | alt="Cliente che si gode un narghilè al bancone del NOOR Lounge"
+50 | <span class="etiqueta aparece">Il rito</span>
+51 | Un narghilè fatto bene <em>non ha fretta</em>
+52 | <h3>Il tuo gusto</h3><p>Rubio, Fusion, Full Black, Kazan o Josh. Dicci se lo preferisci fresco, dolce, fruttato o intenso e ti guidiamo al tavolo.</p>
+53 | <h3>Preparato al momento</h3><p>Braciere caricato a mano, carbone naturale al punto giusto e cristallo impeccabile a ogni servizio.</p>
+54 | <h3>Il tempo è tuo</h3><p>Un cocktail, buona musica e il bancone acceso fino alle quattro. Il resto lo decidi tu.</p>
+55 | <span class="etiqueta aparece">Il menù</span>
+56 | Fumo, <em>ghiaccio</em> e tempo lento
+57 | Narghilè, cocktail e tè da condividere: l'essenza di NOOR in tre gesti. Chiedi al tavolo il gusto per te.
+58 | alt="Narghilè blu e oro con un cocktail al NOOR Lounge Valencia"
+59 | <h3>Narghilè</h3><p>Dal Rubio al Kazan Especial, e le nostre specialità alla frutta fresca. Da 16 €.</p>
+60 | alt="Mojito con menta accanto a un narghilè"
+61 | <h3>Cocktail</h3><p>Mojito alla fragola, al mango o al frutto della passione, Espresso Martini, PornStar, Negroni. Classici ben serviti, da 12 €.</p>
+62 | alt="Gin tonic rosa su un tavolo di marmo verde al NOOR"
+63 | <h3>Tè e bollicine</h3><p>Chai latte e tè da condividere; cava, Veuve Clicquot o Dom Pérignon quando la notte lo chiede. Da 8 €.</p>
+64 | <h3>Narghilè</h3>
+65 | <li><span>Frutta fresca</span><b>40 €</b></li>
+66 | <h3>Cocktail</h3>\n            <ul>
+67 | <li><span>Mojito classico, fragola, mango o frutto della passione</span>
+68 | <li><span>Piña colada · Whiskey Sour · Bloody Mary</span>
+69 | <li><span>Cocktail Premium</span>
+70 | <h3>Tè, vini e altro</h3>
+71 | <li><span>Chai latte (piccolo / grande)</span>
+72 | <li><span>Tè agli agrumi e zenzero o ai frutti rossi (1 l)</span>
+73 | <li><span>Vino al calice · Cava</span>
+74 | <li><span>Birre</span><b>da 3,50 €</b></li>
+75 | <li><span>Bibite</span>
+76 | <li><span>PlayStation 5 al tuo tavolo</span>
+77 | rel="noopener nofollow">Vedi il menù completo (in spagnolo)</a>
+78 | <span class="etiqueta aparece">Galleria</span>
+79 | NOOR, <em>di notte</em>
+80 | Brace, cristallo e rame: il nostro shisha lounge nell'Eixample, così come appare dopo la mezzanotte.
+81 | alt="Angolo con narghilè e colonna di luce calda al NOOR Lounge"
+82 | alt="Bancone del NOOR con bottiglie illuminate"
+83 | alt="Carta dei vini del NOOR, shisha lounge a Valencia"
+84 | alt="Cocktail con schiuma servito al NOOR Lounge"
+85 | alt="Facciata dello shisha lounge NOOR in Carrer Serrano Morales 3, Valencia"
+86 | alt="Specchio rotondo con anello di luce arancione al NOOR"
+87 | alt="Cocktail rosso servito al bancone del NOOR"
+88 | alt="Menù dei tè e delle bevande calde del NOOR"
+89 | <span class="etiqueta aparece">Domande</span>
+90 | Prima di <em>venire</em>
+91 | <span class="etiqueta aparece">Dove siamo</span>
+92 | Ti teniamo <em>un tavolo</em>
+93 | <p class="aparece">Nel cuore dell'Eixample, accanto a Plaza Cánovas.</p>
+94 | <dt>Indirizzo</dt>
+95 | <dt>Telefono</dt><dd><a href="tel:+34963120754">+34 963 12 07 54</a></dd>
+96 | <dt>Orari <span
+97 | <td>Dal lunedì alla domenica</td>
+98 | rel="noopener">Prenota su WhatsApp</a>
+99 | href="#reservar">Scegli giorno e ora</a>
+100 | <span>Vedi la mappa interattiva</span>
+101 | <span class="etiqueta aparece">Stasera</span>
+102 | La brace è già <em>accesa</em>
+103 | Prenota il tuo tavolo con un messaggio. Dubbi sul menù o vieni in gruppo? Il nostro assistente ti risponde subito.
+104 | aria-label="Prenotazione rapida"
+105 | <legend>Giorno</legend>
+106 | <legend>Persone</legend>
+107 | aria-label="Una persona in meno"
+108 | aria-label="Una persona in più"
+109 | <legend>Ora</legend>
+110 | rel="noopener">Chiedi un tavolo su WhatsApp</a>
+111 | data-abrir-asistente>Chiedi all'assistente</button>
+112 | Ti confermiamo il tavolo su WhatsApp. Preferisci sceglierlo online? <a href="https://www.scennio.com/es/noor-lounge/calendar" target="_blank" rel="noopener nofollow">Prenota su Scennio</a>.
+113 | <div>Narghilè e cocktail a Valencia · Carrer Serrano Morales, 3 · 46004 València · <a href="tel:+34963120754">+34 963 12 07 54</a></div>
+114 | È vietata la vendita di tabacco e alcolici ai minori di 18 anni. Il fumo nuoce gravemente alla salute. © 2026 NOOR Lounge
+115 | aria-label="Scrivici su WhatsApp"
+116 | Ti teniamo un tavolo stasera?
+117 | aria-label="Chiedici"
+118 | <span class="texto">Chiedici</span>
+119 | Assistente NOOR</strong><span>● Online</span>
+120 | aria-label="Chiudi">×</button>
+121 | for="asistente-texto">La tua domanda</label>
+122 | placeholder="Scrivi la tua domanda…"
+123 | aria-label="Invia"
+124 | Risposte automatiche. Per prenotare, meglio WhatsApp.

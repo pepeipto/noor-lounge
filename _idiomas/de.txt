@@ -1,0 +1,126 @@
+# de: eine Zeile pro Text, „Nummer | Text“. Die Nummer entspricht fuentes.txt. \n = Zeilenumbruch.
+0 | content="Shisha-Lounge in L'Eixample, Valencia: Shishas aus geschliffenem Kristall (Kazan, Full Black, frische Frucht) und Cocktails ab 12 €. Täglich von 16:00 bis 04:00 Uhr geöffnet. Reservieren Sie Ihren Tisch."
+1 | NOOR Lounge · Shisha &amp; Cocktails in Valencia
+2 | content="Shishas aus geschliffenem Kristall, Cocktails und warmes Licht in der Carrer Serrano Morales, 3 (L'Eixample). Täglich von 16:00 bis 04:00 Uhr."
+3 | content="Rauchende Shisha aus geschliffenem Kristall an der Bar der NOOR Lounge, Valencia"
+4 | content="Shishas aus geschliffenem Kristall und Cocktails in L'Eixample. Täglich von 16:00 bis 04:00 Uhr."
+5 | "Shisha-Lounge und Cocktailbar in L'Eixample, Valencia. Shishas aus geschliffenem Kristall, Cocktails, Tee und Wein. Täglich von 16:00 bis 04:00 Uhr geöffnet."
+6 | "name": "Tischreservierung"
+7 | Wann hat die NOOR Lounge geöffnet?
+8 | Wir haben täglich geöffnet, von Montag bis Sonntag, von 16:00 bis 04:00 Uhr.
+9 | Wo befindet sich diese Shisha-Lounge in Valencia?
+10 | In der Carrer Serrano Morales, 3, L'Eixample, 46004 València, direkt an der Plaza Cánovas.
+11 | Was kostet eine Shisha?
+12 | Unsere Shishas kosten zwischen 16 € (Rubio oder Josh) und 30 € (Kazan Especial), die Shisha mit frischer Frucht 40 €.
+13 | Wie reserviere ich einen Tisch?
+14 | Online über Scennio (1 bis 10 Personen), telefonisch unter +34 963 12 07 54 oder per WhatsApp. Für große Gruppen am besten per WhatsApp.
+15 | Gibt es Cocktails?
+16 | Ja: Cocktails ab 12 €, darunter Mojitos mit Erdbeere, Mango oder Maracuja, Espresso Martini, PornStar Martini, Negroni und mehr.
+17 | Wie viel gibt man im Schnitt pro Person aus?
+18 | Zwischen 10 und 20 € pro Person, je nach Bestellung.
+19 | <nav class="menu" id="menu-principal" aria-label="Hauptmenü">
+20 | <a href="#lounge">Die Lounge</a>
+21 | <a href="#ritual">Das Ritual</a>
+22 | <a href="#carta">Karte</a>
+23 | <a href="#preguntas">Fragen</a>
+24 | <a href="#galeria">Galerie</a>
+25 | <a href="#visitanos">Anfahrt</a>
+26 | rel="noopener">Tisch reservieren</a>
+27 | aria-label="Menü öffnen"
+28 | NOOR КАЛЬЯН Lounge: Shisha und Cocktails in Valencia
+29 | alt="Rauchende Shisha aus geschliffenem Kristall auf der Bar der NOOR Lounge"
+30 | <span class="etiqueta">Shisha-Lounge · València</span>
+31 | <span>4,7 ★ bei Google</span><span data-abierto>Täglich von 16:00 bis 04:00 Uhr</span>
+32 | Shisha aus geschliffenem Kristall, Naturkohle und Cocktails ohne Eile. L'Eixample.
+33 |  Tisch reservieren</a>
+34 | href="#carta">Zur Karte</a>
+35 | <div class="nota"><strong>4,7 ★</strong><span>139 Google-Bewertungen</span></div>
+36 | <span data-abierto>Täglich</span>
+37 | Limitierte Edition · Geschliffenes Kristall
+38 | Hier beginnt die Nacht <em>mit Licht</em>.
+39 | <div class="hero-pista">Scrollen</div>
+40 | <span>Shisha</span><span>Kazan</span><span>Mojitos</span><span>Chai Latte</span><span>Espresso Martini</span><span>Gute Musik</span><span>Bis 4:00 Uhr</span>
+41 | <span class="etiqueta aparece">Die Lounge</span>
+42 | Shisha in Valencia, <em>im warmen Licht</em> von L'Eixample
+43 | Noor bedeutet Licht, und das spürt man hier. Kupferfarbene Fliesen, Sofas für lange Nächte, Säulen, die wie Glut leuchten, und eine Bar, an der Shisha und Cocktails dieselbe Sprache sprechen. Nur einen Schritt von der Plaza Cánovas entfernt.
+44 | Zum Feiern, für ein langes Gespräch oder einfach so. Täglich geöffnet, von 16:00 bis 04:00 Uhr.
+45 | <div><strong>4,7 ★</strong><span>139 Google-Bewertungen</span></div>
+46 | <div><strong>16–04 Uhr</strong><span>Täglich</span></div>
+47 | <div><strong>10–20 €</strong><span>Durchschnitt pro Person (Google)</span></div>
+48 | alt="Gastraum des NOOR, Shisha-Lounge in Valencia, mit kupferfarben gefliester Bar, Hockern und Shishas"
+49 | alt="Gast genießt eine Shisha an der Bar der NOOR Lounge"
+50 | <span class="etiqueta aparece">Das Ritual</span>
+51 | Eine gute Shisha <em>braucht Zeit</em>
+52 | <h3>Ihr Geschmack</h3><p>Rubio, Fusion, Full Black, Kazan oder Josh. Sagen Sie uns, ob Sie es frisch, süß, fruchtig oder intensiv mögen – wir beraten Sie am Tisch.</p>
+53 | <h3>Frisch zubereitet</h3><p>Von Hand gestopfter Kopf, Naturkohle mit der richtigen Glut und makelloses Kristall bei jedem Service.</p>
+54 | <h3>Ihre Zeit</h3><p>Ein Cocktail, gute Musik und eine Bar, die bis vier Uhr leuchtet. Alles andere entscheiden Sie.</p>
+55 | <span class="etiqueta aparece">Die Karte</span>
+56 | Rauch, <em>Eis</em> und Zeit ohne Eile
+57 | Shishas, Cocktails und Tee zum Teilen: das Wesentliche des NOOR in drei Gesten. Fragen Sie am Tisch nach Ihrem Geschmack.
+58 | alt="Blau-goldene Shisha mit einem Cocktail in der NOOR Lounge Valencia"
+59 | <h3>Shishas</h3><p>Von Rubio bis Kazan Especial, dazu unsere Spezialitäten mit frischer Frucht. Ab 16 €.</p>
+60 | alt="Mojito mit Minze neben einer Shisha"
+61 | <h3>Cocktails</h3><p>Mojitos mit Erdbeere, Mango oder Maracuja, Espresso Martini, PornStar, Negroni. Klassiker, gut gemixt, ab 12 €.</p>
+62 | alt="Rosafarbene Gin Tonics auf einem Tisch aus grünem Marmor im NOOR"
+63 | <h3>Tee und Prickelndes</h3><p>Chai Latte und Tee zum Teilen; Cava, Veuve Clicquot oder Dom Pérignon, wenn die Nacht danach verlangt. Ab 8 €.</p>
+64 | <h3>Shishas</h3>
+65 | <li><span>Frische Frucht</span><b>40 €</b></li>
+66 | <h3>Cocktails</h3>\n            <ul>
+67 | <li><span>Mojito klassisch, Erdbeere, Mango oder Maracuja</span>
+68 | <li><span>Piña Colada · Whiskey Sour · Bloody Mary</span>
+69 | <li><span>Premium-Cocktail</span>
+70 | <h3>Tee, Wein und mehr</h3>
+71 | <li><span>Chai Latte (klein / groß)</span>
+72 | <li><span>Zitrus-Ingwer- oder Beerentee (1 l)</span>
+73 | <li><span>Wein im Glas · Cava</span>
+74 | <li><span>Bier</span><b>ab 3,50 €</b></li>
+75 | <li><span>Softdrinks</span>
+76 | <li><span>PlayStation 5 an Ihrem Tisch</span>
+77 | rel="noopener nofollow">Vollständige Karte (auf Spanisch)</a>
+78 | <span class="etiqueta aparece">Galerie</span>
+79 | NOOR <em>bei Nacht</em>
+80 | Glut, Kristall und Kupfer: unsere Shisha-Lounge in L'Eixample, so wie sie nach Mitternacht aussieht.
+81 | alt="Ecke mit Shisha und warm leuchtender Säule in der NOOR Lounge"
+82 | alt="Bar des NOOR mit beleuchteten Flaschen"
+83 | alt="Weinkarte des NOOR, Shisha-Lounge in Valencia"
+84 | alt="Cocktail mit Schaum in der NOOR Lounge"
+85 | alt="Fassade der Shisha-Lounge NOOR in der Carrer Serrano Morales 3, Valencia"
+86 | alt="Runder Spiegel mit orangefarbenem Lichtring im NOOR"
+87 | alt="Roter Cocktail an der Bar des NOOR"
+88 | alt="Karte mit Tee und Heißgetränken des NOOR"
+89 | <span class="etiqueta aparece">Fragen</span>
+90 | Vor Ihrem <em>Besuch</em>
+91 | <span class="etiqueta aparece">Anfahrt</span>
+92 | Wir halten Ihnen <em>einen Tisch</em> frei
+93 | <p class="aparece">Mitten in L'Eixample, direkt an der Plaza Cánovas.</p>
+94 | <dt>Adresse</dt>
+95 | <dt>Telefon</dt><dd><a href="tel:+34963120754">+34 963 12 07 54</a></dd>
+96 | <dt>Öffnungszeiten <span
+97 | <td>Montag bis Sonntag</td>
+98 | rel="noopener">Per WhatsApp reservieren</a>
+99 | href="#reservar">Tag und Uhrzeit wählen</a>
+100 | <span>Interaktive Karte anzeigen</span>
+101 | <span class="etiqueta aparece">Heute Abend</span>
+102 | Die Glut ist schon <em>entfacht</em>
+103 | Reservieren Sie Ihren Tisch mit einer Nachricht. Fragen zur Karte oder Sie kommen als Gruppe? Unser Assistent antwortet sofort.
+104 | aria-label="Schnellreservierung"
+105 | <legend>Tag</legend>
+106 | <legend>Personen</legend>
+107 | aria-label="Eine Person weniger"
+108 | aria-label="Eine Person mehr"
+109 | <legend>Uhrzeit</legend>
+110 | rel="noopener">Tisch per WhatsApp anfragen</a>
+111 | data-abrir-asistente>Den Assistenten fragen</button>
+112 | Wir bestätigen Ihren Tisch per WhatsApp. Lieber online auswählen? <a href="https://www.scennio.com/es/noor-lounge/calendar" target="_blank" rel="noopener nofollow">Bei Scennio reservieren</a>.
+113 | <div>Shisha und Cocktails in Valencia · Carrer Serrano Morales, 3 · 46004 València · <a href="tel:+34963120754">+34 963 12 07 54</a></div>
+114 | Der Verkauf von Tabak und Alkohol an Personen unter 18 Jahren ist verboten. Rauchen schadet Ihrer Gesundheit erheblich. © 2026 NOOR Lounge
+115 | aria-label="Schreiben Sie uns per WhatsApp"
+116 | Sollen wir Ihnen heute Abend einen Tisch freihalten?
+117 | aria-label="Fragen Sie uns"
+118 | <span class="texto">Fragen Sie uns</span>
+119 | NOOR-Assistent</strong><span>● Online</span>
+120 | aria-label="Schließen">×</button>
+121 | for="asistente-texto">Ihre Frage</label>
+122 | placeholder="Ihre Frage eingeben …"
+123 | aria-label="Senden"
+124 | Automatische Antworten. Für Reservierungen am besten per WhatsApp.

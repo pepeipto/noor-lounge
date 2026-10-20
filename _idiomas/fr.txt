@@ -1,0 +1,126 @@
+# fr : une ligne par texte, « numéro | texte ». Le numéro est celui de fuentes.txt. \n = saut de ligne.
+0 | content="Lounge à chicha dans L'Eixample, Valence : chichas en cristal taillé (Kazan, Full Black, fruit frais) et cocktails dès 12 €. Ouvert tous les jours de 16:00 à 04:00. Réservez votre table."
+1 | NOOR Lounge · Chicha et cocktails à Valence
+2 | content="Chichas en cristal taillé, cocktails et lumière chaleureuse au Carrer Serrano Morales, 3 (L'Eixample). Tous les jours de 16:00 à 04:00."
+3 | content="Chicha en cristal taillé fumant sur le bar du NOOR Lounge, Valence"
+4 | content="Chichas en cristal taillé et cocktails dans L'Eixample. Tous les jours de 16:00 à 04:00."
+5 | "Lounge à chicha et bar à cocktails dans L'Eixample, Valence. Chichas en cristal taillé, cocktails, thés et vins. Ouvert tous les jours de 16:00 à 04:00."
+6 | "name": "Réservation de table"
+7 | Quels sont les horaires du NOOR Lounge ?
+8 | Nous sommes ouverts tous les jours, du lundi au dimanche, de 16:00 à 04:00.
+9 | Où se trouve ce lounge à chicha à Valence ?
+10 | Au Carrer Serrano Morales, 3, L'Eixample, 46004 València, à côté de la Plaza Cánovas.
+11 | Combien coûte une chicha ?
+12 | Les chichas vont de 16 € (Rubio ou Josh) à 30 € (Kazan Especial), et 40 € pour celle au fruit frais.
+13 | Comment réserver une table ?
+14 | En ligne sur Scennio (de 1 à 10 personnes), par téléphone au +34 963 12 07 54 ou sur WhatsApp. Pour les grands groupes, WhatsApp est préférable.
+15 | Proposez-vous des cocktails ?
+16 | Oui : cocktails dès 12 €, avec mojitos à la fraise, à la mangue ou au fruit de la passion, Espresso Martini, PornStar Martini, Negroni et bien d'autres.
+17 | Quel est le budget moyen par personne ?
+18 | Entre 10 et 20 € par personne, selon votre commande.
+19 | <nav class="menu" id="menu-principal" aria-label="Menu principal">
+20 | <a href="#lounge">Le lounge</a>
+21 | <a href="#ritual">Le rituel</a>
+22 | <a href="#carta">Carte</a>
+23 | <a href="#preguntas">Questions</a>
+24 | <a href="#galeria">Galerie</a>
+25 | <a href="#visitanos">Nous trouver</a>
+26 | rel="noopener">Réserver</a>
+27 | aria-label="Ouvrir le menu"
+28 | NOOR КАЛЬЯН Lounge : chicha et cocktails à Valence
+29 | alt="Chicha en cristal taillé fumant sur le bar du NOOR Lounge"
+30 | <span class="etiqueta">Lounge à chicha · Valence</span>
+31 | <span>4,7 ★ sur Google</span><span data-abierto>Tous les jours de 16:00 à 04:00</span>
+32 | Chicha en cristal taillé, charbon naturel et cocktails sans hâte. L'Eixample.
+33 |  Réservez votre table</a>
+34 | href="#carta">Découvrir la carte</a>
+35 | <div class="nota"><strong>4,7 ★</strong><span>139 avis Google</span></div>
+36 | <span data-abierto>Tous les jours</span>
+37 | Édition limitée · Cristal taillé
+38 | Ici, la nuit commence <em>par la lumière</em>.
+39 | <div class="hero-pista">Faites défiler</div>
+40 | <span>Chicha</span><span>Kazan</span><span>Mojitos</span><span>Chai latte</span><span>Espresso Martini</span><span>Bonne musique</span><span>Jusqu'à 4:00</span>
+41 | <span class="etiqueta aparece">Le lounge</span>
+42 | La chicha à Valence, <em>dans la lumière chaude</em> de L'Eixample
+43 | Noor signifie lumière, et cela se ressent. Carreaux cuivrés, canapés faits pour prolonger la nuit, colonnes qui rougeoient comme des braises et un bar où chicha et cocktails parlent la même langue. À deux pas de la Plaza Cánovas.
+44 | Pour célébrer, pour une longue conversation ou pour rien de particulier. Ouvert tous les jours, de 16:00 à 04:00.
+45 | <div><strong>4,7 ★</strong><span>139 avis Google</span></div>
+46 | <div><strong>16–04 h</strong><span>Tous les jours</span></div>
+47 | <div><strong>10–20 €</strong><span>Budget moyen par personne (Google)</span></div>
+48 | alt="Salle du NOOR, lounge à chicha à Valence, avec bar en carreaux cuivrés, tabourets et chichas"
+49 | alt="Client savourant une chicha au bar du NOOR Lounge"
+50 | <span class="etiqueta aparece">Le rituel</span>
+51 | Une chicha bien faite <em>ne se presse pas</em>
+52 | <h3>Votre saveur</h3><p>Rubio, Fusion, Full Black, Kazan ou Josh. Dites-nous si vous la voulez fraîche, douce, fruitée ou intense, et nous vous guidons à table.</p>
+53 | <h3>Préparée à la minute</h3><p>Foyer garni à la main, charbon naturel à point et cristal impeccable à chaque service.</p>
+54 | <h3>Le temps vous appartient</h3><p>Un cocktail, de la bonne musique et le bar allumé jusqu'à quatre heures. Le reste, c'est vous qui décidez.</p>
+55 | <span class="etiqueta aparece">La carte</span>
+56 | Fumée, <em>glace</em> et temps suspendu
+57 | Chichas, cocktails et thés à partager : l'essentiel du NOOR en trois gestes. Demandez conseil à table pour votre saveur.
+58 | alt="Chicha bleue et dorée avec un cocktail au NOOR Lounge Valence"
+59 | <h3>Chichas</h3><p>De la Rubio à la Kazan Especial, sans oublier nos créations au fruit frais. Dès 16 €.</p>
+60 | alt="Mojito à la menthe à côté d'une chicha"
+61 | <h3>Cocktails</h3><p>Mojitos à la fraise, à la mangue ou au fruit de la passion, Espresso Martini, PornStar, Negroni. Des classiques bien servis, dès 12 €.</p>
+62 | alt="Gin tonics roses sur une table en marbre vert au NOOR"
+63 | <h3>Thés et bulles</h3><p>Chai latte et thés à partager ; cava, Veuve Clicquot ou Dom Pérignon quand la nuit le demande. Dès 8 €.</p>
+64 | <h3>Chichas</h3>
+65 | <li><span>Fruit frais</span><b>40 €</b></li>
+66 | <h3>Cocktails</h3>\n            <ul>
+67 | <li><span>Mojito classique, fraise, mangue ou fruit de la passion</span>
+68 | <li><span>Piña colada · Whiskey Sour · Bloody Mary</span>
+69 | <li><span>Cocktail Premium</span>
+70 | <h3>Thés, vins et plus</h3>
+71 | <li><span>Chai latte (petit / grand)</span>
+72 | <li><span>Thé agrumes et gingembre ou fruits rouges (1 l)</span>
+73 | <li><span>Vin au verre · Cava</span>
+74 | <li><span>Bières</span><b>dès 3,50 €</b></li>
+75 | <li><span>Sodas</span>
+76 | <li><span>PlayStation 5 à votre table</span>
+77 | rel="noopener nofollow">Voir la carte complète (en espagnol)</a>
+78 | <span class="etiqueta aparece">Galerie</span>
+79 | NOOR, <em>la nuit</em>
+80 | Braise, cristal et cuivre : notre lounge à chicha dans L'Eixample, tel qu'il apparaît passé minuit.
+81 | alt="Coin avec chicha et colonne de lumière chaude au NOOR Lounge"
+82 | alt="Bar du NOOR avec bouteilles éclairées"
+83 | alt="Carte des vins du NOOR, lounge à chicha à Valence"
+84 | alt="Cocktail mousseux servi au NOOR Lounge"
+85 | alt="Façade du lounge à chicha NOOR au Carrer Serrano Morales 3, Valence"
+86 | alt="Miroir rond cerclé de lumière orange au NOOR"
+87 | alt="Cocktail rouge servi au bar du NOOR"
+88 | alt="Carte des thés et boissons chaudes du NOOR"
+89 | <span class="etiqueta aparece">Questions</span>
+90 | Avant de <em>venir</em>
+91 | <span class="etiqueta aparece">Nous trouver</span>
+92 | Nous vous gardons <em>une table</em>
+93 | <p class="aparece">Au cœur de L'Eixample, à côté de la Plaza Cánovas.</p>
+94 | <dt>Adresse</dt>
+95 | <dt>Téléphone</dt><dd><a href="tel:+34963120754">+34 963 12 07 54</a></dd>
+96 | <dt>Horaires <span
+97 | <td>Du lundi au dimanche</td>
+98 | rel="noopener">Réserver sur WhatsApp</a>
+99 | href="#reservar">Choisir le jour et l'heure</a>
+100 | <span>Voir le plan interactif</span>
+101 | <span class="etiqueta aparece">Ce soir</span>
+102 | La braise est déjà <em>allumée</em>
+103 | Réservez votre table en un message. Une question sur la carte ou vous venez en groupe ? Notre assistant vous répond aussitôt.
+104 | aria-label="Réservation rapide"
+105 | <legend>Jour</legend>
+106 | <legend>Personnes</legend>
+107 | aria-label="Une personne de moins"
+108 | aria-label="Une personne de plus"
+109 | <legend>Heure</legend>
+110 | rel="noopener">Demander une table sur WhatsApp</a>
+111 | data-abrir-asistente>Poser une question à l'assistant</button>
+112 | Nous vous confirmons la table sur WhatsApp. Vous préférez la choisir en ligne ? <a href="https://www.scennio.com/es/noor-lounge/calendar" target="_blank" rel="noopener nofollow">Réserver sur Scennio</a>.
+113 | <div>Chicha et cocktails à Valence · Carrer Serrano Morales, 3 · 46004 València · <a href="tel:+34963120754">+34 963 12 07 54</a></div>
+114 | La vente de tabac et d'alcool aux mineurs de moins de 18 ans est interdite. Fumer nuit gravement à la santé. © 2026 NOOR Lounge
+115 | aria-label="Écrivez-nous sur WhatsApp"
+116 | On vous garde une table ce soir ?
+117 | aria-label="Une question ?"
+118 | <span class="texto">Une question ?</span>
+119 | Assistant NOOR</strong><span>● En ligne</span>
+120 | aria-label="Fermer">×</button>
+121 | for="asistente-texto">Votre question</label>
+122 | placeholder="Écrivez votre question…"
+123 | aria-label="Envoyer"
+124 | Réponses automatiques. Pour réserver, mieux vaut WhatsApp.

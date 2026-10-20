@@ -1,0 +1,126 @@
+# va (valencià, normativa de l'AVL): una línia per text, «número | text». El número és el de fuentes.txt. \n = salt de línia.
+0 | content="Shisha lounge a l'Eixample, València: cachimbes de cristall tallat (Kazan, Full Black, fruita natural) i còctels des de 12 €. Obert tots els dies de 16:00 a 04:00. Reserva la teua taula."
+1 | NOOR Lounge · Shisha i còctels a València
+2 | content="Cachimbes de cristall tallat, cocteleria i llum càlida al Carrer Serrano Morales, 3 (l'Eixample). Tots els dies de 16:00 a 04:00."
+3 | content="Shisha de cristall tallat traient fum a la barra de NOOR Lounge, València"
+4 | content="Cachimbes de cristall tallat i cocteleria a l'Eixample. Tots els dies de 16:00 a 04:00."
+5 | "Shisha lounge i cocteleria a l'Eixample, València. Cachimbes de cristall tallat, còctels, tes i vins. Obert tots els dies de 16:00 a 04:00."
+6 | "name": "Reserva de taula"
+7 | Quin horari té NOOR Lounge?
+8 | Obrim tots els dies, de dilluns a diumenge, de 16:00 a 04:00.
+9 | On és este shisha lounge de València?
+10 | Al Carrer Serrano Morales, 3, l'Eixample, 46004 València, al costat de la plaça de Cánovas.
+11 | Quant costa una cachimba?
+12 | Les shishes van de 16 € (Rubio o Josh) a 30 € (Kazan Especial), i 40 € la de fruita natural.
+13 | Com reserve taula?
+14 | En línia a Scennio (d'1 a 10 persones), per telèfon al 963 12 07 54 o per WhatsApp. Per a grups grans, millor per WhatsApp.
+15 | Teniu còctels?
+16 | Sí: cocteleria des de 12 €, amb mojitos de maduixa, mango o maracujà, Espresso Martini, PornStar Martini, Negroni i més.
+17 | Quina és la despesa mitjana per persona?
+18 | Entre 10 i 20 € per persona, segons el que demanes.
+19 | <nav class="menu" id="menu-principal" aria-label="Principal">
+20 | <a href="#lounge">El lounge</a>
+21 | <a href="#ritual">El ritual</a>
+22 | <a href="#carta">Carta</a>
+23 | <a href="#preguntas">Preguntes</a>
+24 | <a href="#galeria">Galeria</a>
+25 | <a href="#visitanos">Visita'ns</a>
+26 | rel="noopener">Reservar taula</a>
+27 | aria-label="Obrir el menú"
+28 | NOOR КАЛЬЯН Lounge: shisha i còctels a València
+29 | alt="Shisha de cristall tallat traient fum sobre la barra de NOOR Lounge"
+30 | <span class="etiqueta">Shisha Lounge · València</span>
+31 | <span>4,7 ★ a Google</span><span data-abierto>Tots els dies de 16:00 a 04:00</span>
+32 | Shisha de cristall tallat, carbó natural i còctels sense pressa. L'Eixample.
+33 |  Reserva la teua taula</a>
+34 | href="#carta">Descobrir la carta</a>
+35 | <div class="nota"><strong>4,7 ★</strong><span>139 opinions a Google</span></div>
+36 | <span data-abierto>Tots els dies</span>
+37 | Edició limitada · Cristall tallat
+38 | Ací la nit comença <em>amb llum</em>.
+39 | <div class="hero-pista">Llisca</div>
+40 | <span>Shisha</span><span>Kazan</span><span>Mojitos</span><span>Chai latte</span><span>Espresso Martini</span><span>Bona música</span><span>Fins a les 4:00</span>
+41 | <span class="etiqueta aparece">El lounge</span>
+42 | Shisha a València, <em>a la llum càlida</em> de l'Eixample
+43 | Noor vol dir llum, i ací es nota. Taulells de to coure, sofàs fets per a allargar la nit, columnes que cremen com brases i una barra on la cachimba i els còctels parlen el mateix idioma. A un pas de la plaça de Cánovas.
+44 | Per a celebrar, per a una conversa llarga o per a res en particular. Obrim cada dia, de 16:00 a 04:00.
+45 | <div><strong>4,7 ★</strong><span>139 opinions a Google</span></div>
+46 | <div><strong>16–04 h</strong><span>Tots els dies</span></div>
+47 | <div><strong>10–20 €</strong><span>Despesa mitjana per persona (Google)</span></div>
+48 | alt="Sala de NOOR, shisha lounge a València, amb barra de taulells de to coure, tamborets i cachimbes"
+49 | alt="Client gaudint d'una cachimba a la barra de NOOR Lounge"
+50 | <span class="etiqueta aparece">El ritual</span>
+51 | Una cachimba ben feta <em>no té pressa</em>
+52 | <h3>El teu sabor</h3><p>Rubio, Fusion, Full Black, Kazan o Josh. Digues-nos si la vols fresca, dolça, afruitada o intensa i t'orientem en taula.</p>
+53 | <h3>Preparada al moment</h3><p>Cassoleta carregada a mà, carbó natural en el seu punt i cristall impecable en cada servei.</p>
+54 | <h3>El temps, teu</h3><p>Un còctel, bona música i la barra encesa fins a les quatre. La resta ho decideixes tu.</p>
+55 | <span class="etiqueta aparece">La carta</span>
+56 | Fum, <em>gel</em> i temps lent
+57 | Shishes, còctels i tes per a compartir: l'essència de NOOR en tres gestos. Pregunta en taula pel teu sabor.
+58 | alt="Shisha blava i daurada amb un còctel a NOOR Lounge València"
+59 | <h3>Shishes i cachimbes</h3><p>De la Rubio a la Kazan Especial, i les nostres especials amb fruita natural. Des de 16 €.</p>
+60 | alt="Mojito amb herba-sana al costat d'una cachimba"
+61 | <h3>Còctels</h3><p>Mojitos de maduixa, mango o maracujà, Espresso Martini, PornStar, Negroni. Clàssics ben servits, des de 12 €.</p>
+62 | alt="Gintònics rosats sobre una taula de marbre verd a NOOR"
+63 | <h3>Tes i bombolles</h3><p>Chai latte i tes per a compartir; cava, Veuve Clicquot o Dom Pérignon quan la nit ho demana. Des de 8 €.</p>
+64 | <h3>Shishes</h3>
+65 | <li><span>Fruita natural</span><b>40 €</b></li>
+66 | <h3>Còctels</h3>\n            <ul>
+67 | <li><span>Mojito clàssic, maduixa, mango o maracujà</span>
+68 | <li><span>Piña colada · Whiskey Sour · Bloody Mary</span>
+69 | <li><span>Còctel Premium</span>
+70 | <h3>Tes, vins i més</h3>
+71 | <li><span>Chai latte (xicotet / gran)</span>
+72 | <li><span>Te cítric amb gingebre o fruits roigs (1 l)</span>
+73 | <li><span>Vi per copa · Cava</span>
+74 | <li><span>Cerveses</span><b>des de 3,50 €</b></li>
+75 | <li><span>Refrescos</span>
+76 | <li><span>PlayStation 5 en la teua taula</span>
+77 | rel="noopener nofollow">Veure la carta completa (en castellà)</a>
+78 | <span class="etiqueta aparece">Galeria</span>
+79 | NOOR, <em>de nit</em>
+80 | Brasa, cristall i coure: el nostre lounge de shisha a l'Eixample, tal com es veu passada la mitjanit.
+81 | alt="Racó amb cachimba i columna de llum càlida a NOOR Lounge"
+82 | alt="Barra de NOOR amb botelles il·luminades"
+83 | alt="Carta de vins de NOOR, shisha lounge a València"
+84 | alt="Còctel amb escuma servit a NOOR Lounge"
+85 | alt="Façana de NOOR shisha lounge al Carrer Serrano Morales 3, València"
+86 | alt="Espill redó amb un cércol de llum taronja a NOOR"
+87 | alt="Còctel roig servit a la barra de NOOR"
+88 | alt="Carta de tes i begudes calentes de NOOR"
+89 | <span class="etiqueta aparece">Preguntes freqüents</span>
+90 | Abans de <em>vindre</em>
+91 | <span class="etiqueta aparece">Visita'ns</span>
+92 | Et guardem <em>taula</em>
+93 | <p class="aparece">En ple Eixample, al costat de la plaça de Cánovas.</p>
+94 | <dt>Adreça</dt>
+95 | <dt>Telèfon</dt><dd><a href="tel:+34963120754">963 12 07 54</a></dd>
+96 | <dt>Horari <span
+97 | <td>De dilluns a diumenge</td>
+98 | rel="noopener">Reservar per WhatsApp</a>
+99 | href="#reservar">Triar dia i hora</a>
+100 | <span>Veure el mapa interactiu</span>
+101 | <span class="etiqueta aparece">Esta nit</span>
+102 | La brasa ja està <em>encesa</em>
+103 | Reserva la teua taula amb un missatge. Dubtes sobre la carta o véns en grup? El nostre assistent et respon al moment.
+104 | aria-label="Reserva ràpida"
+105 | <legend>Dia</legend>
+106 | <legend>Persones</legend>
+107 | aria-label="Una persona menys"
+108 | aria-label="Una persona més"
+109 | <legend>Hora</legend>
+110 | rel="noopener">Demanar taula per WhatsApp</a>
+111 | data-abrir-asistente>Preguntar a l'assistent</button>
+112 | Et confirmem la taula per WhatsApp. Prefereixes triar-la en línia? <a href="https://www.scennio.com/es/noor-lounge/calendar" target="_blank" rel="noopener nofollow">Reserva a Scennio</a>.
+113 | <div>Shisha i còctels a València · Carrer Serrano Morales, 3 · 46004 València · <a href="tel:+34963120754">963 12 07 54</a></div>
+114 | Prohibida la venda de tabac i alcohol a menors de 18 anys. El consum de tabac perjudica greument la salut. © 2026 NOOR Lounge
+115 | aria-label="Escriu-nos per WhatsApp"
+116 | Et guardem taula esta nit?
+117 | aria-label="Pregunta'ns"
+118 | <span class="texto">Pregunta'ns</span>
+119 | Assistent NOOR</strong><span>● En línia</span>
+120 | aria-label="Tancar">×</button>
+121 | for="asistente-texto">La teua pregunta</label>
+122 | placeholder="Escriu la teua pregunta…"
+123 | aria-label="Enviar"
+124 | Respostes automàtiques. Per a reserves, millor per WhatsApp.
