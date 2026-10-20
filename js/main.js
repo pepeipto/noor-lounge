@@ -53,6 +53,8 @@
   const frases = [...document.querySelectorAll('.hero-frase')];
   const cabecera = document.querySelector('.cabecera');
   const parallax = [...document.querySelectorAll('[data-parallax]')];
+  const ritual = document.querySelector('.ritual');
+  const escena = { abre: 0, brasa: 0 };
   let objetivo = 0, suave = 0, ultimoY = scrollY;
 
   function alHacerScroll() {
@@ -75,12 +77,15 @@
     if (hero) {
       hero.style.setProperty('--p', suave.toFixed(4));
       hero.style.setProperty('--intro', Math.max(0, 1 - suave / .16).toFixed(3));
-      // La pieza: se dibuja (0–45 %), se llena de cristal y metal, se encienden las brasas y aparece la placa.
-      const tramo = (a, b) => Math.min(Math.max((suave - a) / (b - a), 0), 1).toFixed(4);
-      hero.style.setProperty('--dibujo', (.06 + .94 * tramo(0, .45)).toFixed(4));
-      hero.style.setProperty('--relleno', tramo(.4, .62));
-      hero.style.setProperty('--brasa', tramo(.55, .75));
-      hero.style.setProperty('--placa', tramo(.78, .9));
+      // La pieza: el arco pasa del primer plano del humo a la shisha entera, se avivan las brasas y aparece la placa.
+      const tramo = (a, b) => Math.min(Math.max((suave - a) / (b - a), 0), 1);
+      const x = tramo(.02, .7);
+      const abre = x * x * (3 - 2 * x);
+      escena.abre = abre;
+      escena.brasa = tramo(.1, .65);
+      hero.style.setProperty('--abre', abre.toFixed(4));
+      hero.style.setProperty('--brasa', escena.brasa.toFixed(4));
+      hero.style.setProperty('--placa', tramo(.78, .9).toFixed(4));
       // Tramos del recorrido: cada frase y cada foto de fondo tiene el suyo.
       frases.forEach((f) => {
         const [a, b] = f.dataset.tramo.split(',').map(Number);
@@ -90,6 +95,10 @@
         if (!f.dataset.desde) return;
         f.classList.toggle('visible', suave >= Number(f.dataset.desde));
       });
+    }
+    if (ritual) {
+      const r = ritual.getBoundingClientRect();
+      ritual.style.setProperty('--ritual', Math.min(Math.max(-r.top / Math.max(r.height - innerHeight, 1), 0), 1).toFixed(4));
     }
     for (const el of parallax) {
       const r = el.getBoundingClientRect();
@@ -192,6 +201,109 @@
       requestAnimationFrame(pintar);
     })(0);
   }
+  // ---------- La pieza: foto real animada en WebGL ----------
+  // El humo de la foto se deforma con ruido (se mueve como humo de verdad), salen volutas nuevas
+  // de la cazoleta y las brasas laten. Coordenadas de la foto (0–1, y hacia abajo): brasas en (.54, .215),
+  // cazoleta y vástago en x≈.515, nube de humo alrededor de (.5, .42).
+  function iniciarCachimba(listo) {
+    const arco = document.querySelector('.arco');
+    const lienzo = document.getElementById('cachimba-gl');
+    const foto = new Image();
+    foto.src = 'img/cachimba-humo.webp';
+    foto.decode().then(() => listo(), () => listo());
+    const gl = !sinMovimiento && lienzo?.getContext('webgl', { antialias: false, alpha: false });
+    if (!gl) { lienzo?.remove(); return; }
+    const vs = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+    const fs = `precision highp float;
+      uniform sampler2D img;uniform vec2 res,centro,cubre;uniform float t,zoom,brasa,luz;
+      float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+      float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);
+        return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}
+      float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<4;i++){v+=a*n(p);p=p*2.07+vec2(1.7,9.2);a*=.5;}return v;}
+      void main(){
+        vec2 uv=gl_FragCoord.xy/res;uv.y=1.-uv.y;
+        vec2 iu=(uv-.5)*cubre/zoom+centro;
+        vec3 base=texture2D(img,iu).rgb;
+        float lum=dot(base,vec3(.299,.587,.114));
+        float sat=max(base.r,max(base.g,base.b))-min(base.r,min(base.g,base.b));
+        float region=1.-smoothstep(.6,1.2,length((iu-vec2(.5,.42))/vec2(.40,.20)));
+        float ancho=iu.y<.38?.075:.045;
+        float pilar=(1.-smoothstep(ancho-.02,ancho,abs(iu.x-.515)))*step(.18,iu.y);
+        float m=smoothstep(.22,.6,lum)*(1.-smoothstep(.12,.32,sat))*region*(1.-pilar);
+        float T=t*.35;
+        vec2 flujo=vec2(fbm(iu*7.+vec2(T*.3,-T)),fbm(iu*7.+vec2(3.1,1.7-T*1.2)))-.5;
+        vec3 col=texture2D(img,iu+flujo*m*.045).rgb;
+        col+=m*(fbm(iu*5.+flujo*3.+vec2(0.,-T*.6))-.45)*.22;
+        vec2 q=iu-vec2(.515,.33);
+        float nube=fbm(vec2(q.x*4.,q.y*5.)+vec2(-sign(q.x)*T*.5,T*.4)+flujo);
+        float forma=exp(-pow(q.y/.13,2.))*smoothstep(.45,.08,abs(q.x));
+        float vol=smoothstep(.45,.85,nube)*forma*(.35+.5*brasa)*(1.-pilar);
+        col=mix(col,vec3(.86,.82,.78),vol*.55);
+        vec2 b=(iu-vec2(.54,.215))/vec2(.05,.025);
+        float parp=.75+.25*sin(t*3.1)*sin(t*1.7+1.3);
+        col+=vec3(1.,.45,.12)*exp(-dot(b,b))*(.25+.6*brasa)*parp;
+        col*=luz;
+        col*=mix(.55,1.,smoothstep(1.2,.35,length(uv-vec2(.5,.45))));
+        gl_FragColor=vec4(col,1.);
+      }`;
+    const prog = gl.createProgram();
+    for (const [tipo, src] of [[gl.VERTEX_SHADER, vs], [gl.FRAGMENT_SHADER, fs]]) {
+      const sh = gl.createShader(tipo);
+      gl.shaderSource(sh, src);
+      gl.compileShader(sh);
+      if (!gl.getShaderParameter(sh, gl.COMPILE_STATUS)) { console.warn(gl.getShaderInfoLog(sh)); lienzo.remove(); return; }
+      gl.attachShader(prog, sh);
+    }
+    gl.linkProgram(prog);
+    gl.useProgram(prog);
+    gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+    const loc = gl.getAttribLocation(prog, 'p');
+    gl.enableVertexAttribArray(loc);
+    gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+    const u = Object.fromEntries(['res', 'centro', 'cubre', 't', 'zoom', 'brasa', 'luz'].map((k) => [k, gl.getUniformLocation(prog, k)]));
+    const aspectoFoto = 853 / 1280;
+
+    foto.decode().then(() => {
+      const tex = gl.createTexture();
+      gl.bindTexture(gl.TEXTURE_2D, tex);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, foto);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+      arco.classList.add('gl-listo');
+      requestAnimationFrame(pintar);
+    }, () => lienzo.remove());
+
+    function pintar(ms) {
+      requestAnimationFrame(pintar);
+      if (hero.getBoundingClientRect().bottom < 0) return; // fuera de pantalla no se pinta
+      const dpr = Math.min(devicePixelRatio || 1, 1.5);
+      const w = Math.round(lienzo.clientWidth * dpr), h = Math.round(lienzo.clientHeight * dpr);
+      if (lienzo.width !== w || lienzo.height !== h) { lienzo.width = w; lienzo.height = h; gl.viewport(0, 0, w, h); }
+      const aspecto = w / h;
+      const cubre = aspecto > aspectoFoto ? [1, aspectoFoto / aspecto] : [aspecto / aspectoFoto, 1];
+      const zoom = 2 - escena.abre;
+      const medio = cubre.map((c) => c / 2 / zoom);
+      const cx = Math.min(Math.max(.5, medio[0]), 1 - medio[0]);
+      const cy = Math.min(Math.max(.36 + escena.abre * .14, medio[1]), 1 - medio[1]);
+      gl.uniform2f(u.res, w, h);
+      gl.uniform2f(u.cubre, cubre[0], cubre[1]);
+      gl.uniform2f(u.centro, cx, cy);
+      gl.uniform1f(u.zoom, zoom);
+      gl.uniform1f(u.t, ms / 1000);
+      gl.uniform1f(u.brasa, escena.brasa);
+      gl.uniform1f(u.luz, .72 + escena.abre * .33);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+    }
+  }
+
+  // Pantalla de carga: se va cuando la foto de la pieza está lista (o a los 3 s como mucho).
+  let cargado = false;
+  const terminarCarga = () => { if (!cargado) { cargado = true; setTimeout(() => raiz.classList.add('cargado'), 500); } };
+  setTimeout(terminarCarga, 3000);
+  iniciarCachimba(terminarCarga);
   iniciarHumo();
   iniciarAscuas();
 

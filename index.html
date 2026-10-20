@@ -8,13 +8,13 @@
   <meta name="theme-color" content="#0a0706">
   <meta property="og:title" content="NOOR Lounge · Shisha & Cocktails en València">
   <meta property="og:description" content="Shishas, coctelería y ambiente cálido en Carrer Serrano Morales, 3. Todos los días de 16:00 a 04:00.">
-  <meta property="og:image" content="img/interior-2.webp">
+  <meta property="og:image" content="img/cachimba-humo.webp">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230a0706'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia' font-size='28' fill='%23e3a24f'%3EN%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="img/interior-2.webp">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preload" as="image" href="img/cachimba-humo.webp">
+  <link rel="stylesheet" href="css/styles.css?v=2">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -25,11 +25,15 @@
     "geo": { "@type": "GeoCoordinates", "latitude": 39.4690259, "longitude": -0.3657751 },
     "openingHours": "Mo-Su 16:00-04:00",
     "priceRange": "10-20 €",
-    "sameAs": ["https://www.instagram.com/noorloungevlc/"]
+    "sameAs": ["https://www.instagram.com/noorloungevlc/", "https://www.tiktok.com/@noorpub"]
   }
   </script>
 </head>
 <body>
+  <div class="cargador" aria-hidden="true">
+    <div class="cargador-logo">NOOR<small>КАЛЬЯН LOUNGE</small></div>
+    <div class="cargador-linea"><span></span></div>
+  </div>
   <div class="progreso" aria-hidden="true"></div>
   <canvas id="humo" aria-hidden="true"></canvas>
   <canvas id="ascuas" aria-hidden="true"></canvas>
@@ -38,6 +42,7 @@
     <a class="logo" href="#inicio" aria-label="NOOR Lounge, inicio">NOOR<small>КАЛЬЯН LOUNGE</small></a>
     <nav class="menu" aria-label="Principal">
       <a href="#lounge">El lounge</a>
+      <a href="#ritual">El ritual</a>
       <a href="#carta">Carta</a>
       <a href="#galeria">Galería</a>
       <a href="#visitanos">Visítanos</a>
@@ -51,76 +56,19 @@
   </header>
 
   <main>
-    <!-- Hero: el fondo se queda fijo mientras el scroll hace zoom, cambia de foto y pasa las frases -->
+    <!-- Hero: la escena se queda fija mientras el scroll abre la pieza y pasa las frases -->
     <section class="hero" id="inicio">
       <div class="hero-fijo">
-        <div class="hero-foto" style="background-image:url(img/interior-2.webp)"></div>
+        <div class="escena-fondo" style="background-image:url(img/cachimba-humo.webp)"></div>
         <div class="hero-velo"></div>
 
-        <!-- La pieza: shisha de edición limitada que se dibuja, se llena y se enciende con el scroll -->
-        <div class="pieza-halo" aria-hidden="true"></div>
-        <svg class="pieza" viewBox="0 0 420 900" role="img" aria-label="Shisha NOOR Signature de edición limitada">
-          <defs>
-            <linearGradient id="oro" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#f6dca6"/><stop offset=".45" stop-color="#d9a24e"/><stop offset="1" stop-color="#8a5326"/>
-            </linearGradient>
-            <linearGradient id="cristal" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#3a1a0c" stop-opacity=".9"/><stop offset=".35" stop-color="#c46a2a" stop-opacity=".55"/>
-              <stop offset=".5" stop-color="#f3b866" stop-opacity=".7"/><stop offset="1" stop-color="#2a1208" stop-opacity=".9"/>
-            </linearGradient>
-            <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#5a3415"/><stop offset=".4" stop-color="#f0c27f"/><stop offset=".6" stop-color="#fff0cc"/><stop offset="1" stop-color="#6b3d18"/>
-            </linearGradient>
-            <radialGradient id="fuego"><stop offset="0" stop-color="#fff1c4"/><stop offset=".35" stop-color="#ff9a3c"/><stop offset="1" stop-color="#ff5a1f" stop-opacity="0"/></radialGradient>
-          </defs>
-
-          <!-- humo de la pieza -->
-          <g class="humo-pieza" fill="none" stroke="#f3d7ae" stroke-linecap="round">
-            <path d="M210 52 C190 20 236 -6 214 -40 S226 -90 206 -120" stroke-width="3"/>
-            <path d="M200 52 C224 22 182 -6 202 -44 S186 -92 206 -126" stroke-width="2"/>
-          </g>
-
-          <!-- rellenos (aparecen después del trazo) -->
-          <g class="relleno">
-            <path d="M172 112 L177 74 Q210 62 243 74 L248 112 Z" fill="url(#metal)"/>
-            <path d="M176 114 L244 114 L231 150 Q210 160 189 150 Z" fill="url(#metal)" opacity=".85"/>
-            <ellipse cx="210" cy="176" rx="100" ry="14" fill="url(#metal)" opacity=".75"/>
-            <rect x="201" y="190" width="18" height="335" fill="url(#metal)" opacity=".8"/>
-            <path d="M198 528 C196 562 158 592 138 652 C113 724 128 804 210 824 C292 804 307 724 282 652 C262 592 224 562 222 528 Z" fill="url(#cristal)"/>
-            <path d="M136 690 Q210 708 284 690 C292 730 288 790 210 814 C132 790 128 730 136 690 Z" fill="#e3a24f" opacity=".28"/>
-          </g>
-
-          <!-- brasas -->
-          <g class="brasa">
-            <circle cx="210" cy="96" r="46" fill="url(#fuego)"/>
-            <rect x="186" y="86" width="9" height="16" rx="2" fill="#ffb25a"/><rect x="206" y="84" width="9" height="18" rx="2" fill="#ffd28a"/><rect x="226" y="86" width="9" height="16" rx="2" fill="#ffb25a"/>
-            <circle cx="210" cy="690" r="120" fill="url(#fuego)" opacity=".18"/>
-          </g>
-
-          <!-- trazo dorado que se dibuja -->
-          <g class="trazo">
-            <circle cx="210" cy="56" r="8" pathLength="1"/>
-            <path d="M172 112 L177 74 Q210 62 243 74 L248 112 Z" pathLength="1"/>
-            <path d="M176 114 L244 114 L231 150 Q210 160 189 150 Z" pathLength="1"/>
-            <ellipse cx="210" cy="176" rx="100" ry="14" pathLength="1"/>
-            <path d="M201 190 L201 525 M219 190 L219 525" pathLength="1"/>
-            <ellipse cx="210" cy="232" rx="20" ry="8" pathLength="1"/>
-            <ellipse cx="210" cy="292" rx="15" ry="6" pathLength="1"/>
-            <path d="M210 318 L236 350 L210 382 L184 350 Z" pathLength="1"/>
-            <path d="M210 330 L224 350 L210 370 L196 350 Z" pathLength="1"/>
-            <ellipse cx="210" cy="418" rx="15" ry="6" pathLength="1"/>
-            <ellipse cx="210" cy="512" rx="24" ry="9" pathLength="1"/>
-            <path d="M219 466 L262 466 L268 460 L268 472 L262 466" pathLength="1"/>
-            <path d="M268 466 C350 466 360 560 318 612 C276 664 344 724 372 764 L382 796" pathLength="1"/>
-            <path d="M376 792 L392 790 L404 862 L394 866 Z" pathLength="1"/>
-            <path d="M198 528 C196 562 158 592 138 652 C113 724 128 804 210 824 C292 804 307 724 282 652 C262 592 224 562 222 528 Z" pathLength="1"/>
-            <path d="M136 690 Q210 708 284 690" pathLength="1"/>
-            <path d="M160 628 Q210 612 260 628 M148 660 Q180 650 210 668 Q240 650 272 660" pathLength="1"/>
-            <path d="M178 742 L210 712 L242 742 L210 772 Z M210 726 L226 742 L210 758 L194 742 Z" pathLength="1"/>
-            <ellipse cx="210" cy="828" rx="86" ry="10" pathLength="1"/>
-          </g>
-        </svg>
-        <div class="pieza-placa" aria-hidden="true"><span>Edición limitada</span>NOOR Signature</div>
+        <!-- La pieza: foto real animada en WebGL (el humo se mueve, las brasas laten) que se abre con el scroll -->
+        <div class="arco">
+          <img class="arco-foto" src="img/cachimba-humo.webp" alt="Shisha de cristal tallado echando humo sobre la barra de NOOR" width="853" height="1280">
+          <canvas id="cachimba-gl" aria-hidden="true"></canvas>
+          <span class="arco-filo" aria-hidden="true"></span>
+        </div>
+        <div class="pieza-placa" aria-hidden="true"><span>Edición limitada</span>Cristal tallado · NOOR</div>
 
         <div class="hero-intro">
           <span class="etiqueta">Shisha Lounge · València</span>
@@ -136,8 +84,8 @@
           </div>
         </div>
 
-        <p class="hero-frase izq" data-tramo=".18,.42"><small>01 · La pieza</small>Una shisha de <em>edición limitada</em>, trazada en oro.</p>
-        <p class="hero-frase der" data-tramo=".46,.7"><small>02 · El ritual</small>Cristal ámbar, brasas lentas, <em>humo de seda</em>.</p>
+        <p class="hero-frase izq" data-tramo=".18,.42"><small>01 · La pieza</small>Cristal tallado a mano, <em>edición limitada</em>.</p>
+        <p class="hero-frase der" data-tramo=".46,.7"><small>02 · El humo</small>Denso, lento, <em>de seda</em>.</p>
         <p class="hero-frase izq" data-tramo=".74,1.01"><small>03 · Noor = luz</small>Solo para quien sabe <em>esperar la noche</em>.</p>
 
         <div class="hero-pista">Desliza</div>
@@ -166,6 +114,25 @@
         </div>
         <div class="foto-marco aparece" data-parallax="1">
           <img src="img/interior-1.webp" alt="Sala de NOOR Lounge con barra de azulejo cobrizo, taburetes y shishas" loading="lazy" width="1200" height="1600">
+        </div>
+      </div>
+    </section>
+
+    <section class="ritual" id="ritual">
+      <div class="contenedor ritual-rejilla">
+        <div class="ritual-foto">
+          <div class="ritual-marco">
+            <img src="img/ritual.webp" alt="Cliente disfrutando de una shisha en la barra de NOOR" loading="lazy" width="853" height="1280">
+          </div>
+        </div>
+        <div class="ritual-pasos">
+          <div class="ritual-cabeza">
+            <span class="etiqueta aparece">El ritual</span>
+            <h2 class="aparece">Una shisha no se pide, <em>se vive</em></h2>
+          </div>
+          <article class="paso aparece"><span>01</span><h3>Elige tu sabor</h3><p>Rubio, Fusion, Full Black o Kazan. Te aconsejamos en mesa según lo que te guste: fresco, dulce, afrutado o intenso.</p></article>
+          <article class="paso aparece"><span>02</span><h3>La preparamos al momento</h3><p>Cazoleta cargada a mano, carbón natural en su punto y cristal limpio en cada servicio.</p></article>
+          <article class="paso aparece"><span>03</span><h3>Sin prisa</h3><p>Un cóctel, buena música y la barra encendida hasta las cuatro de la mañana. El resto, cosa tuya.</p></article>
         </div>
       </div>
     </section>
@@ -224,7 +191,16 @@
           </div>
         </div>
         <div class="galeria-pie aparece">
-          <a class="boton boton-secundario" href="https://www.instagram.com/noorloungevlc/" target="_blank" rel="noopener">Síguenos en Instagram · @noorloungevlc</a>
+          <div class="redes-grandes">
+            <a class="red" href="https://www.instagram.com/noorloungevlc/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+              <span><small>Instagram</small>@noorloungevlc</span>
+            </a>
+            <a class="red" href="https://www.tiktok.com/@noorpub" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.4 2.2 1.8 3.7 4 3.9v3.2c-1.5 0-2.9-.4-4-1.2v6.3a6 6 0 1 1-6-6h.6v3.3a2.8 2.8 0 1 0 2.2 2.7V3h3.2Z"/></svg>
+              <span><small>TikTok</small>@noorpub</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -274,6 +250,7 @@
         <div>Carrer Serrano Morales, 3 · 46004 València · <a href="tel:+34963120754">963 12 07 54</a></div>
         <div class="pie-redes">
           <a href="https://www.instagram.com/noorloungevlc/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@noorpub" target="_blank" rel="noopener">TikTok</a>
           <a data-whatsapp href="#">WhatsApp</a>
         </div>
       </div>
@@ -308,7 +285,7 @@
     <p class="asistente-nota">Respuestas automáticas. Para reservas, mejor por WhatsApp.</p>
   </dialog>
 
-  <script src="js/datos.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/datos.js?v=2"></script>
+  <script src="js/main.js?v=2"></script>
 </body>
 </html>
