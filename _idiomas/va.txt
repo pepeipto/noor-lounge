@@ -107,3 +107,4 @@
 125 | <span class="etiqueta aparece">La teua taula</span>
 126 | Tria el teu <em>racó</em>
 127 | Toca una zona del local per a veure les seues taules i places, i reserva en un minut.
+128 | <a href="#mesas">Reserves</a>

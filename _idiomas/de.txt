@@ -107,3 +107,4 @@
 125 | <span class="etiqueta aparece">Ihr Tisch</span>
 126 | Wählen Sie Ihren <em>Platz</em>
 127 | Tippen Sie auf einen Bereich der Lounge, um Tische und Plätze zu sehen, und reservieren Sie in einer Minute.
+128 | <a href="#mesas">Reservieren</a>

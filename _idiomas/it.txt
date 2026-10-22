@@ -107,3 +107,4 @@
 125 | <span class="etiqueta aparece">Il tuo tavolo</span>
 126 | Scegli il tuo <em>angolo</em>
 127 | Tocca una zona del locale per vedere tavoli e posti, e prenota in un minuto.
+128 | <a href="#mesas">Prenota</a>

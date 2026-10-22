@@ -107,3 +107,4 @@
 125 | <span class="etiqueta aparece">Votre table</span>
 126 | Choisissez votre <em>coin</em>
 127 | Touchez une zone du lounge pour voir ses tables et ses places, et réservez en une minute.
+128 | <a href="#mesas">Réserver</a>

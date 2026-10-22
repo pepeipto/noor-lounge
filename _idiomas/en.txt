@@ -107,3 +107,4 @@
 125 | <span class="etiqueta aparece">Your table</span>
 126 | Choose your <em>spot</em>
 127 | Tap an area of the lounge to see its tables and seats, and book in a minute.
+128 | <a href="#mesas">Book</a>

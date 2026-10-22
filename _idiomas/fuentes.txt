@@ -107,3 +107,4 @@
 125 | <span class="etiqueta aparece">Tu mesa</span>
 126 | Elige tu <em>rincón</em>
 127 | Toca una zona del local para ver sus mesas y plazas, y reserva en un minuto.
+128 | <a href="#mesas">Reservas</a>
