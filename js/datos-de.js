@@ -7,6 +7,23 @@ window.NOOR = {
   carta: 'https://www.scennio.com/es/noor-lounge/menu',
   asistenteApi: '',
   textos: {
+    mapa: {
+      aria: "Interaktiver Raumplan der NOOR Lounge", entrada: "EINGANG", aseos: "TOILETTEN",
+      barras: { barra: "BAR", bebida: "GETRÄNKEBAR", shishas: "SHISHA" },
+      mesa: "Tisch", taburete: "Barhocker", mesaCorta: "Tisch", tab: "Hocker",
+      elige: "Bereich wählen", ayuda: "Tippen Sie auf einen Bereich im Plan oder wählen Sie ihn hier, um die Tische zu sehen.", reservar: "In diesem Bereich reservieren", nota: "Tag, Uhrzeit und Personenzahl wählen Sie in unserem Reservierungssystem; unser Serviceteam weist Ihnen den Tisch je nach Verfügbarkeit zu.",
+      hasta: (n) => `bis zu ${n} ${n === 1 ? 'Person' : 'Personen'}`,
+      resumen: (m, p) => `${m} ${m === 1 ? 'Tisch' : 'Tische'} · ${p} Plätze`,
+      reservarMesa: (id) => `Reservieren · Tisch ${id}`,
+      zonas: {
+        terraza: { nombre: "Terrasse", desc: "Zwei runde Tische am Eingang, um den Abend im Freien zu beginnen." },
+        play: { nombre: "PlayStation-Bereich", desc: "Plätze am Bildschirm mit PlayStation 5: spielen, während Sie rauchen." },
+        cine: { nombre: "98″-Bildschirm", desc: "Tische vor dem großen Bildschirm, ideal für Spiele und Gruppen." },
+        fondo: { nombre: "Sofas hinten", desc: "Unsere geräumigsten Tische, zwischen Lichtsäulen und dem 75″-Bildschirm." },
+        centro: { nombre: "Mitte", desc: "Im Herzen des Raums, mit Blick auf die ganze Lounge." },
+        barra: { nombre: "Bar", desc: "Hocker vor der Getränke- und der Shisha-Bar: Sehen Sie zu, wie wir Ihre Shisha vorbereiten." },
+      },
+    },
     abrirMenu: 'Menü öffnen',
     cerrarMenu: 'Menü schließen',
     abiertoAhora: 'Jetzt geöffnet · bis 04:00 Uhr',

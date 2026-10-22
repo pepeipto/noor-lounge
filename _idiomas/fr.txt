@@ -104,3 +104,6 @@
 124 | Réponses automatiques. Pour réserver, utilisez le bouton de réservation en ligne.
 83 | alt="Carte des vins du NOOR, lounge à chicha à Valence"
 88 | alt="Carte des thés et boissons chaudes du NOOR"
+125 | <span class="etiqueta aparece">Votre table</span>
+126 | Choisissez votre <em>coin</em>
+127 | Touchez une zone du lounge pour voir ses tables et ses places, et réservez en une minute.

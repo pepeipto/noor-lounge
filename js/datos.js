@@ -10,6 +10,23 @@ window.NOOR = {
   asistenteApi: '', // p. ej. 'https://servidor/api/asistente' para conectar una IA real
   // Textos de la interfaz que pinta main.js (menú, estado, reserva rápida y asistente).
   textos: {
+    mapa: {
+      aria: "Mapa interactivo de la sala de NOOR", entrada: "ENTRADA", aseos: "ASEOS",
+      barras: { barra: "BARRA", bebida: "BARRA DE BEBIDA", shishas: "SHISHAS" },
+      mesa: "Mesa", taburete: "Taburete", mesaCorta: "Mesa", tab: "Taburete",
+      elige: "Elige una zona", ayuda: "Toca una zona del mapa o elígela aquí para ver sus mesas.", reservar: "Reservar en esta zona", nota: "Eliges día, hora y personas en nuestro sistema de reservas; el equipo de sala te asigna la mesa según disponibilidad.",
+      hasta: (n) => `hasta ${n} ${n === 1 ? 'persona' : 'personas'}`,
+      resumen: (m, p) => `${m} ${m === 1 ? 'mesa' : 'mesas'} · ${p} plazas`,
+      reservarMesa: (id) => `Reservar · mesa ${id}`,
+      zonas: {
+        terraza: { nombre: "Terraza", desc: "Dos mesas redondas junto a la entrada, para empezar la noche al aire libre." },
+        play: { nombre: "Zona PlayStation", desc: "Asientos junto a la pantalla con PlayStation 5: juega mientras fumas." },
+        cine: { nombre: "Pantalla 98″", desc: "Mesas frente a la pantalla grande, perfectas para partidos y grupos." },
+        fondo: { nombre: "Sofás del fondo", desc: "Las mesas más amplias, entre columnas de luz y la pantalla de 75″." },
+        centro: { nombre: "Centro", desc: "En el corazón de la sala, con vistas a todo el local." },
+        barra: { nombre: "Barra", desc: "Taburetes frente a la barra de bebida y la de shishas: mira cómo preparamos tu cachimba." },
+      },
+    },
     abrirMenu: 'Abrir menú',
     cerrarMenu: 'Cerrar menú',
     abiertoAhora: 'Abierto ahora · hasta las 04:00',

@@ -104,3 +104,6 @@
 124 | Automatic answers. To book, use the online booking button.
 83 | alt="Wine list at NOOR, shisha lounge in Valencia"
 88 | alt="NOOR tea and hot drinks menu"
+125 | <span class="etiqueta aparece">Your table</span>
+126 | Choose your <em>spot</em>
+127 | Tap an area of the lounge to see its tables and seats, and book in a minute.

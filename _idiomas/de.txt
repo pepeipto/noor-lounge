@@ -104,3 +104,6 @@
 124 | Automatische Antworten. Zum Reservieren nutzen Sie den Button für die Online-Reservierung.
 83 | alt="Weinkarte des NOOR, Shisha-Lounge in Valencia"
 88 | alt="Karte mit Tee und Heißgetränken des NOOR"
+125 | <span class="etiqueta aparece">Ihr Tisch</span>
+126 | Wählen Sie Ihren <em>Platz</em>
+127 | Tippen Sie auf einen Bereich der Lounge, um Tische und Plätze zu sehen, und reservieren Sie in einer Minute.

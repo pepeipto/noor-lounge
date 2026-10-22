@@ -636,3 +636,64 @@ footer { border-top: 1px solid var(--linea); padding: 54px 0 120px; color: var(-
 
 /* Las fotos de las tarjetas respetan su proporción (el atributo height no debe estirarlas) */
 .tarjeta img { height: auto; }
+
+/* ---------- Mapa de sala para reservar ---------- */
+.mapa-sala { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 28px; align-items: start; }
+.mapa-svg { width: 100%; height: auto; display: block; overflow: visible; user-select: none; -webkit-tap-highlight-color: transparent; }
+.mapa-svg text { font-family: var(--cuerpo); text-anchor: middle; pointer-events: none; }
+.mapa-svg .suelo polygon { fill: url(#m-suelo); }
+.mapa-svg .suelo line { stroke: #ffffff; stroke-opacity: .04; }
+.mapa-svg .suelo .borde { fill: none; stroke: var(--ambar); stroke-opacity: .55; stroke-width: 1.5; }
+.mapa-svg .pared polygon { fill: url(#m-azulejo); }
+.mapa-svg .pared .junta { stroke: #1d0e07; stroke-opacity: .45; stroke-width: 1; }
+.mapa-svg .pared .remate { stroke: var(--ambar-claro); stroke-width: 2; }
+.mapa-svg .entrada polygon { fill: rgba(227, 162, 79, .08); stroke: var(--ambar-claro); stroke-dasharray: 6 5; }
+.mapa-svg .entrada text, .mapa-svg .aseos text { font-size: 11px; font-weight: 600; letter-spacing: .22em; fill: var(--ambar-claro); }
+.mapa-svg .aseos .tapa { fill: #2a221e; } .mapa-svg .aseos .lado-a { fill: #1b1512; } .mapa-svg .aseos .lado-b { fill: #231b17; }
+.mapa-svg .aseos text { fill: var(--texto-2); }
+.mapa-svg .barra-obj .tapa { fill: url(#m-cobre); } .mapa-svg .barra-obj .lado-a { fill: #6b3415; } .mapa-svg .barra-obj .lado-b { fill: #8a4a22; }
+.mapa-svg .barra-obj text { font-size: 10px; font-weight: 600; letter-spacing: .18em; fill: #fff3e2; }
+.mapa-svg .pantalla .tapa { fill: #26304a; } .mapa-svg .pantalla .lado-a { fill: #4b6bb8; filter: drop-shadow(0 0 6px rgba(120, 160, 255, .6)); } .mapa-svg .pantalla .lado-b { fill: #141a2b; }
+.mapa-svg .columna .tapa { fill: #fff0cc; } .mapa-svg .columna .lado-a { fill: #f0b766; } .mapa-svg .columna-halo { fill: #ffbe6b; opacity: .55; }
+.mapa-svg .mesa { cursor: pointer; outline: none; transition: opacity .35s; }
+.mapa-svg .mesa .tapa { fill: #2c1f18; stroke: var(--ambar); stroke-width: 1.2; transition: fill .3s, stroke .3s; }
+.mapa-svg .mesa .lado-a { fill: #170f0b; } .mapa-svg .mesa .lado-b { fill: #1f1510; }
+.mapa-svg .mesa.taburete .tapa { fill: #a14f24; stroke: #f0b766; }
+.mapa-svg .mesa .num { font-family: var(--titulos); font-size: 15px; fill: var(--texto); }
+.mapa-svg .mesa.taburete .num { font-family: var(--cuerpo); font-size: 9px; font-weight: 600; }
+.mapa-svg .mesa:hover .tapa, .mapa-svg .mesa:focus-visible .tapa { fill: #4a3021; stroke: var(--ambar-claro); stroke-width: 2; }
+.mapa-svg.con-zona .mesa:not(.activa) { opacity: .35; }
+.mapa-svg .mesa.activa .tapa { stroke: var(--ambar-claro); stroke-width: 2; filter: drop-shadow(0 0 8px rgba(240, 194, 127, .55)); }
+.mapa-svg .mesa.elegida .tapa { fill: var(--ambar); stroke: #fff3e2; }
+.mapa-svg .mesa.elegida .num { fill: #1d1206; }
+.mapa-svg .marcador { cursor: pointer; outline: none; }
+.mapa-svg .marcador line { stroke: var(--ambar-claro); stroke-width: 1.2; }
+.mapa-svg .marcador circle { fill: var(--ambar-claro); }
+.mapa-svg .marcador .mk-fondo { fill: rgba(16, 11, 9, .9); stroke: rgba(240, 194, 127, .55); transition: fill .3s, stroke .3s; }
+.mapa-svg .marcador .mk-nombre { font-family: var(--titulos); font-size: 17px; fill: var(--texto); }
+.mapa-svg .marcador .mk-sub { font-size: 10px; letter-spacing: .14em; fill: var(--ambar-claro); text-transform: uppercase; }
+.mapa-svg .marcador:hover .mk-fondo, .mapa-svg .marcador:focus-visible .mk-fondo, .mapa-svg .marcador.activa .mk-fondo { fill: #2a1a10; stroke: var(--ambar-claro); }
+.mapa-svg.con-zona .marcador:not(.activa) { opacity: .5; }
+.mapa-panel { position: sticky; top: 100px; border: 1px solid var(--linea); border-radius: 10px; padding: 26px; background: rgba(20, 14, 11, .85); }
+.mapa-panel h3 { font-size: 32px; margin: 6px 0 10px; }
+.mapa-panel p { color: var(--texto-2); font-size: 15px; margin: 0 0 18px; }
+.mapa-etq { font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color: var(--ambar); }
+.mapa-zonas, .mapa-mesas { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.mapa-zonas button, .mapa-mesas button {
+  min-height: 44px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--linea); background: transparent;
+  color: var(--texto); font: 14px var(--cuerpo); cursor: pointer; transition: border-color .3s, background .3s, color .3s;
+}
+.mapa-mesas button { display: flex; flex-direction: column; align-items: flex-start; border-radius: 10px; padding: 8px 12px; }
+.mapa-mesas button b { font-weight: 600; }
+.mapa-mesas button span { font-size: 12px; color: var(--texto-2); }
+.mapa-zonas button:hover, .mapa-mesas button:hover { border-color: var(--ambar); }
+.mapa-mesas button.activa { background: var(--ambar); border-color: var(--ambar); color: #1d1206; }
+.mapa-mesas button.activa span { color: #3a2410; }
+.mapa-panel .boton { width: 100%; }
+.mapa-nota { font-size: 12px !important; margin: 14px 0 0 !important; }
+@media (max-width: 900px) {
+  .mapa-sala { grid-template-columns: 1fr; }
+  .mapa-panel { position: static; }
+  .mapa-svg .marcador .mk-nombre { font-size: 22px; }
+  .mapa-svg .marcador .mk-sub { font-size: 13px; }
+}

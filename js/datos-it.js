@@ -7,6 +7,23 @@ window.NOOR = {
   carta: 'https://www.scennio.com/es/noor-lounge/menu',
   asistenteApi: '',
   textos: {
+    mapa: {
+      aria: "Mappa interattiva della sala del NOOR", entrada: "INGRESSO", aseos: "BAGNI",
+      barras: { barra: "BANCONE", bebida: "BAR BEVANDE", shishas: "SHISHA" },
+      mesa: "Tavolo", taburete: "Sgabello", mesaCorta: "Tavolo", tab: "Sgabello",
+      elige: "Scegli una zona", ayuda: "Tocca una zona della mappa, o sceglila qui, per vedere i suoi tavoli.", reservar: "Prenota in questa zona", nota: "Scegli giorno, ora e numero di persone nel nostro sistema di prenotazione; lo staff di sala ti assegna il tavolo in base alla disponibilità.",
+      hasta: (n) => `fino a ${n} ${n === 1 ? 'persona' : 'persone'}`,
+      resumen: (m, p) => `${m} ${m === 1 ? 'tavolo' : 'tavoli'} · ${p} posti`,
+      reservarMesa: (id) => `Prenota · tavolo ${id}`,
+      zonas: {
+        terraza: { nombre: "Terrazza", desc: "Due tavoli rotondi vicino all’ingresso, per iniziare la serata all’aperto." },
+        play: { nombre: "Zona PlayStation", desc: "Posti vicino allo schermo con PlayStation 5: gioca mentre fumi." },
+        cine: { nombre: "Schermo 98″", desc: "Tavoli davanti al grande schermo, perfetti per le partite e i gruppi." },
+        fondo: { nombre: "Divani in fondo", desc: "I tavoli più ampi, tra colonne di luce e lo schermo da 75″." },
+        centro: { nombre: "Centro", desc: "Nel cuore della sala, con vista su tutto il locale." },
+        barra: { nombre: "Bancone", desc: "Sgabelli davanti al bar delle bevande e a quello delle shisha: guarda come prepariamo il tuo narghilè." },
+      },
+    },
     abrirMenu: 'Apri il menu',
     cerrarMenu: 'Chiudi il menu',
     abiertoAhora: 'Aperto ora · fino alle 04:00',

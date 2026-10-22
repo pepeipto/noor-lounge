@@ -7,6 +7,23 @@ window.NOOR = {
   carta: 'https://www.scennio.com/es/noor-lounge/menu',
   asistenteApi: '',
   textos: {
+    mapa: {
+      aria: "Mapa interactiu de la sala de NOOR", entrada: "ENTRADA", aseos: "LAVABOS",
+      barras: { barra: "BARRA", bebida: "BARRA DE BEGUDES", shishas: "SHISHES" },
+      mesa: "Taula", taburete: "Tamboret", mesaCorta: "Taula", tab: "Tamboret",
+      elige: "Tria una zona", ayuda: "Toca una zona del mapa o tria-la ací per a veure les seues taules.", reservar: "Reservar en aquesta zona", nota: "Tries dia, hora i persones en el nostre sistema de reserves; l’equip de sala t’assigna la taula segons disponibilitat.",
+      hasta: (n) => `fins a ${n} ${n === 1 ? 'persona' : 'persones'}`,
+      resumen: (m, p) => `${m} ${m === 1 ? 'taula' : 'taules'} · ${p} places`,
+      reservarMesa: (id) => `Reservar · taula ${id}`,
+      zonas: {
+        terraza: { nombre: "Terrassa", desc: "Dues taules redones al costat de l’entrada, per a començar la nit a l’aire lliure." },
+        play: { nombre: "Zona PlayStation", desc: "Seients al costat de la pantalla amb PlayStation 5: juga mentre fumes." },
+        cine: { nombre: "Pantalla 98″", desc: "Taules davant de la pantalla gran, perfectes per a partits i grups." },
+        fondo: { nombre: "Sofàs del fons", desc: "Les taules més àmplies, entre columnes de llum i la pantalla de 75″." },
+        centro: { nombre: "Centre", desc: "Al cor de la sala, amb vistes a tot el local." },
+        barra: { nombre: "Barra", desc: "Tamborets davant de la barra de begudes i la de shishes: mira com preparem la teua cachimba." },
+      },
+    },
     abrirMenu: 'Obrir el menú',
     cerrarMenu: 'Tancar el menú',
     abiertoAhora: 'Obert ara · fins a les 04:00',

@@ -104,3 +104,6 @@
 124 | Risposte automatiche. Per prenotare, usa il pulsante di prenotazione online.
 83 | alt="Carta dei vini del NOOR, shisha lounge a Valencia"
 88 | alt="Menù dei tè e delle bevande calde del NOOR"
+125 | <span class="etiqueta aparece">Il tuo tavolo</span>
+126 | Scegli il tuo <em>angolo</em>
+127 | Tocca una zona del locale per vedere tavoli e posti, e prenota in un minuto.

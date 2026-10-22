@@ -18,6 +18,7 @@ Y abrir http://localhost:8090
 - **Secciones**: el lounge, el ritual, carta con precios en HTML (indexable), galería con parallax, preguntas frecuentes, visítanos (el mapa de Google solo se carga al pulsar) y llamada a reservar.
 - **SEO**: title y description con «shisha lounge en Valencia», Open Graph/Twitter con `img/og-noor.jpg` (1200×630), JSON-LD (BarOrPub + WebSite + FAQPage, sin aggregateRating propio), `robots.txt`, `sitemap.xml`, iconos y `site.webmanifest`.
 - **Reservas**: todos los botones de reservar (cabecera, portada, visítanos, sección final, botón flotante y asistente) van a Scennio (`scennio.com/es/noor-lounge/calendar`), que es el sistema de mesas que usan los camareros. **No hay reserva por WhatsApp** (decisión del cliente, 22/10/2026): así no se cuelan reservas fuera del sistema.
+- **Mapa de sala** (`#mesas`, `js/mapa.js`): plano isométrico interactivo hecho a partir del plano del TPV (sin nombres de clientes). El cliente toca una zona (Terraza, Zona PlayStation, Pantalla 98″, Sofás del fondo, Centro, Barra), ve sus mesas y plazas y el botón lleva a reservar en Scennio. Textos en `textos.mapa` de cada `js/datos*.js`. No muestra disponibilidad (haría falta conexión con Scennio).
 - **WhatsApp**: solo para consultas, en el pie (`wa.me/34963120754` con «tengo una consulta» en cada idioma).
 - **Asistente**: chat flotante que responde con los datos del local (`js/datos.js`). Para conectar una IA real, poner la URL de un servidor en `asistenteApi` (recibe `{ mensajes }` y devuelve `{ respuesta }`).
 

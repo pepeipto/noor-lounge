@@ -7,6 +7,23 @@ window.NOOR = {
   carta: 'https://www.scennio.com/es/noor-lounge/menu',
   asistenteApi: '',
   textos: {
+    mapa: {
+      aria: "Plan interactif de la salle de NOOR", entrada: "ENTRÉE", aseos: "TOILETTES",
+      barras: { barra: "BAR", bebida: "BAR À BOISSONS", shishas: "CHICHAS" },
+      mesa: "Table", taburete: "Tabouret", mesaCorta: "Table", tab: "Tabouret",
+      elige: "Choisissez une zone", ayuda: "Touchez une zone du plan, ou choisissez-la ici, pour voir ses tables.", reservar: "Réserver dans cette zone", nota: "Vous choisissez le jour, l’heure et le nombre de personnes dans notre système de réservation ; l’équipe en salle vous attribue la table selon les disponibilités.",
+      hasta: (n) => `jusqu’à ${n} ${n === 1 ? 'personne' : 'personnes'}`,
+      resumen: (m, p) => `${m} ${m === 1 ? 'table' : 'tables'} · ${p} places`,
+      reservarMesa: (id) => `Réserver · table ${id}`,
+      zonas: {
+        terraza: { nombre: "Terrasse", desc: "Deux tables rondes près de l’entrée, pour commencer la soirée en plein air." },
+        play: { nombre: "Espace PlayStation", desc: "Places près de l’écran avec PlayStation 5 : jouez en fumant." },
+        cine: { nombre: "Écran 98″", desc: "Tables face au grand écran, idéales pour les matchs et les groupes." },
+        fondo: { nombre: "Canapés du fond", desc: "Nos tables les plus spacieuses, entre les colonnes de lumière et l’écran de 75″." },
+        centro: { nombre: "Centre", desc: "Au cœur de la salle, avec vue sur tout le lounge." },
+        barra: { nombre: "Bar", desc: "Tabourets face au bar à boissons et au bar à chichas : regardez-nous préparer votre chicha." },
+      },
+    },
     abrirMenu: 'Ouvrir le menu',
     cerrarMenu: 'Fermer le menu',
     abiertoAhora: 'Ouvert maintenant · jusqu’à 04:00',

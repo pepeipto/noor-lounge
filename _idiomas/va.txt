@@ -104,3 +104,6 @@
 124 | Respostes automàtiques. Per a reservar, utilitza el botó de reserva en línia.
 83 | alt="Carta de vins de NOOR, shisha lounge a València"
 88 | alt="Carta de tes i begudes calentes de NOOR"
+125 | <span class="etiqueta aparece">La teua taula</span>
+126 | Tria el teu <em>racó</em>
+127 | Toca una zona del local per a veure les seues taules i places, i reserva en un minut.

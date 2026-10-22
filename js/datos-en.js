@@ -7,6 +7,23 @@ window.NOOR = {
   carta: 'https://www.scennio.com/es/noor-lounge/menu',
   asistenteApi: '', // e.g. 'https://server/api/assistant' to connect a real AI
   textos: {
+    mapa: {
+      aria: "Interactive map of the NOOR lounge", entrada: "ENTRANCE", aseos: "TOILETS",
+      barras: { barra: "BAR", bebida: "DRINKS BAR", shishas: "SHISHA" },
+      mesa: "Table", taburete: "Bar stool", mesaCorta: "Table", tab: "Stool",
+      elige: "Choose an area", ayuda: "Tap an area on the map, or pick one here, to see its tables.", reservar: "Book in this area", nota: "You choose the day, time and number of guests in our booking system; our floor team assigns your table based on availability.",
+      hasta: (n) => `up to ${n} ${n === 1 ? 'guest' : 'guests'}`,
+      resumen: (m, p) => `${m} ${m === 1 ? 'table' : 'tables'} · ${p} seats`,
+      reservarMesa: (id) => `Book · table ${id}`,
+      zonas: {
+        terraza: { nombre: "Terrace", desc: "Two round tables by the entrance, to start the night outdoors." },
+        play: { nombre: "PlayStation area", desc: "Seats by the screen with a PlayStation 5: play while you smoke." },
+        cine: { nombre: "98″ screen", desc: "Tables facing the big screen, perfect for matches and groups." },
+        fondo: { nombre: "Back sofas", desc: "Our roomiest tables, between the light columns and the 75″ screen." },
+        centro: { nombre: "Centre", desc: "At the heart of the room, with a view of the whole lounge." },
+        barra: { nombre: "Bar", desc: "Stools facing the drinks bar and the shisha bar: watch us prepare your hookah." },
+      },
+    },
     abrirMenu: 'Open menu',
     cerrarMenu: 'Close menu',
     abiertoAhora: 'Open now · until 04:00',
