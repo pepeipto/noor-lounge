@@ -55,39 +55,24 @@
 53 | <h3>Frisch zubereitet</h3><p>Von Hand gestopfter Kopf, Naturkohle mit der richtigen Glut und makelloses Kristall bei jedem Service.</p>
 54 | <h3>Ihre Zeit</h3><p>Ein Cocktail, gute Musik und eine Bar, die bis vier Uhr leuchtet. Alles andere entscheiden Sie.</p>
 55 | <span class="etiqueta aparece">Die Karte</span>
-56 | Rauch, <em>Eis</em> und Zeit ohne Eile
-57 | Shishas, Cocktails und Tee zum Teilen: das Wesentliche des NOOR in drei Gesten. Fragen Sie am Tisch nach Ihrem Geschmack.
+56 | Rauch, <em>Eis</em> und Feuer
+57 | Shishas, Cocktails und Heißgetränke: das Wesentliche von NOOR in drei Gesten. Fragen Sie am Tisch nach Ihrem Geschmack.
 58 | alt="Blau-goldene Shisha mit einem Cocktail in der NOOR Lounge Valencia"
-59 | <h3>Shishas</h3><p>Von Rubio bis Kazan Especial, dazu unsere Spezialitäten mit frischer Frucht. Ab 16 €.</p>
+59 | <h3>Shishas</h3><p>Von Rubio bis Kazan Especial, dazu unsere Specials mit frischem Obst.</p>
 60 | alt="Mojito mit Minze neben einer Shisha"
-61 | <h3>Cocktails</h3><p>Mojitos mit Erdbeere, Mango oder Maracuja, Espresso Martini, PornStar, Negroni. Klassiker, gut gemixt, ab 12 €.</p>
-62 | alt="Rosafarbene Gin Tonics auf einem Tisch aus grünem Marmor im NOOR"
-63 | <h3>Tee und Prickelndes</h3><p>Chai Latte und Tee zum Teilen; Cava, Veuve Clicquot oder Dom Pérignon, wenn die Nacht danach verlangt. Ab 8 €.</p>
-64 | <h3>Shishas</h3>
-65 | <li><span>Frische Frucht</span><b>40 €</b></li>
-66 | <h3>Cocktails</h3>\n            <ul>
-67 | <li><span>Mojito klassisch, Erdbeere, Mango oder Maracuja</span>
-68 | <li><span>Piña Colada · Whiskey Sour · Bloody Mary</span>
-69 | <li><span>Premium-Cocktail</span>
-70 | <h3>Tee, Wein und mehr</h3>
-71 | <li><span>Chai Latte (klein / groß)</span>
-72 | <li><span>Zitrus-Ingwer- oder Beerentee (1 l)</span>
-73 | <li><span>Wein im Glas · Cava</span>
-74 | <li><span>Bier</span><b>ab 3,50 €</b></li>
-75 | <li><span>Softdrinks</span>
-76 | <li><span>PlayStation 5 an Ihrem Tisch</span>
+61 | <h3>Cocktails und Drinks</h3><p>Mojitos mit Erdbeere, Mango oder Maracuja, Espresso Martini, PornStar, Negroni und Ihre Lieblingsdrinks, sauber gemixt.</p>
+62 | alt="Karte mit Tees und Heißgetränken zum Teilen in der NOOR Lounge"
+63 | <h3>Heißgetränke</h3><p>Chai Latte und Tees zum Teilen, Zitrus mit Ingwer oder rote Beeren, dazu Kaffee.</p>
 77 | rel="noopener nofollow">Vollständige Karte (auf Spanisch)</a>
 78 | <span class="etiqueta aparece">Galerie</span>
 79 | NOOR <em>bei Nacht</em>
 80 | Glut, Kristall und Kupfer: unsere Shisha-Lounge in L'Eixample, so wie sie nach Mitternacht aussieht.
 81 | alt="Ecke mit Shisha und warm leuchtender Säule in der NOOR Lounge"
 82 | alt="Bar des NOOR mit beleuchteten Flaschen"
-83 | alt="Weinkarte des NOOR, Shisha-Lounge in Valencia"
 84 | alt="Cocktail mit Schaum in der NOOR Lounge"
 85 | alt="Fassade der Shisha-Lounge NOOR in der Carrer Serrano Morales 3, Valencia"
 86 | alt="Runder Spiegel mit orangefarbenem Lichtring im NOOR"
 87 | alt="Roter Cocktail an der Bar des NOOR"
-88 | alt="Karte mit Tee und Heißgetränken des NOOR"
 89 | <span class="etiqueta aparece">Fragen</span>
 90 | Vor Ihrem <em>Besuch</em>
 91 | <span class="etiqueta aparece">Anfahrt</span>
@@ -117,3 +102,5 @@
 122 | placeholder="Ihre Frage eingeben …"
 123 | aria-label="Senden"
 124 | Automatische Antworten. Zum Reservieren nutzen Sie den Button für die Online-Reservierung.
+83 | alt="Weinkarte des NOOR, Shisha-Lounge in Valencia"
+88 | alt="Karte mit Tee und Heißgetränken des NOOR"

@@ -55,39 +55,24 @@
 53 | <h3>Preparada al momento</h3><p>Cazoleta cargada a mano, carbón natural en su punto y cristal impecable en cada servicio.</p>
 54 | <h3>El tiempo, tuyo</h3><p>Un cóctel, buena música y la barra encendida hasta las cuatro. Lo demás lo decides tú.</p>
 55 | <span class="etiqueta aparece">La carta</span>
-56 | Humo, <em>hielo</em> y tiempo lento
-57 | Shishas, cócteles y tés para compartir: lo esencial de NOOR en tres gestos. Pregunta en mesa por tu sabor.
+56 | Humo, <em>hielo</em> y fuego
+57 | Shishas, coctelería y bebidas calientes: lo esencial de NOOR en tres gestos. Pregunta en mesa por tu sabor.
 58 | alt="Shisha azul y dorada con un cóctel en NOOR Lounge Valencia"
-59 | <h3>Shishas y cachimbas</h3><p>De la Rubio a la Kazan Especial, y nuestras especiales con fruta natural. Desde 16 €.</p>
+59 | <h3>Shishas</h3><p>De la Rubio a la Kazan Especial, y nuestras especiales con fruta natural.</p>
 60 | alt="Mojito con hierbabuena junto a una cachimba"
-61 | <h3>Cócteles</h3><p>Mojitos de fresa, mango o maracuyá, Espresso Martini, PornStar, Negroni. Clásicos bien servidos, desde 12 €.</p>
-62 | alt="Gin-tonics rosados sobre mesa de mármol verde en NOOR"
-63 | <h3>Tés y burbujas</h3><p>Chai latte y tés para compartir; cava, Veuve Clicquot o Dom Pérignon cuando la noche lo pide. Desde 8 €.</p>
-64 | <h3>Shishas</h3>
-65 | <li><span>Fruta natural</span><b>40 €</b></li>
-66 | <h3>Cócteles</h3>\n            <ul>
-67 | <li><span>Mojito clásico, fresa, mango o maracuyá</span>
-68 | <li><span>Piña colada · Whiskey Sour · Bloody Mary</span>
-69 | <li><span>Cóctel Premium</span>
-70 | <h3>Tés, vinos y más</h3>
-71 | <li><span>Chai latte (pequeño / grande)</span>
-72 | <li><span>Té cítrico con jengibre o frutos rojos (1 l)</span>
-73 | <li><span>Vino por copa · Cava</span>
-74 | <li><span>Cervezas</span><b>desde 3,50 €</b></li>
-75 | <li><span>Refrescos</span>
-76 | <li><span>PlayStation 5 en tu mesa</span>
+61 | <h3>Coctelería y copas</h3><p>Mojitos de fresa, mango o maracuyá, Espresso Martini, PornStar, Negroni y tus copas de siempre, bien servidas.</p>
+62 | alt="Carta de tés y bebidas calientes para compartir en NOOR Lounge"
+63 | <h3>Bebidas calientes</h3><p>Chai latte y tés para compartir, cítrico con jengibre o frutos rojos, y café.</p>
 77 | rel="noopener nofollow">Ver la carta completa</a>
 78 | <span class="etiqueta aparece">Galería</span>
 79 | NOOR, <em>de noche</em>
 80 | Brasa, cristal y cobre: nuestro lounge de shisha en L'Eixample, tal como se ve pasada la medianoche.
 81 | alt="Rincón con cachimba y columna de luz cálida en NOOR Lounge"
 82 | alt="Barra de NOOR con botellas iluminadas"
-83 | alt="Carta de vinos de NOOR, shisha lounge en Valencia"
 84 | alt="Cóctel con espuma servido en NOOR Lounge"
 85 | alt="Fachada de NOOR shisha lounge en Carrer Serrano Morales 3, Valencia"
 86 | alt="Espejo redondo con aro de luz naranja en NOOR"
 87 | alt="Cóctel rojo servido en la barra de NOOR"
-88 | alt="Carta de tés y bebidas calientes de NOOR"
 89 | <span class="etiqueta aparece">Preguntas</span>
 90 | Antes de <em>venir</em>
 91 | <span class="etiqueta aparece">Visítanos</span>
@@ -117,3 +102,5 @@
 122 | placeholder="Escribe tu pregunta…"
 123 | aria-label="Enviar"
 124 | Respuestas automáticas. Para reservar, usa el botón de reserva online.
+83 | alt="Carta de vinos de NOOR, shisha lounge en Valencia"
+88 | alt="Carta de tés y bebidas calientes de NOOR"

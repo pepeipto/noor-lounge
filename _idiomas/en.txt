@@ -55,39 +55,24 @@
 53 | <h3>Prepared to order</h3><p>Hand-packed bowl, natural charcoal at just the right heat and spotless crystal every time.</p>
 54 | <h3>Your time, your pace</h3><p>A cocktail, good music and the bar alight until four. The rest is up to you.</p>
 55 | <span class="etiqueta aparece">The menu</span>
-56 | Smoke, <em>ice</em> and slow time
-57 | Shishas, cocktails and teas to share: the essence of NOOR in three gestures. Ask about your flavour at the table.
+56 | Smoke, <em>ice</em> and fire
+57 | Shisha, cocktails and hot drinks: the essence of NOOR in three gestures. Ask at your table about your flavour.
 58 | alt="Blue and gold shisha with a cocktail at NOOR Lounge Valencia"
-59 | <h3>Shishas &amp; hookahs</h3><p>From Rubio to Kazan Especial, plus our specials served in fresh fruit. From €16.</p>
+59 | <h3>Shisha</h3><p>From Rubio to Kazan Especial, plus our specials with fresh fruit.</p>
 60 | alt="Mint mojito next to a shisha"
-61 | <h3>Cocktails</h3><p>Strawberry, mango or passion fruit mojitos, Espresso Martini, PornStar, Negroni. Classics, well poured, from €12.</p>
-62 | alt="Pink gin and tonics on a green marble table at NOOR"
-63 | <h3>Teas &amp; bubbles</h3><p>Chai latte and teas to share; cava, Veuve Clicquot or Dom Pérignon when the night calls for it. From €8.</p>
-64 | <h3>Shishas</h3>
-65 | <li><span>Fresh fruit</span><b>€40</b></li>
-66 | <h3>Cocktails</h3>\n            <ul>
-67 | <li><span>Mojito: classic, strawberry, mango or passion fruit</span>
-68 | <li><span>Piña Colada · Whiskey Sour · Bloody Mary</span>
-69 | <li><span>Premium cocktail</span>
-70 | <h3>Teas, wines &amp; more</h3>
-71 | <li><span>Chai latte (small / large)</span>
-72 | <li><span>Citrus &amp; ginger or red berry tea (1 l)</span>
-73 | <li><span>Wine by the glass · Cava</span>
-74 | <li><span>Beers</span><b>from €3.50</b></li>
-75 | <li><span>Soft drinks</span>
-76 | <li><span>PlayStation 5 at your table</span>
+61 | <h3>Cocktails and drinks</h3><p>Strawberry, mango or passion fruit mojitos, Espresso Martini, PornStar, Negroni and your usual drinks, well poured.</p>
+62 | alt="Menu of teas and hot drinks to share at NOOR Lounge"
+63 | <h3>Hot drinks</h3><p>Chai latte and teas to share, citrus and ginger or red berries, and coffee.</p>
 77 | rel="noopener nofollow">See the full menu (Spanish)</a>
 78 | <span class="etiqueta aparece">Gallery</span>
 79 | NOOR, <em>by night</em>
 80 | Embers, crystal and copper: our shisha lounge in L'Eixample, just as it looks after midnight.
 81 | alt="Corner with a shisha and a warm light column at NOOR Lounge"
 82 | alt="NOOR bar with illuminated bottles"
-83 | alt="Wine list at NOOR, shisha lounge in Valencia"
 84 | alt="Foamy cocktail served at NOOR Lounge"
 85 | alt="Front of NOOR shisha lounge at Carrer Serrano Morales 3, Valencia"
 86 | alt="Round mirror with an orange light ring at NOOR"
 87 | alt="Red cocktail served at the NOOR bar"
-88 | alt="NOOR tea and hot drinks menu"
 89 | <span class="etiqueta aparece">FAQ</span>
 90 | Before <em>you come</em>
 91 | <span class="etiqueta aparece">Visit us</span>
@@ -117,3 +102,5 @@
 122 | placeholder="Type your question…"
 123 | aria-label="Send"
 124 | Automatic answers. To book, use the online booking button.
+83 | alt="Wine list at NOOR, shisha lounge in Valencia"
+88 | alt="NOOR tea and hot drinks menu"

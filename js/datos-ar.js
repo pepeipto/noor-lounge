@@ -81,7 +81,7 @@ window.NOOR = {
     },
     {
       claves: ['انستغرام', 'إنستغرام', 'instagram', 'تيك توك', 'tiktok', 'فيديو', 'صور'],
-      texto: 'تابعنا على Instagram ‏@noorloungevlc وعلى TikTok ‏@noorpub: هناك ننشر أجواء كل ليلة.',
+      texto: "تابعنا على Instagram ‏@noorloungevlc: هناك ننشر أجواء كل ليلة.",
     },
     {
       claves: ['مرحبا', 'مرحبًا', 'أهلا', 'أهلًا', 'السلام', 'مساء الخير'],

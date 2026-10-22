@@ -633,3 +633,6 @@ footer { border-top: 1px solid var(--linea); padding: 54px 0 120px; color: var(-
 @media (max-width: 900px) {
   .hero-sub { font-size: 14px; line-height: 1.45; }
 }
+
+/* Las fotos de las tarjetas respetan su proporción (el atributo height no debe estirarlas) */
+.tarjeta img { height: auto; }

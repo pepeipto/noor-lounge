@@ -27,7 +27,7 @@ def pagina(archivo, titulo, descripcion, cuerpo):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=15">
+  <link rel="stylesheet" href="css/styles.css?v=16">
 </head>
 <body class="pagina-legal">
   <header class="cabecera con-fondo">
@@ -86,7 +86,7 @@ pagina('aviso-legal.html', 'Aviso legal', 'Aviso legal de NOOR КАЛЬЯН Loun
       <p>Los textos, fotografías, logotipos, diseño y código de esta web pertenecen a su titular o se utilizan con autorización de sus autores. Queda prohibida su reproducción, distribución o transformación sin autorización expresa, salvo para uso personal y privado.</p>
 
       <h2>6. Enlaces a terceros</h2>
-      <p>La web contiene enlaces a servicios de terceros (WhatsApp, Instagram, TikTok, Google Maps y la plataforma de reservas Scennio). El titular no se responsabiliza de los contenidos ni de las políticas de privacidad de esos sitios, que se rigen por sus propias condiciones.</p>
+      <p>La web contiene enlaces a servicios de terceros (WhatsApp, Instagram, Google Maps y la plataforma de reservas Scennio). El titular no se responsabiliza de los contenidos ni de las políticas de privacidad de esos sitios, que se rigen por sus propias condiciones.</p>
 
       <h2>7. Asistente automático</h2>
       <p>El asistente de la web ofrece respuestas automáticas a partir de la información del establecimiento. Puede contener errores; para reservas y consultas importantes, contacta por teléfono o WhatsApp.</p>
@@ -137,7 +137,7 @@ pagina('cookies.html', 'Política de cookies', 'Política de cookies de NOOR К�
       <ul>
         <li><b>Google Maps:</b> el mapa de la sección «Visítanos» no se carga hasta que pulsas «Ver mapa interactivo». A partir de ese momento, Google puede instalar sus propias cookies. Más información en la política de privacidad de Google.</li>
         <li><b>Google Fonts:</b> las tipografías de la web se cargan desde los servidores de Google, que recibe datos técnicos de conexión como tu dirección IP. No instala cookies.</li>
-        <li><b>Enlaces externos:</b> WhatsApp, Instagram, TikTok y Scennio aplican sus propias cookies cuando visitas sus sitios desde nuestros enlaces.</li>
+        <li><b>Enlaces externos:</b> WhatsApp, Instagram y Scennio aplican sus propias cookies cuando visitas sus sitios desde nuestros enlaces.</li>
       </ul>
 
       <h2>4. Cómo gestionar las cookies</h2>

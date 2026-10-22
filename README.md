@@ -14,7 +14,7 @@ Y abrir http://localhost:8090
 
 - **Cabecera**: logo partido «NO ∩ OR» alrededor de un arco dorado con la foto real de la shisha (`img/cachimba-humo.webp`), animada en WebGL (el humo se mueve, salen volutas, laten las brasas, la imagen sigue al ratón). Entra sola al cargar; con una sola pantalla de scroll el arco se abre a pantalla completa y aparece «Aquí la noche empieza con luz». Sin WebGL o con «reducir movimiento», foto fija.
 - **El ritual**: la segunda foto (`img/ritual.webp`) se queda fija mientras pasan los tres pasos.
-- **Redes**: Instagram @noorloungevlc y TikTok @noorpub.
+- **Redes**: solo Instagram @noorloungevlc (TikTok quitado a petición del cliente, 23/10/2026).
 - **Secciones**: el lounge, el ritual, carta con precios en HTML (indexable), galería con parallax, preguntas frecuentes, visítanos (el mapa de Google solo se carga al pulsar) y llamada a reservar.
 - **SEO**: title y description con «shisha lounge en Valencia», Open Graph/Twitter con `img/og-noor.jpg` (1200×630), JSON-LD (BarOrPub + WebSite + FAQPage, sin aggregateRating propio), `robots.txt`, `sitemap.xml`, iconos y `site.webmanifest`.
 - **Reservas**: todos los botones de reservar (cabecera, portada, visítanos, sección final, botón flotante y asistente) van a Scennio (`scennio.com/es/noor-lounge/calendar`), que es el sistema de mesas que usan los camareros. **No hay reserva por WhatsApp** (decisión del cliente, 22/10/2026): así no se cuelan reservas fuera del sistema.

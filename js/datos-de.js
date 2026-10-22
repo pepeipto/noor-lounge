@@ -79,7 +79,7 @@ window.NOOR = {
     },
     {
       claves: ['instagram', 'tiktok', 'social', 'insta', 'folgen', 'video', 'fotos'],
-      texto: 'Folgen Sie uns auf Instagram @noorloungevlc und auf TikTok @noorpub: Dort zeigen wir die Stimmung jedes Abends.',
+      texto: "Folgen Sie uns auf Instagram @noorloungevlc: Dort zeigen wir die Stimmung jedes Abends.",
     },
     {
       claves: ['hallo', 'guten abend', 'guten tag', 'servus', 'hi'],

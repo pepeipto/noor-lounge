@@ -55,39 +55,24 @@
 53 | <h3>Préparée à la minute</h3><p>Foyer garni à la main, charbon naturel à point et cristal impeccable à chaque service.</p>
 54 | <h3>Le temps vous appartient</h3><p>Un cocktail, de la bonne musique et le bar allumé jusqu'à quatre heures. Le reste, c'est vous qui décidez.</p>
 55 | <span class="etiqueta aparece">La carte</span>
-56 | Fumée, <em>glace</em> et temps suspendu
-57 | Chichas, cocktails et thés à partager : l'essentiel du NOOR en trois gestes. Demandez conseil à table pour votre saveur.
+56 | Fumée, <em>glace</em> et feu
+57 | Chichas, cocktails et boissons chaudes : l’essentiel de NOOR en trois gestes. Demandez votre saveur à table.
 58 | alt="Chicha bleue et dorée avec un cocktail au NOOR Lounge Valence"
-59 | <h3>Chichas</h3><p>De la Rubio à la Kazan Especial, sans oublier nos créations au fruit frais. Dès 16 €.</p>
+59 | <h3>Chichas</h3><p>De la Rubio à la Kazan Especial, et nos spéciales aux fruits frais.</p>
 60 | alt="Mojito à la menthe à côté d'une chicha"
-61 | <h3>Cocktails</h3><p>Mojitos à la fraise, à la mangue ou au fruit de la passion, Espresso Martini, PornStar, Negroni. Des classiques bien servis, dès 12 €.</p>
-62 | alt="Gin tonics roses sur une table en marbre vert au NOOR"
-63 | <h3>Thés et bulles</h3><p>Chai latte et thés à partager ; cava, Veuve Clicquot ou Dom Pérignon quand la nuit le demande. Dès 8 €.</p>
-64 | <h3>Chichas</h3>
-65 | <li><span>Fruit frais</span><b>40 €</b></li>
-66 | <h3>Cocktails</h3>\n            <ul>
-67 | <li><span>Mojito classique, fraise, mangue ou fruit de la passion</span>
-68 | <li><span>Piña colada · Whiskey Sour · Bloody Mary</span>
-69 | <li><span>Cocktail Premium</span>
-70 | <h3>Thés, vins et plus</h3>
-71 | <li><span>Chai latte (petit / grand)</span>
-72 | <li><span>Thé agrumes et gingembre ou fruits rouges (1 l)</span>
-73 | <li><span>Vin au verre · Cava</span>
-74 | <li><span>Bières</span><b>dès 3,50 €</b></li>
-75 | <li><span>Sodas</span>
-76 | <li><span>PlayStation 5 à votre table</span>
+61 | <h3>Cocktails et verres</h3><p>Mojitos fraise, mangue ou fruit de la passion, Espresso Martini, PornStar, Negroni et vos verres habituels, bien servis.</p>
+62 | alt="Carte des thés et boissons chaudes à partager chez NOOR Lounge"
+63 | <h3>Boissons chaudes</h3><p>Chai latte et thés à partager, agrumes et gingembre ou fruits rouges, et café.</p>
 77 | rel="noopener nofollow">Voir la carte complète (en espagnol)</a>
 78 | <span class="etiqueta aparece">Galerie</span>
 79 | NOOR, <em>la nuit</em>
 80 | Braise, cristal et cuivre : notre lounge à chicha dans L'Eixample, tel qu'il apparaît passé minuit.
 81 | alt="Coin avec chicha et colonne de lumière chaude au NOOR Lounge"
 82 | alt="Bar du NOOR avec bouteilles éclairées"
-83 | alt="Carte des vins du NOOR, lounge à chicha à Valence"
 84 | alt="Cocktail mousseux servi au NOOR Lounge"
 85 | alt="Façade du lounge à chicha NOOR au Carrer Serrano Morales 3, Valence"
 86 | alt="Miroir rond cerclé de lumière orange au NOOR"
 87 | alt="Cocktail rouge servi au bar du NOOR"
-88 | alt="Carte des thés et boissons chaudes du NOOR"
 89 | <span class="etiqueta aparece">Questions</span>
 90 | Avant de <em>venir</em>
 91 | <span class="etiqueta aparece">Nous trouver</span>
@@ -117,3 +102,5 @@
 122 | placeholder="Écrivez votre question…"
 123 | aria-label="Envoyer"
 124 | Réponses automatiques. Pour réserver, utilisez le bouton de réservation en ligne.
+83 | alt="Carte des vins du NOOR, lounge à chicha à Valence"
+88 | alt="Carte des thés et boissons chaudes du NOOR"
