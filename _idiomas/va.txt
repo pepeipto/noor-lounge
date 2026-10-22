@@ -31,17 +31,17 @@
 29 | alt="Shisha de cristall tallat traient fum sobre la barra de NOOR Lounge"
 30 | <span class="etiqueta">Shisha Lounge · València</span>
 31 | <span>4,7 ★ a Google</span><span data-abierto>Tots els dies de 16:00 a 04:00</span>
-32 | Shisha de cristall tallat, carbó natural i còctels sense pressa. L'Eixample.
+32 | El teu shisha lounge especialitzat, ambientat en l’autèntic estil rus, amb tota mena de mescles que sorprendran el teu paladar.
 33 |  Reserva la teua taula</a>
 34 | href="#carta">Descobrir la carta</a>
 35 | <div class="nota"><strong>4,7 ★</strong><span>139 opinions a Google</span></div>
 36 | <span data-abierto>Tots els dies</span>
 37 | Edició limitada · Cristall tallat
-38 | Ací la nit comença <em>amb llum</em>.
+38 | On fumar és una experiència, <em>no un simple hàbit social</em>.
 39 | <div class="hero-pista">Llisca</div>
 40 | <span>Shisha</span><span>Kazan</span><span>Mojitos</span><span>Chai latte</span><span>Espresso Martini</span><span>Bona música</span><span>Fins a les 4:00</span>
 41 | <span class="etiqueta aparece">El lounge</span>
-42 | Shisha a València, <em>a la llum càlida</em> de l'Eixample
+42 | En ple <em>cor</em> de la ciutat
 43 | Noor vol dir llum, i ací es nota. Taulells de to coure, sofàs fets per a allargar la nit, columnes que cremen com brases i una barra on la cachimba i els còctels parlen el mateix idioma. A un pas de la plaça de Cánovas.
 44 | Per a celebrar, per a una conversa llarga o per a res en particular. Obrim cada dia, de 16:00 a 04:00.
 45 | <div><strong>4,7 ★</strong><span>139 opinions a Google</span></div>
@@ -50,7 +50,7 @@
 48 | alt="Sala de NOOR, shisha lounge a València, amb barra de taulells de to coure, tamborets i cachimbes"
 49 | alt="Client gaudint d'una cachimba a la barra de NOOR Lounge"
 50 | <span class="etiqueta aparece">El ritual</span>
-51 | Una cachimba ben feta <em>no té pressa</em>
+51 | Un ritual en què la cachimba <em>eleva l’experiència</em>
 52 | <h3>El teu sabor</h3><p>Rubio, Fusion, Full Black, Kazan o Josh. Digues-nos si la vols fresca, dolça, afruitada o intensa i t'orientem en taula.</p>
 53 | <h3>Preparada al moment</h3><p>Cassoleta carregada a mà, carbó natural en el seu punt i cristall impecable en cada servei.</p>
 54 | <h3>El temps, teu</h3><p>Un còctel, bona música i la barra encesa fins a les quatre. La resta ho decideixes tu.</p>

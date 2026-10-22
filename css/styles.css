@@ -203,7 +203,7 @@ h2 em, h1 em { font-style: italic; color: var(--ambar-claro); }
   .hero { height: 190vh; }
   .marca span { font-size: 30vw; top: auto; }
   .marca .marca-izq { right: auto; left: 5vw; top: calc(var(--arco-arriba, 120px) - 16vw); transform: translateX(calc(var(--abre, 0) * -40vw)); }
-  .marca .marca-der { left: auto; right: 5vw; top: calc(var(--arco-abajo, 600px) - 14vw); transform: translateX(calc(var(--abre, 0) * 40vw)); z-index: 3; }
+  .marca .marca-der { left: auto; right: 5vw; top: calc(var(--arco-abajo, 600px) - 18vw); transform: translateX(calc(var(--abre, 0) * 40vw)); z-index: 3; }
   .marca { z-index: 3; }
   .hero-lado-der { display: none; }
   .hero-lado-izq { left: 16px; right: 16px; max-width: none; bottom: 4svh; text-align: center; }
@@ -630,3 +630,6 @@ footer { border-top: 1px solid var(--linea); padding: 54px 0 120px; color: var(-
 .whatsapp.reserva-flotante svg { width: 28px; height: 28px; }
 .reserva .hero-botones { justify-content: center; }
 .reserva .rr-nota { margin-left: auto; margin-right: auto; max-width: 560px; }
+@media (max-width: 900px) {
+  .hero-sub { font-size: 14px; line-height: 1.45; }
+}

@@ -31,17 +31,17 @@
 29 | alt="Cut-crystal shisha releasing smoke over the bar at NOOR Lounge"
 30 | <span class="etiqueta">Shisha Lounge · València</span>
 31 | <span>4.7 ★ on Google</span><span data-abierto>Every day from 16:00 to 04:00</span>
-32 | Cut-crystal shisha, natural charcoal and unhurried cocktails. L'Eixample.
+32 | Your specialist shisha lounge, set in authentic Russian style, with every kind of blend to surprise your palate.
 33 |  Book your table</a>
 34 | href="#carta">Explore the menu</a>
 35 | <div class="nota"><strong>4.7 ★</strong><span>139 Google reviews</span></div>
 36 | <span data-abierto>Every day</span>
 37 | Limited edition · Cut crystal
-38 | Here the night begins <em>with light</em>.
+38 | Where smoking is an experience, <em>not just a social habit</em>.
 39 | <div class="hero-pista">Scroll</div>
 40 | <span>Shisha</span><span>Kazan</span><span>Mojitos</span><span>Chai latte</span><span>Espresso Martini</span><span>Good music</span><span>Until 4:00</span>
 41 | <span class="etiqueta aparece">The lounge</span>
-42 | Shisha in Valencia, <em>in the warm light</em> of L'Eixample
+42 | Right in the <em>heart</em> of the city
 43 | Noor means light, and you can feel it here. Copper tiles, sofas made for long nights, columns that glow like embers and a bar where shisha and cocktails speak the same language. A step away from Plaza Cánovas.
 44 | For a celebration, a long conversation or nothing in particular. Open every day, from 16:00 to 04:00.
 45 | <div><strong>4.7 ★</strong><span>139 Google reviews</span></div>
@@ -50,7 +50,7 @@
 48 | alt="Inside NOOR, a shisha lounge in Valencia, with a copper-tiled bar, stools and hookahs"
 49 | alt="Guest enjoying a shisha at the bar of NOOR Lounge"
 50 | <span class="etiqueta aparece">The ritual</span>
-51 | A well-made shisha <em>is never rushed</em>
+51 | A ritual in which the hookah <em>elevates the experience</em>
 52 | <h3>Your flavour</h3><p>Rubio, Fusion, Full Black, Kazan or Josh. Tell us if you like it fresh, sweet, fruity or intense and we will guide you at your table.</p>
 53 | <h3>Prepared to order</h3><p>Hand-packed bowl, natural charcoal at just the right heat and spotless crystal every time.</p>
 54 | <h3>Your time, your pace</h3><p>A cocktail, good music and the bar alight until four. The rest is up to you.</p>

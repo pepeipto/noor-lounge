@@ -31,17 +31,17 @@
 29 | alt="Narghilè in cristallo intagliato che sprigiona fumo sul bancone del NOOR Lounge"
 30 | <span class="etiqueta">Shisha Lounge · València</span>
 31 | <span>4,7 ★ su Google</span><span data-abierto>Tutti i giorni dalle 16:00 alle 04:00</span>
-32 | Narghilè in cristallo intagliato, carbone naturale e cocktail senza fretta. L'Eixample.
+32 | Il tuo shisha lounge specializzato, nell’autentico stile russo, con ogni tipo di miscela che sorprenderà il tuo palato.
 33 |  Prenota il tuo tavolo</a>
 34 | href="#carta">Scopri il menù</a>
 35 | <div class="nota"><strong>4,7 ★</strong><span>139 recensioni su Google</span></div>
 36 | <span data-abierto>Tutti i giorni</span>
 37 | Edizione limitata · Cristallo intagliato
-38 | Qui la notte comincia <em>con la luce</em>.
+38 | Dove fumare è un’esperienza, <em>non una semplice abitudine sociale</em>.
 39 | <div class="hero-pista">Scorri</div>
 40 | <span>Narghilè</span><span>Kazan</span><span>Mojito</span><span>Chai latte</span><span>Espresso Martini</span><span>Buona musica</span><span>Fino alle 4:00</span>
 41 | <span class="etiqueta aparece">Il lounge</span>
-42 | Narghilè a Valencia, <em>nella luce calda</em> dell'Eixample
+42 | Nel pieno <em>cuore</em> della città
 43 | Noor significa luce, e qui si sente. Piastrelle color rame, divani fatti per allungare la notte, colonne che ardono come brace e un bancone dove narghilè e cocktail parlano la stessa lingua. A due passi da Plaza Cánovas.
 44 | Per festeggiare, per una lunga chiacchierata o per niente di particolare. Aperti ogni giorno, dalle 16:00 alle 04:00.
 45 | <div><strong>4,7 ★</strong><span>139 recensioni su Google</span></div>
@@ -50,7 +50,7 @@
 48 | alt="Sala del NOOR, shisha lounge a Valencia, con bancone in piastrelle color rame, sgabelli e narghilè"
 49 | alt="Cliente che si gode un narghilè al bancone del NOOR Lounge"
 50 | <span class="etiqueta aparece">Il rito</span>
-51 | Un narghilè fatto bene <em>non ha fretta</em>
+51 | Un rituale in cui il narghilè <em>eleva l’esperienza</em>
 52 | <h3>Il tuo gusto</h3><p>Rubio, Fusion, Full Black, Kazan o Josh. Dicci se lo preferisci fresco, dolce, fruttato o intenso e ti guidiamo al tavolo.</p>
 53 | <h3>Preparato al momento</h3><p>Braciere caricato a mano, carbone naturale al punto giusto e cristallo impeccabile a ogni servizio.</p>
 54 | <h3>Il tempo è tuo</h3><p>Un cocktail, buona musica e il bancone acceso fino alle quattro. Il resto lo decidi tu.</p>
