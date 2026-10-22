@@ -8,7 +8,7 @@ DIRECCION = "Carrer Serrano Morales, 3, bajo, 46004 València (Valencia)"
 TEL = '963 12 07 54'
 EMAIL = 'info@noorloungevalencia.com'
 WEB = 'www.noorloungevalencia.com'
-FECHA = '20 de octubre de 2026'
+FECHA = '22 de octubre de 2026'
 
 
 def pagina(archivo, titulo, descripcion, cuerpo):
@@ -27,7 +27,7 @@ def pagina(archivo, titulo, descripcion, cuerpo):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=12">
+  <link rel="stylesheet" href="css/styles.css?v=13">
 </head>
 <body class="pagina-legal">
   <header class="cabecera con-fondo">
@@ -105,8 +105,8 @@ pagina('privacidad.html', 'Política de privacidad', 'Política de privacidad de
       <h2>2. Qué datos tratamos</h2>
       <p>Esta web no tiene formularios ni crea cuentas de usuario. Solo tratamos los datos que tú nos facilitas cuando te pones en contacto con nosotros:</p>
       <ul>
-        <li><b>WhatsApp o teléfono:</b> tu nombre, número de teléfono y lo que nos cuentes (por ejemplo, el día, la hora y el número de personas de una reserva).</li>
-        <li><b>Reserva rápida de la web:</b> solo prepara un mensaje de WhatsApp en tu dispositivo. La web no guarda ni envía esos datos; únicamente nos llegan si decides enviar el mensaje.</li>
+        <li><b>WhatsApp, teléfono o correo:</b> tu nombre, número de teléfono o email y lo que nos cuentes en tu consulta.</li>
+        <li><b>Reservas online:</b> se hacen en la plataforma Scennio, que es el sistema de mesas del local. Allí facilitas tu nombre, teléfono, día, hora y número de personas; Scennio los trata como encargado del tratamiento para gestionar tu reserva.</li>
         <li><b>Asistente:</b> funciona dentro de tu navegador con la información del local. Tus preguntas no se envían ni se guardan en ningún servidor.</li>
       </ul>
 

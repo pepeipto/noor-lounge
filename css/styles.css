@@ -623,3 +623,8 @@ footer { border-top: 1px solid var(--linea); padding: 54px 0 120px; color: var(-
 .legal-enlaces { margin-top: 10px; font-size: 12px; opacity: .8; }
 .legal-enlaces a { text-decoration: none; border-bottom: 1px solid var(--linea); }
 .legal-enlaces a:hover { color: var(--ambar-claro); }
+
+/* ---------- Botón flotante de reserva (Scennio) ---------- */
+.whatsapp.reserva-flotante, .whatsapp.reserva-flotante::before { background: var(--ambar); }
+.whatsapp.reserva-flotante { color: #1d1206; }
+.whatsapp.reserva-flotante svg { width: 28px; height: 28px; }

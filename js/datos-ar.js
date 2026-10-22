@@ -3,7 +3,7 @@
 window.NOOR = {
   idioma: 'ar-u-nu-latn',
   whatsapp: '34963120754',
-  textoWhatsApp: 'مرحبًا NOOR، أود حجز طاولة.',
+  textoWhatsApp: 'مرحبًا NOOR، لديّ استفسار.',
   reservas: 'https://www.scennio.com/es/noor-lounge/calendar',
   carta: 'https://www.scennio.com/es/noor-lounge/menu',
   asistenteApi: '',
@@ -20,6 +20,7 @@ window.NOOR = {
     resumen: (quien, dia, hora) => `طاولة ${quien}، ${dia}، الساعة ${hora}.`,
     mensajeReserva: (quien, dia, hora) => `مرحبًا NOOR، أود حجز طاولة ${quien} ${dia} الساعة ${hora}.`,
     tituloMapa: 'خريطة NOOR Lounge',
+    reservarOnline: "احجز طاولة عبر الإنترنت ←",
     escribirWhatsApp: 'راسلنا عبر واتساب ←',
     escribiendo: 'المساعد يكتب',
     sinRespuesta: 'نفضّل أن يجيبك فريقنا مباشرةً عن هذا السؤال. راسلنا عبر واتساب وسيردّون عليك فورًا.',
@@ -54,8 +55,8 @@ window.NOOR = {
     },
     {
       claves: ['حجز', 'الحجز', 'احجز', 'أحجز', 'طاولة', 'مجموعة', 'أشخاص', 'عيد ميلاد', 'حفلة', 'مناسبة', 'احتفال'],
-      texto: 'يمكنك حجز طاولة عبر الإنترنت (من شخص إلى 10 أشخاص) على scennio.com/es/noor-lounge/calendar، أو الاتصال بنا على ‎+34 963 12 07 54، أو مراسلتنا عبر واتساب. للمجموعات الكبيرة والمناسبات، الأفضل عبر واتساب.',
-      whatsapp: 'مرحبًا NOOR، أود حجز طاولة لـ__ أشخاص يوم __ الساعة __.',
+      texto: "احجز طاولتك عبر الإنترنت من الزر أدناه، من شخص إلى 10 أشخاص: يصل الحجز مباشرة إلى نظام الطاولات لدينا. للمجموعات التي تزيد على 10 أشخاص، اتصل بنا على ‎+34 963 12 07 54.",
+      reservar: true,
     },
     {
       claves: ['أين', 'عنوان', 'العنوان', 'موقع', 'الموقع', 'الوصول', 'شارع', 'مترو', 'المترو', 'موقف', 'ركن'],

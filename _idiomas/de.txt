@@ -13,7 +13,7 @@
 11 | Was kostet eine Shisha?
 12 | Unsere Shishas kosten zwischen 16 € (Rubio oder Josh) und 30 € (Kazan Especial), die Shisha mit frischer Frucht 40 €.
 13 | Wie reserviere ich einen Tisch?
-14 | Online über Scennio (1 bis 10 Personen), telefonisch unter +34 963 12 07 54 oder per WhatsApp. Für große Gruppen am besten per WhatsApp.
+14 | Online über diese Website, für 1 bis 10 Personen: Die Reservierung landet direkt in unserem Tischsystem. Für Gruppen ab 11 Personen rufen Sie uns unter +34 963 12 07 54 an.
 15 | Gibt es Cocktails?
 16 | Ja: Cocktails ab 12 €, darunter Mojitos mit Erdbeere, Mango oder Maracuja, Espresso Martini, PornStar Martini, Negroni und mehr.
 17 | Wie viel gibt man im Schnitt pro Person aus?
@@ -97,24 +97,17 @@
 95 | <dt>Telefon</dt><dd><a href="tel:+34963120754">+34 963 12 07 54</a></dd>
 96 | <dt>Öffnungszeiten <span
 97 | <td>Montag bis Sonntag</td>
-98 | rel="noopener">Per WhatsApp reservieren</a>
+98 | rel="noopener">Online reservieren</a>
 99 | href="#reservar">Tag und Uhrzeit wählen</a>
 100 | <span>Interaktive Karte anzeigen</span>
 101 | <span class="etiqueta aparece">Heute Abend</span>
 102 | Die Glut ist schon <em>entfacht</em>
-103 | Reservieren Sie Ihren Tisch mit einer Nachricht. Fragen zur Karte oder Sie kommen als Gruppe? Unser Assistent antwortet sofort.
-104 | aria-label="Schnellreservierung"
-105 | <legend>Tag</legend>
-106 | <legend>Personen</legend>
-107 | aria-label="Eine Person weniger"
-108 | aria-label="Eine Person mehr"
-109 | <legend>Uhrzeit</legend>
-110 | rel="noopener">Tisch per WhatsApp anfragen</a>
+103 | Reservieren Sie Ihren Tisch in einer Minute online: Tag, Uhrzeit und Personenzahl wählen, und der Tisch ist sofort für Sie reserviert. Fragen zur Karte? Unser Assistent antwortet Ihnen.
 111 | data-abrir-asistente>Den Assistenten fragen</button>
-112 | Wir bestätigen Ihren Tisch per WhatsApp. Lieber online auswählen? <a href="https://www.scennio.com/es/noor-lounge/calendar" target="_blank" rel="noopener nofollow">Bei Scennio reservieren</a>.
+112 | Ihre Reservierung landet direkt im Tischsystem unseres Serviceteams. Für Gruppen ab 11 Personen rufen Sie uns unter <a href="tel:+34963120754">+34 963 12 07 54</a> an.
 113 | <div>Shisha und Cocktails in Valencia · Carrer Serrano Morales, 3 · 46004 València · <a href="tel:+34963120754">+34 963 12 07 54</a></div>
 114 | Der Verkauf von Tabak und Alkohol an Personen unter 18 Jahren ist verboten. Rauchen schadet Ihrer Gesundheit erheblich. © 2026 NOOR Lounge
-115 | aria-label="Schreiben Sie uns per WhatsApp"
+115 | aria-label="Tisch online reservieren"
 116 | Sollen wir Ihnen heute Abend einen Tisch freihalten?
 117 | aria-label="Fragen Sie uns"
 118 | <span class="texto">Fragen Sie uns</span>
@@ -123,4 +116,4 @@
 121 | for="asistente-texto">Ihre Frage</label>
 122 | placeholder="Ihre Frage eingeben …"
 123 | aria-label="Senden"
-124 | Automatische Antworten. Für Reservierungen am besten per WhatsApp.
+124 | Automatische Antworten. Zum Reservieren nutzen Sie den Button für die Online-Reservierung.

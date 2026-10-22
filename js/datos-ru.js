@@ -3,7 +3,7 @@ const formaPersonas = new Intl.PluralRules('ru-RU');
 window.NOOR = {
   idioma: 'ru-RU',
   whatsapp: '34963120754',
-  textoWhatsApp: 'Здравствуйте, NOOR! Хочу забронировать столик.',
+  textoWhatsApp: 'Здравствуйте, NOOR! У меня вопрос.',
   reservas: 'https://www.scennio.com/es/noor-lounge/calendar',
   carta: 'https://www.scennio.com/es/noor-lounge/menu',
   asistenteApi: '',
@@ -20,6 +20,7 @@ window.NOOR = {
     resumen: (quien, dia, hora) => `Столик на ${quien}, ${dia}, в ${hora}.`,
     mensajeReserva: (quien, dia, hora) => `Здравствуйте, NOOR! Хочу забронировать столик на ${quien} ${dia} в ${hora}.`,
     tituloMapa: 'Карта: NOOR Lounge',
+    reservarOnline: "Забронировать стол онлайн →",
     escribirWhatsApp: 'Написать в WhatsApp →',
     escribiendo: 'Ассистент печатает',
     sinRespuesta: 'На этот вопрос лучше ответит наша команда. Напишите нам в WhatsApp — ответим в ближайшее время.',
@@ -54,8 +55,8 @@ window.NOOR = {
     },
     {
       claves: ['брон', 'резерв', 'столик', 'компани', 'человек', 'день рождени', 'праздн', 'мероприят'],
-      texto: 'Забронировать столик можно онлайн (от 1 до 10 человек) на scennio.com/es/noor-lounge/calendar, по телефону +34 963 12 07 54 или в WhatsApp. Для больших компаний и праздников лучше писать в WhatsApp.',
-      whatsapp: 'Здравствуйте, NOOR! Хочу забронировать столик на __ человек, дата: __, время: __.',
+      texto: "Забронируйте стол онлайн по кнопке ниже, от 1 до 10 человек: бронь сразу попадает в нашу систему столов. Для групп больше 10 человек звоните: +34 963 12 07 54.",
+      reservar: true,
     },
     {
       claves: ['где', 'адрес', 'добрат', 'найти', 'улиц', 'метро', 'парков', 'район'],

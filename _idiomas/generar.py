@@ -25,7 +25,7 @@ IDIOMAS = [
     ('ar', 'ar', 'ar', 'ar_AR', 'العربية', 'AR', 'اللغة', 'صالة شيشة في فالنسيا · شيشة وكوكتيلات | NOOR КАЛЬЯН Lounge'),
 ]
 TITULO_ES = IDIOMAS[0][7]
-WA_ES = 'Hola%20NOOR%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa.'
+WA_ES = 'Hola%20NOOR%2C%20tengo%20una%20consulta.'  # WhatsApp del pie: solo consultas (las reservas van a Scennio)
 FUENTES_ARABE = ('family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Manrope:wght@400;600',
                  'family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Manrope:wght@400;600'
                  '&family=Noto+Naskh+Arabic:wght@400;600&family=Noto+Sans+Arabic:wght@400;600')

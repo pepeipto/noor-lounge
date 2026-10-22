@@ -13,7 +13,7 @@
 11 | ¿Cuánto cuesta una cachimba?
 12 | Las shishas van de 16 € (Rubio o Josh) a 30 € (Kazan Especial), y 40 € la de fruta natural.
 13 | ¿Cómo reservo mesa?
-14 | Online en Scennio (de 1 a 10 personas), por teléfono al 963 12 07 54 o por WhatsApp. Para grupos grandes, mejor por WhatsApp.
+14 | Online desde esta web, de 1 a 10 personas: la reserva entra directamente en nuestro sistema de mesas. Para grupos de más de 10, llámanos al 963 12 07 54.
 15 | ¿Tenéis cócteles?
 16 | Sí: coctelería desde 12 €, con mojitos de fresa, mango o maracuyá, Espresso Martini, PornStar Martini, Negroni y más.
 17 | ¿Cuál es el gasto medio por persona?
@@ -97,24 +97,17 @@
 95 | <dt>Teléfono</dt><dd><a href="tel:+34963120754">963 12 07 54</a></dd>
 96 | <dt>Horario <span
 97 | <td>Lunes a domingo</td>
-98 | rel="noopener">Reservar por WhatsApp</a>
+98 | rel="noopener">Reservar online</a>
 99 | href="#reservar">Elegir día y hora</a>
 100 | <span>Ver mapa interactivo</span>
 101 | <span class="etiqueta aparece">Esta noche</span>
 102 | La brasa ya está <em>encendida</em>
-103 | Reserva tu mesa con un mensaje. ¿Dudas sobre la carta o vienes en grupo? Nuestro asistente te responde al momento.
-104 | aria-label="Reserva rápida"
-105 | <legend>Día</legend>
-106 | <legend>Personas</legend>
-107 | aria-label="Una persona menos"
-108 | aria-label="Una persona más"
-109 | <legend>Hora</legend>
-110 | rel="noopener">Pedir mesa por WhatsApp</a>
+103 | Reserva tu mesa online en un minuto: eliges día, hora y personas, y la mesa queda apartada al momento. ¿Dudas sobre la carta? Nuestro asistente te responde.
 111 | data-abrir-asistente>Preguntar al asistente</button>
-112 | Te confirmamos la mesa por WhatsApp. ¿Prefieres elegirla online? <a href="https://www.scennio.com/es/noor-lounge/calendar" target="_blank" rel="noopener nofollow">Reserva en Scennio</a>.
+112 | La reserva entra directamente en el sistema de mesas de nuestro equipo de sala. Para grupos de más de 10 personas, llámanos al <a href="tel:+34963120754">963 12 07 54</a>.
 113 | <div>Shisha y cócteles en Valencia · Carrer Serrano Morales, 3 · 46004 València · <a href="tel:+34963120754">963 12 07 54</a></div>
 114 | Prohibida la venta de tabaco y alcohol a menores de 18 años. El consumo de tabaco perjudica gravemente la salud. © 2026 NOOR Lounge
-115 | aria-label="Escríbenos por WhatsApp"
+115 | aria-label="Reservar mesa online"
 116 | ¿Te guardamos mesa esta noche?
 117 | aria-label="Pregúntanos"
 118 | <span class="texto">Pregúntanos</span>
@@ -123,4 +116,4 @@
 121 | for="asistente-texto">Tu pregunta</label>
 122 | placeholder="Escribe tu pregunta…"
 123 | aria-label="Enviar"
-124 | Respuestas automáticas. Para reservas, mejor por WhatsApp.
+124 | Respuestas automáticas. Para reservar, usa el botón de reserva online.

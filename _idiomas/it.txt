@@ -13,7 +13,7 @@
 11 | Quanto costa un narghilè?
 12 | I narghilè vanno da 16 € (Rubio o Josh) a 30 € (Kazan Especial), e 40 € quello alla frutta fresca.
 13 | Come prenoto un tavolo?
-14 | Online su Scennio (da 1 a 10 persone), per telefono al +34 963 12 07 54 o su WhatsApp. Per gruppi numerosi, meglio WhatsApp.
+14 | Online da questo sito, da 1 a 10 persone: la prenotazione entra direttamente nel nostro sistema dei tavoli. Per gruppi di più di 10 persone, chiamaci al +34 963 12 07 54.
 15 | Avete cocktail?
 16 | Sì: cocktail da 12 €, con mojito alla fragola, al mango o al frutto della passione, Espresso Martini, PornStar Martini, Negroni e altro ancora.
 17 | Qual è la spesa media a persona?
@@ -97,24 +97,17 @@
 95 | <dt>Telefono</dt><dd><a href="tel:+34963120754">+34 963 12 07 54</a></dd>
 96 | <dt>Orari <span
 97 | <td>Dal lunedì alla domenica</td>
-98 | rel="noopener">Prenota su WhatsApp</a>
+98 | rel="noopener">Prenota online</a>
 99 | href="#reservar">Scegli giorno e ora</a>
 100 | <span>Vedi la mappa interattiva</span>
 101 | <span class="etiqueta aparece">Stasera</span>
 102 | La brace è già <em>accesa</em>
-103 | Prenota il tuo tavolo con un messaggio. Dubbi sul menù o vieni in gruppo? Il nostro assistente ti risponde subito.
-104 | aria-label="Prenotazione rapida"
-105 | <legend>Giorno</legend>
-106 | <legend>Persone</legend>
-107 | aria-label="Una persona in meno"
-108 | aria-label="Una persona in più"
-109 | <legend>Ora</legend>
-110 | rel="noopener">Chiedi un tavolo su WhatsApp</a>
+103 | Prenota il tuo tavolo online in un minuto: scegli giorno, ora e numero di persone, e il tavolo è subito tuo. Dubbi sul menù? Il nostro assistente ti risponde.
 111 | data-abrir-asistente>Chiedi all'assistente</button>
-112 | Ti confermiamo il tavolo su WhatsApp. Preferisci sceglierlo online? <a href="https://www.scennio.com/es/noor-lounge/calendar" target="_blank" rel="noopener nofollow">Prenota su Scennio</a>.
+112 | La prenotazione entra direttamente nel sistema dei tavoli del nostro staff di sala. Per gruppi di più di 10 persone, chiamaci al <a href="tel:+34963120754">+34 963 12 07 54</a>.
 113 | <div>Narghilè e cocktail a Valencia · Carrer Serrano Morales, 3 · 46004 València · <a href="tel:+34963120754">+34 963 12 07 54</a></div>
 114 | È vietata la vendita di tabacco e alcolici ai minori di 18 anni. Il fumo nuoce gravemente alla salute. © 2026 NOOR Lounge
-115 | aria-label="Scrivici su WhatsApp"
+115 | aria-label="Prenota un tavolo online"
 116 | Ti teniamo un tavolo stasera?
 117 | aria-label="Chiedici"
 118 | <span class="texto">Chiedici</span>
@@ -123,4 +116,4 @@
 121 | for="asistente-texto">La tua domanda</label>
 122 | placeholder="Scrivi la tua domanda…"
 123 | aria-label="Invia"
-124 | Risposte automatiche. Per prenotare, meglio WhatsApp.
+124 | Risposte automatiche. Per prenotare, usa il pulsante di prenotazione online.

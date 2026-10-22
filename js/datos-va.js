@@ -2,7 +2,7 @@
 window.NOOR = {
   idioma: 'ca-ES-valencia',
   whatsapp: '34963120754',
-  textoWhatsApp: 'Hola NOOR, m’agradaria reservar una taula.',
+  textoWhatsApp: 'Hola NOOR, tinc una consulta.',
   reservas: 'https://www.scennio.com/es/noor-lounge/calendar',
   carta: 'https://www.scennio.com/es/noor-lounge/menu',
   asistenteApi: '',
@@ -18,6 +18,7 @@ window.NOOR = {
     resumen: (quien, dia, hora) => `Taula per a ${quien}, ${dia} ${hora.startsWith('01') ? 'a la' : 'a les'} ${hora}.`,
     mensajeReserva: (quien, dia, hora) => `Hola NOOR, m’agradaria reservar taula per a ${quien} ${dia} ${hora.startsWith('01') ? 'a la' : 'a les'} ${hora}.`,
     tituloMapa: 'Mapa de NOOR Lounge',
+    reservarOnline: "Reservar taula en línia →",
     escribirWhatsApp: 'Escriu-nos per WhatsApp →',
     escribiendo: 'L’assistent està escrivint',
     sinRespuesta: 'Eixa pregunta preferim que te la responga l’equip directament. Escriu-nos per WhatsApp i et contestaran de seguida.',
@@ -52,8 +53,8 @@ window.NOOR = {
     },
     {
       claves: ['reserv', 'taula', 'grup', 'persones', 'aniversari', 'celebrar', 'esdeveniment', 'festa'],
-      texto: 'Pots reservar taula en línia (d’1 a 10 persones) en scennio.com/es/noor-lounge/calendar, telefonar-nos al 963 12 07 54 o escriure’ns per WhatsApp. Per a grups grans o celebracions, millor per WhatsApp.',
-      whatsapp: 'Hola NOOR, vull reservar una taula per a __ persones el dia __ a les __.',
+      texto: "Reserva la teua taula en línia ací baix, d’1 a 10 persones: entra directament en el sistema de taules del local. Per a grups de més de 10, crida’ns al 963 12 07 54.",
+      reservar: true,
     },
     {
       claves: ['on', 'adreca', 'arribar', 'ubicacio', 'carrer', 'metro', 'aparcar', 'parking', 'zona'],

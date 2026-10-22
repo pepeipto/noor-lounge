@@ -487,18 +487,20 @@
 
   const normalizar = (t) => t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 
-  function burbuja(rol, texto, conWhatsApp) {
+  // Las reservas van siempre al sistema de mesas del local (Scennio); WhatsApp queda solo para consultas.
+  function burbuja(rol, texto, conWhatsApp, reservar) {
     const li = document.createElement('li');
     li.className = `burbuja ${rol === 'usuario' ? 'usuario' : 'asistente-msg'}`;
     const p = document.createElement('p');
     p.textContent = texto;
     li.append(p);
-    if (conWhatsApp) {
+    const enlace = reservar ? [DATOS.reservas, T.reservarOnline] : conWhatsApp ? [enlaceWhatsApp(conWhatsApp), T.escribirWhatsApp] : null;
+    if (enlace) {
       const a = document.createElement('a');
-      a.href = enlaceWhatsApp(conWhatsApp);
+      a.href = enlace[0];
       a.target = '_blank';
       a.rel = 'noopener';
-      a.textContent = T.escribirWhatsApp;
+      a.textContent = enlace[1];
       a.style.display = 'inline-block';
       a.style.marginTop = '8px';
       li.append(a);
@@ -552,7 +554,7 @@
     lista.scrollTop = lista.scrollHeight;
     const r = await responder(texto);
     pensando.remove();
-    burbuja('asistente', r.texto, r.whatsapp);
+    burbuja('asistente', r.texto, r.whatsapp, r.reservar);
     historial.push({ rol: 'asistente', texto: r.texto });
   }
 

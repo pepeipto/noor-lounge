@@ -13,7 +13,7 @@
 11 | How much is a shisha?
 12 | Shishas range from €16 (Rubio or Josh) to €30 (Kazan Especial), and €40 for a fresh fruit bowl.
 13 | How do I book a table?
-14 | Online via Scennio (1 to 10 people), by phone on +34 963 12 07 54 or on WhatsApp. For large groups, WhatsApp is best.
+14 | Online from this website, for 1 to 10 people: your booking goes straight into our table system. For groups of more than 10, call us on +34 963 12 07 54.
 15 | Do you serve cocktails?
 16 | Yes: cocktails from €12, including strawberry, mango or passion fruit mojitos, Espresso Martini, PornStar Martini, Negroni and more.
 17 | What is the average spend per person?
@@ -97,24 +97,17 @@
 95 | <dt>Phone</dt><dd><a href="tel:+34963120754">+34 963 12 07 54</a></dd>
 96 | <dt>Opening hours <span
 97 | <td>Monday to Sunday</td>
-98 | rel="noopener">Book on WhatsApp</a>
+98 | rel="noopener">Book online</a>
 99 | href="#reservar">Choose day and time</a>
 100 | <span>View interactive map</span>
 101 | <span class="etiqueta aparece">Tonight</span>
 102 | The embers are <em>already glowing</em>
-103 | Book your table with a single message. Questions about the menu or coming as a group? Our assistant answers right away.
-104 | aria-label="Quick booking"
-105 | <legend>Day</legend>
-106 | <legend>Guests</legend>
-107 | aria-label="One guest fewer"
-108 | aria-label="One guest more"
-109 | <legend>Time</legend>
-110 | rel="noopener">Request a table on WhatsApp</a>
+103 | Book your table online in a minute: choose the day, time and number of guests, and the table is held for you instantly. Questions about the menu? Our assistant will answer.
 111 | data-abrir-asistente>Ask the assistant</button>
-112 | We will confirm your table on WhatsApp. Prefer to choose it online? <a href="https://www.scennio.com/es/noor-lounge/calendar" target="_blank" rel="noopener nofollow">Book on Scennio</a>.
+112 | Your booking goes straight into the table system our floor team uses. For groups of more than 10, call us on <a href="tel:+34963120754">+34 963 12 07 54</a>.
 113 | <div>Shisha and cocktails in Valencia · Carrer Serrano Morales, 3 · 46004 València · <a href="tel:+34963120754">+34 963 12 07 54</a></div>
 114 | The sale of tobacco and alcohol to under-18s is prohibited. Smoking seriously harms your health. © 2026 NOOR Lounge
-115 | aria-label="Message us on WhatsApp"
+115 | aria-label="Book a table online"
 116 | Shall we keep a table for you tonight?
 117 | aria-label="Ask us"
 118 | <span class="texto">Ask us</span>
@@ -123,4 +116,4 @@
 121 | for="asistente-texto">Your question</label>
 122 | placeholder="Type your question…"
 123 | aria-label="Send"
-124 | Automated answers. For bookings, WhatsApp is best.
+124 | Automatic answers. To book, use the online booking button.

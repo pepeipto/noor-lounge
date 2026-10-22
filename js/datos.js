@@ -4,7 +4,7 @@
 window.NOOR = {
   idioma: 'es-ES',
   whatsapp: '34963120754',
-  textoWhatsApp: 'Hola NOOR, me gustaría reservar una mesa.',
+  textoWhatsApp: 'Hola NOOR, tengo una consulta.',
   reservas: 'https://www.scennio.com/es/noor-lounge/calendar',
   carta: 'https://www.scennio.com/es/noor-lounge/menu',
   asistenteApi: '', // p. ej. 'https://servidor/api/asistente' para conectar una IA real
@@ -21,6 +21,7 @@ window.NOOR = {
     resumen: (quien, dia, hora) => `Mesa para ${quien}, ${dia} ${hora.startsWith('01') ? 'a la' : 'a las'} ${hora}.`,
     mensajeReserva: (quien, dia, hora) => `Hola NOOR, me gustaría reservar mesa para ${quien} ${dia} ${hora.startsWith('01') ? 'a la' : 'a las'} ${hora}.`,
     tituloMapa: 'Mapa de NOOR Lounge',
+    reservarOnline: "Reservar mesa online →",
     escribirWhatsApp: 'Escribir por WhatsApp →',
     escribiendo: 'El asistente está escribiendo',
     sinRespuesta: 'Esa pregunta prefiero que te la responda el equipo directamente. Escríbenos por WhatsApp y te contestan enseguida.',
@@ -55,8 +56,8 @@ window.NOOR = {
     },
     {
       claves: ['reserv', 'mesa', 'grupo', 'personas', 'cumpleanos', 'celebrar', 'evento'],
-      texto: 'Puedes reservar mesa online (de 1 a 10 personas) en scennio.com/es/noor-lounge/calendar, llamarnos al 963 12 07 54 o escribirnos por WhatsApp. Para grupos grandes o celebraciones, mejor por WhatsApp.',
-      whatsapp: 'Hola NOOR, quiero reservar una mesa para __ personas el día __ a las __.',
+      texto: "Reserva tu mesa online aquí abajo, de 1 a 10 personas: entra directamente en el sistema de mesas del local. Para grupos de más de 10, llámanos al 963 12 07 54.",
+      reservar: true,
     },
     {
       claves: ['donde', 'direccion', 'llegar', 'ubicacion', 'calle', 'metro', 'aparcar', 'parking', 'zona'],

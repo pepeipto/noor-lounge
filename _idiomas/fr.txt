@@ -13,7 +13,7 @@
 11 | Combien coûte une chicha ?
 12 | Les chichas vont de 16 € (Rubio ou Josh) à 30 € (Kazan Especial), et 40 € pour celle au fruit frais.
 13 | Comment réserver une table ?
-14 | En ligne sur Scennio (de 1 à 10 personnes), par téléphone au +34 963 12 07 54 ou sur WhatsApp. Pour les grands groupes, WhatsApp est préférable.
+14 | En ligne depuis ce site, de 1 à 10 personnes : la réservation arrive directement dans notre système de tables. Pour les groupes de plus de 10, appelez-nous au +34 963 12 07 54.
 15 | Proposez-vous des cocktails ?
 16 | Oui : cocktails dès 12 €, avec mojitos à la fraise, à la mangue ou au fruit de la passion, Espresso Martini, PornStar Martini, Negroni et bien d'autres.
 17 | Quel est le budget moyen par personne ?
@@ -97,24 +97,17 @@
 95 | <dt>Téléphone</dt><dd><a href="tel:+34963120754">+34 963 12 07 54</a></dd>
 96 | <dt>Horaires <span
 97 | <td>Du lundi au dimanche</td>
-98 | rel="noopener">Réserver sur WhatsApp</a>
+98 | rel="noopener">Réserver en ligne</a>
 99 | href="#reservar">Choisir le jour et l'heure</a>
 100 | <span>Voir le plan interactif</span>
 101 | <span class="etiqueta aparece">Ce soir</span>
 102 | La braise est déjà <em>allumée</em>
-103 | Réservez votre table en un message. Une question sur la carte ou vous venez en groupe ? Notre assistant vous répond aussitôt.
-104 | aria-label="Réservation rapide"
-105 | <legend>Jour</legend>
-106 | <legend>Personnes</legend>
-107 | aria-label="Une personne de moins"
-108 | aria-label="Une personne de plus"
-109 | <legend>Heure</legend>
-110 | rel="noopener">Demander une table sur WhatsApp</a>
+103 | Réservez votre table en ligne en une minute : choisissez le jour, l’heure et le nombre de personnes, et la table vous est réservée aussitôt. Une question sur la carte ? Notre assistant vous répond.
 111 | data-abrir-asistente>Poser une question à l'assistant</button>
-112 | Nous vous confirmons la table sur WhatsApp. Vous préférez la choisir en ligne ? <a href="https://www.scennio.com/es/noor-lounge/calendar" target="_blank" rel="noopener nofollow">Réserver sur Scennio</a>.
+112 | Votre réservation arrive directement dans le système de tables de notre équipe en salle. Pour les groupes de plus de 10 personnes, appelez-nous au <a href="tel:+34963120754">+34 963 12 07 54</a>.
 113 | <div>Chicha et cocktails à Valence · Carrer Serrano Morales, 3 · 46004 València · <a href="tel:+34963120754">+34 963 12 07 54</a></div>
 114 | La vente de tabac et d'alcool aux mineurs de moins de 18 ans est interdite. Fumer nuit gravement à la santé. © 2026 NOOR Lounge
-115 | aria-label="Écrivez-nous sur WhatsApp"
+115 | aria-label="Réserver une table en ligne"
 116 | On vous garde une table ce soir ?
 117 | aria-label="Une question ?"
 118 | <span class="texto">Une question ?</span>
@@ -123,4 +116,4 @@
 121 | for="asistente-texto">Votre question</label>
 122 | placeholder="Écrivez votre question…"
 123 | aria-label="Envoyer"
-124 | Réponses automatiques. Pour réserver, mieux vaut WhatsApp.
+124 | Réponses automatiques. Pour réserver, utilisez le bouton de réservation en ligne.

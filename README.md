@@ -17,7 +17,8 @@ Y abrir http://localhost:8090
 - **Redes**: Instagram @noorloungevlc y TikTok @noorpub.
 - **Secciones**: el lounge, el ritual, carta con precios en HTML (indexable), galería con parallax, preguntas frecuentes, visítanos (el mapa de Google solo se carga al pulsar) y llamada a reservar.
 - **SEO**: title y description con «shisha lounge en Valencia», Open Graph/Twitter con `img/og-noor.jpg` (1200×630), JSON-LD (BarOrPub + WebSite + FAQPage, sin aggregateRating propio), `robots.txt`, `sitemap.xml`, iconos y `site.webmanifest`.
-- **WhatsApp**: botón flotante y botones de reserva a `wa.me/34963120754` con mensaje prerrellenado.
+- **Reservas**: todos los botones de reservar (cabecera, portada, visítanos, sección final, botón flotante y asistente) van a Scennio (`scennio.com/es/noor-lounge/calendar`), que es el sistema de mesas que usan los camareros. **No hay reserva por WhatsApp** (decisión del cliente, 22/10/2026): así no se cuelan reservas fuera del sistema.
+- **WhatsApp**: solo para consultas, en el pie (`wa.me/34963120754` con «tengo una consulta» en cada idioma).
 - **Asistente**: chat flotante que responde con los datos del local (`js/datos.js`). Para conectar una IA real, poner la URL de un servidor en `asistenteApi` (recibe `{ mensajes }` y devuelve `{ respuesta }`).
 
 ## Idiomas
@@ -51,7 +52,7 @@ a partir de `_idiomas/plantilla.html` (español) y de los textos de `_idiomas/<i
 
 ## Pendiente con el cliente
 
-- Confirmar que el 963 12 07 54 tiene WhatsApp (es un fijo: necesita WhatsApp Business) o darnos un móvil.
+- Confirmar que el 963 12 07 54 tiene WhatsApp (es un fijo: necesita WhatsApp Business) o darnos un móvil. Ya solo se usa para consultas.
 - Confirmar el texto «Edición limitada · Cristal tallado» de la pieza del hero.
 - Fotos: el dueño (Ali Yalkharoev) dio permiso para usarlas el 20/10/2026. Pendiente: logo oficial en vectorial, si lo tienen.
 - Confirmar los precios de la carta y si hay mesas al aire libre (sale en Google; el asistente ya no lo afirma).
