@@ -252,7 +252,7 @@
       hero.style.setProperty('--arco-arriba', `${by}px`);
       hero.style.setProperty('--arco-abajo', `${by + bh}px`);
       finalEl.classList.toggle('activo', fin > .5);
-      raiz.classList.toggle('en-cabecera', suave < .55);
+      raiz.classList.toggle('en-cabecera', true); // mientras se ve la cabecera, sus botones bastan (en móvil los flotantes esperan)
     }
     if (ritual) {
       const r = ritual.getBoundingClientRect();
