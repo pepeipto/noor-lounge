@@ -93,13 +93,13 @@ export function baldosa(tam = 1024) {
     const lx = x % lado, ly = y % lado, borde = Math.min(lx, lado - lx, ly, lado - ly);
     if (borde < junta) return [20, 19, 18, 0.95, 0];
     const t = tono[Math.floor(y / lado) * 2 + Math.floor(x / lado)], v = n(x, y);
-    const g = (36 + v * 22) * t;
+    const g = (74 + v * 26) * t;
     return [g * 1.04, g, g * 0.95, 0.42 + v * 0.3, 1 + v * 0.15];
   }, 1.6);
 }
 
 // Paneles de madera oscura con ranuras diagonales que cambian de sentido (como los del local)
-export function madera(tam = 1024) {
+export function madera(tam = 1024, tono = [70, 42, 26]) {
   const n = fbm(tam, 21, 4, 4), panel = tam / 2, paso = tam / 90;
   return material(tam, (x, y) => {
     const px = Math.floor(x / panel), py = Math.floor(y / panel), lx = x % panel, ly = y % panel;
@@ -109,19 +109,19 @@ export function madera(tam = 1024) {
     const ranura = d < 0.22 ? 0 : 1, v = n(x, y), veta = Math.sin((lx + sentido * ly) * 0.05 + v * 8) * 0.5 + 0.5;
     const base = 0.75 + veta * 0.2 + v * 0.15, k = ranura ? 1 : 0.55;
     if (borde < 2) return [18, 11, 7, 0.9, 0];
-    return [70 * base * k, 42 * base * k, 26 * base * k, 0.55 + (1 - ranura) * 0.3, ranura * 0.7 + veta * 0.1];
+    return [tono[0] * base * k, tono[1] * base * k, tono[2] * base * k, 0.55 + (1 - ranura) * 0.3, ranura * 0.7 + veta * 0.1];
   }, 3);
 }
 
 // Mármol marrón con vetas claras (encimeras de la barra)
-export function marmol(tam = 512) {
+export function marmol(tam = 512, base = [78, 44, 26], vet = [150, 110, 80]) {
   const n = fbm(tam, 41, 3, 5), m = fbm(tam, 77, 6, 4);
   return material(tam, (x, y) => {
     const t = n(x, y) * 7 + m(x, y) * 3;
     const veta = Math.pow(1 - Math.abs(Math.sin((x / tam) * 6.28 * 2 + (y / tam) * 6.28 + t)), 9);
     const fina = Math.pow(1 - Math.abs(Math.sin((x / tam) * 6.28 * 5 - (y / tam) * 6.28 * 3 + t * 1.7)), 26) * 0.6;
     const v = Math.min(1, veta + fina), b = 0.85 + m(x, y) * 0.3;
-    return [(78 + v * 150) * b, (44 + v * 110) * b, (26 + v * 80) * b, 0.12 + (1 - v) * 0.1, v * 0.2];
+    return [(base[0] + v * vet[0]) * b, (base[1] + v * vet[1]) * b, (base[2] + v * vet[2]) * b, 0.12 + (1 - v) * 0.1, v * 0.2];
   }, 1);
 }
 
