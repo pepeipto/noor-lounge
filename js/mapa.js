@@ -4,6 +4,7 @@
 // No muestra disponibilidad: la reserva y la asignación de mesa se hacen en Scennio.
 (() => {
   'use strict';
+  const SCRIPT = document.currentScript && document.currentScript.src;
   const caja = document.getElementById('mapa-sala');
   const DATOS = window.NOOR || {};
   const T = (DATOS.textos || {}).mapa;
@@ -257,7 +258,9 @@
     svg.querySelectorAll('[data-zona]').forEach((g) => g.classList.toggle('activa', g.dataset.zona === z));
     svg.querySelectorAll('[data-mesa]').forEach((g) => g.classList.toggle('elegida', g.dataset.mesa === mesa));
     pintarPanel();
+    oyentes.forEach((f) => f(z, mesa));
   }
+  const oyentes = [];
   svg.addEventListener('click', (e) => {
     const g = e.target.closest('[data-mesa], .marcador');
     if (g) elegir(g.dataset.zona, g.dataset.mesa || null);
@@ -268,4 +271,28 @@
     if (g) { e.preventDefault(); elegir(g.dataset.zona, g.dataset.mesa || null); }
   });
   pintarPanel();
+
+  // ---------- Versión 3D (js/mapa3d.js): solo con WebGL2 y cuando la sección se acerca a la pantalla ----------
+  window.NOOR_MAPA = {
+    MESAS, PANTALLAS, COLUMNAS, BARRAS, ZONAS, O, W, H, T, elegir,
+    escuchar: (f) => oyentes.push(f),
+    sinTresD: () => { caja.classList.remove('con-3d'); caja.querySelector('.mapa3d')?.remove(); },
+  };
+  const webgl2 = (() => { try { return !!document.createElement('canvas').getContext('webgl2'); } catch { return false; } })();
+  if (!webgl2 || !SCRIPT || !('IntersectionObserver' in window)) return;
+  const cargar = () => {
+    const zona = document.createElement('div');
+    zona.className = 'mapa3d';
+    caja.prepend(zona);
+    import(new URL('mapa3d.js?v=1', SCRIPT).href)
+      .then((mod) => {
+        caja.classList.add('con-3d');
+        mod.iniciar(window.NOOR_MAPA, zona);
+        if (zonaActual) oyentes.forEach((f) => f(zonaActual, mesaActual));
+        requestAnimationFrame(() => zona.classList.add('lista'));
+      })
+      .catch((e) => { console.warn('Mapa 3D no disponible:', e); window.NOOR_MAPA.sinTresD(); });
+  };
+  const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { io.disconnect(); cargar(); } }, { rootMargin: '900px' });
+  io.observe(caja);
 })();

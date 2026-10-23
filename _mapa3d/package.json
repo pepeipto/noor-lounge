@@ -1,0 +1,9 @@
+{
+  "name": "noor-mapa3d",
+  "private": true,
+  "description": "Escena 3D del mapa de reservas. Se compila a js/mapa3d.js con: npm run compilar",
+  "scripts": {
+    "compilar": "esbuild escena.js --bundle --format=esm --minify --target=es2020 --legal-comments=none --outfile=../js/mapa3d.js"
+  },
+  "devDependencies": { "esbuild": "0.25.10", "three": "0.186.1" }
+}

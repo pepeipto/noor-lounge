@@ -11,6 +11,7 @@ window.NOOR = {
       aria: "Mappa interattiva della sala del NOOR", entrada: "INGRESSO", aseos: "BAGNI",
       barras: { barra: "BANCONE", bebida: "BAR BEVANDE", shishas: "SHISHA" },
       mesa: "Tavolo", taburete: "Sgabello", mesaCorta: "Tavolo", tab: "Sgabello",
+      todaSala: "Tutta la sala", girar: "Trascina per ruotare la sala",
       elige: "Scegli una zona", ayuda: "Tocca una zona della mappa, o sceglila qui, per vedere i suoi tavoli.", reservar: "Prenota in questa zona", nota: "Scegli giorno, ora e numero di persone nel nostro sistema di prenotazione; lo staff di sala ti assegna il tavolo in base alla disponibilità.",
       hasta: (n) => `fino a ${n} ${n === 1 ? 'persona' : 'persone'}`,
       resumen: (m, p) => `${m} ${m === 1 ? 'tavolo' : 'tavoli'} · ${p} posti`,
