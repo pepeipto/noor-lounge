@@ -25,7 +25,7 @@ export function iniciar(api, contenedor) {
   const S = PL.S, ALTO = 2.9;
   const pt = (x, y) => [(x - PL.ORIGEN[0]) * S, (y - PL.ORIGEN[1]) * S];
   const xs = PL.CONTORNO.map((p) => pt(...p)[0]), zs = PL.CONTORNO.map((p) => pt(...p)[1]);
-  const RW = Math.max(...xs), RD = Math.max(...zs);
+  const RW = Math.max(...xs), RD = Math.max(...zs), X_MIN = pt(PL.ACERA[0][0], 0)[0];
   const MIRA = { s: 0, n: Math.PI, e: Math.PI / 2, o: -Math.PI / 2 };
   const DIR = { s: [0, 1], n: [0, -1], e: [1, 0], o: [-1, 0] };
 
@@ -90,7 +90,6 @@ export function iniciar(api, contenedor) {
     espejo: new THREE.MeshStandardMaterial({ color: 0xc8c4be, roughness: 0.06, metalness: 1, envMapIntensity: 4.5 }),
     botella: new THREE.MeshPhysicalMaterial({ roughness: 0.08, transparent: true, opacity: 0.88, clearcoat: 1, envMapIntensity: 1.8 }),
     pantallaMesa: new THREE.MeshStandardMaterial({ color: 0x050608, emissive: 0x1d3a6a, emissiveIntensity: 0.3, roughness: 0.1 }),
-    calle: new THREE.MeshBasicMaterial({ color: 0x3a3f46 }),
   };
 
   const sombra = (o, cast = true, rec = true) => { o.traverse((m) => { if (m.isMesh) { m.castShadow = cast; m.receiveShadow = rec; } }); return o; };
@@ -164,13 +163,23 @@ export function iniciar(api, contenedor) {
     const n = (() => { const [x1, z1] = pt(...a), [x2, z2] = pt(...b), L = Math.hypot(x2 - x1, z2 - z1); return [(z2 - z1) / L, -(x2 - x1) / L]; })();
     if (ventana) { tramo(p0, p1, 0.75, mat, { remate: false }); cortables.push({ o: tramo(p0, p1, ALTO - 2.3, mat, { y0: 2.3 }), n, ocultar: true }); }
     vidrio(p0, p1, { y0: ventana ? 0.75 : 0, alto: ventana ? 1.55 : 2.4, n });
-    // Calle detrás del vidrio (un fondo oscuro para que no se vea el vacío)
-    const [x1, z1] = pt(...p0), [x2, z2] = pt(...p1);
-    const calle = malla(new THREE.PlaneGeometry(Math.hypot(x2 - x1, z2 - z1), 2.4), M.calle, (x1 + x2) / 2 - 0.25, 1.2, (z1 + z2) / 2);
-    calle.rotation.y = Math.PI / 2;
-    sala.add(calle);
-    cortables.push({ o: calle, n, ocultar: true });
   });
+  // Acera (con la terraza) y franja de calzada delante de la fachada
+  {
+    const fa = new THREE.Shape(PL.ACERA.map((p) => { const [X, Z] = pt(...p); return new THREE.Vector2(X, -Z); }));
+    const acera = malla(new THREE.ExtrudeGeometry(fa, { depth: 0.12, bevelEnabled: false }), new THREE.MeshStandardMaterial({ color: 0x8a8782, roughness: 0.92 }), 0, -0.13, 0);
+    acera.rotation.x = -Math.PI / 2;
+    acera.receiveShadow = true;
+    sala.add(acera);
+    const losas = malla(new THREE.ShapeGeometry(fa), baldosa(1 / 0.8, 1 / 0.8), 0, -0.008, 0);
+    losas.rotation.x = -Math.PI / 2;
+    losas.receiveShadow = true;
+    sala.add(losas);
+    const [cx, cy, cw, ch] = PL.CALZADA, [X0, Z0] = pt(cx, cy);
+    const asfalto = malla(new THREE.BoxGeometry(cw * S, 0.1, ch * S), new THREE.MeshStandardMaterial({ color: 0x26282b, roughness: 0.95 }), X0 + cw * S / 2, -0.2, Z0 + ch * S / 2);
+    asfalto.receiveShadow = true;
+    sala.add(asfalto);
+  }
   for (const [a, b] of PL.TABIQUES) tramo(a, b, 1.1, madera, { grosor: 0.1, lado: 0 });
   for (const [a, b] of PL.MAMPARAS) vidrio(a, b);
   // Felpudo de entrada (junto a la puerta de la calle) con el texto traducido
@@ -491,7 +500,7 @@ export function iniciar(api, contenedor) {
   }
 
   // ---------- Luces ----------
-  const centro = new THREE.Vector3(RW / 2, 0.3, RD / 2);
+  const centro = new THREE.Vector3((X_MIN + RW) / 2, 0.3, RD / 2);
   escena.add(new THREE.HemisphereLight(0xffd9b0, 0x1b100a, 0.55));
   // Luz principal que da las sombras de todo el mobiliario (cubre los 20 m de local)
   const sol = new THREE.DirectionalLight(0xffe6cc, 2.4);
@@ -539,11 +548,18 @@ export function iniciar(api, contenedor) {
   controles.target.copy(centro);
   controles.enableDamping = true;
   controles.dampingFactor = 0.08;
-  controles.enablePan = false;
+  // Ampliar y reducir: botones +/−, pellizco con dos dedos en móvil y Ctrl/⌘ + rueda en ordenador.
+  // Al ampliar se puede desplazar la vista (botón derecho o dos dedos).
+  controles.enablePan = true;
+  controles.screenSpacePanning = false;
   controles.enableZoom = false;
+  controles.zoomSpeed = 1.2;
+  controles.minDistance = 2.2;
+  controles.touches = { ONE: -1, TWO: THREE.TOUCH.DOLLY_PAN };
   controles.rotateSpeed = 0.5;
   controles.minPolarAngle = 0.45; controles.maxPolarAngle = 1.1;
-  if (tactil) { controles.enabled = false; lienzo.style.touchAction = 'pan-y'; }
+  // En móvil un dedo mueve la página; dos dedos amplían, reducen y desplazan el mapa
+  if (tactil) { controles.enableZoom = true; controles.enableRotate = false; lienzo.style.touchAction = 'pan-y'; }
   // Desde el lado de la barra; en pantallas estrechas, desde la entrada mirando a lo largo del local
   let AZ = 0.12, POLAR = 0.82;
   const fijarLimites = () => { controles.minAzimuthAngle = AZ - 0.8; controles.maxAzimuthAngle = AZ + 0.8; };
@@ -569,8 +585,9 @@ export function iniciar(api, contenedor) {
   const vista = (objetivo, dist, az = AZ, polar = POLAR) => ({ obj: objetivo.clone(), pos: new THREE.Vector3().setFromSpherical(new THREE.Spherical(dist, polar, az)).add(objetivo) });
   let viaje = null;
   const viajar = (destino) => { viaje = { t0: performance.now(), dur: pocoMovimiento ? 1 : 1300, deO: controles.target.clone(), deP: camara.position.clone(), aO: destino.obj, aP: destino.pos }; };
-  const cajaSala = [0, 0, RW, RD];
+  const cajaSala = [X_MIN, 0, RW, RD];
   const vistaGeneral = () => vista(centro, encuadre(cajaSala, centro, AZ, POLAR, 0.98));
+
 
   function medir() {
     const w = contenedor.clientWidth, h = contenedor.clientHeight;
@@ -585,7 +602,9 @@ export function iniciar(api, contenedor) {
     const estrecha = camara.aspect < 1.25;
     AZ = estrecha ? -1.05 : 0.08; POLAR = estrecha ? 0.72 : 0.64;
     fijarLimites();
-    if (!zonaActual && !viaje) { const vg = vistaGeneral(); camara.position.copy(vg.pos); controles.target.copy(vg.obj); }
+    const vg = vistaGeneral();
+    controles.maxDistance = vg.pos.distanceTo(vg.obj) * 1.35;
+    if (!zonaActual && !viaje) { camara.position.copy(vg.pos); controles.target.copy(vg.obj); }
   }
 
   // ---------- Capa HTML: marcadores de zona y números de mesa ----------
@@ -623,6 +642,30 @@ export function iniciar(api, contenedor) {
   verTodo.type = 'button'; verTodo.className = 'mapa3d-todo'; verTodo.textContent = T.todaSala || '⤢';
   verTodo.addEventListener('click', () => api.elegir(null));
   contenedor.append(verTodo);
+  // Botones de ampliar y reducir
+  const zoom = (f) => {
+    const off = camara.position.clone().sub(controles.target);
+    const d = THREE.MathUtils.clamp(off.length() * f, controles.minDistance, controles.maxDistance);
+    viajar({ obj: controles.target.clone(), pos: controles.target.clone().add(off.setLength(d)) });
+    viaje.dur = pocoMovimiento ? 1 : 450;
+  };
+  const botonesZoom = document.createElement('div');
+  botonesZoom.className = 'mapa3d-zoom';
+  for (const [txt, f, et] of [['+', 0.7, T.ampliar || 'Ampliar'], ['−', 1 / 0.7, T.reducir || 'Reducir']]) {
+    const b = document.createElement('button');
+    b.type = 'button'; b.textContent = txt; b.setAttribute('aria-label', et); b.title = et;
+    b.addEventListener('click', () => zoom(f));
+    botonesZoom.append(b);
+  }
+  contenedor.append(botonesZoom);
+  // Ctrl/⌘ + rueda en ordenador (la rueda sola sigue moviendo la página)
+  lienzo.addEventListener('wheel', (e) => {
+    if (!e.ctrlKey && !e.metaKey) return;
+    e.preventDefault();
+    const off = camara.position.clone().sub(controles.target);
+    const d = THREE.MathUtils.clamp(off.length() * Math.exp(e.deltaY * 0.0015), controles.minDistance, controles.maxDistance);
+    camara.position.copy(controles.target).add(off.setLength(d));
+  }, { passive: false });
   if (!tactil && T.girar) {
     const pista = document.createElement('span');
     pista.className = 'mapa3d-pista'; pista.textContent = T.girar;
@@ -645,7 +688,8 @@ export function iniciar(api, contenedor) {
     }).sort((a, b) => b.y - a.y);
     for (let i = 0; i < cajas.length; i++) for (let j = 0; j < i; j++) {
       const a = cajas[j], c = cajas[i];
-      if (Math.abs(a.x - c.x) < (a.mk.w + c.mk.w) / 2 + 6 && Math.abs(a.y - c.y) < a.mk.h + 6) c.y = a.y - a.mk.h - 6;
+      // Si al subirla se saldría por arriba, se coloca debajo
+      if (Math.abs(a.x - c.x) < (a.mk.w + c.mk.w) / 2 + 6 && Math.abs(a.y - c.y) < a.mk.h + 6) c.y = a.y - a.mk.h - 6 < c.mk.h + 8 ? a.y + a.mk.h + 6 : a.y - a.mk.h - 6;
     }
     cajas.forEach(({ mk, x, y }) => { mk.b.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`; });
     numeros.forEach(({ b, p }) => pon(b, p));
@@ -728,6 +772,12 @@ export function iniciar(api, contenedor) {
       camara.position.setFromSpherical(s).add(controles.target);
     }
     controles.update();
+    // Que al desplazar la vista no se salga del local
+    const tx = THREE.MathUtils.clamp(controles.target.x, cajaSala[0], cajaSala[2]), tz = THREE.MathUtils.clamp(controles.target.z, cajaSala[1], cajaSala[3]);
+    if (tx !== controles.target.x || tz !== controles.target.z) {
+      camara.position.x += tx - controles.target.x; camara.position.z += tz - controles.target.z;
+      controles.target.x = tx; controles.target.z = tz;
+    }
     cortar();
     for (const o of mesas3d.values()) {
       o.brillo += (o.objetivo - o.brillo) * Math.min(1, dt * 6);
@@ -762,10 +812,13 @@ export function iniciar(api, contenedor) {
   addEventListener('resize', medir);
   new ResizeObserver(medir).observe(contenedor);
   let activo = false;
-  new IntersectionObserver(([e]) => {
-    if (e.isIntersecting && !activo) { activo = true; antes = performance.now(); renderer.setAnimationLoop(cuadro); }
-    else if (!e.isIntersecting && activo) { activo = false; renderer.setAnimationLoop(null); }
-  }, { rootMargin: '100px' }).observe(contenedor);
+  const encender = (si) => {
+    if (si && !activo) { activo = true; antes = performance.now(); renderer.setAnimationLoop(cuadro); }
+    else if (!si && activo) { activo = false; renderer.setAnimationLoop(null); }
+  };
+  new IntersectionObserver((es) => encender(es[es.length - 1].isIntersecting), { rootMargin: '100px' }).observe(contenedor);
+  // Por si el mapa ya estaba en pantalla al cargarse
+  requestAnimationFrame(() => { const r = contenedor.getBoundingClientRect(); if (r.bottom > -100 && r.top < innerHeight + 100) encender(true); });
   lienzo.addEventListener('webglcontextlost', (e) => { e.preventDefault(); renderer.setAnimationLoop(null); api.sinTresD(); });
 
   // Primer cuadro ya pintado (para que el cambio desde el mapa plano no parpadee)

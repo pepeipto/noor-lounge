@@ -11,7 +11,7 @@ window.NOOR = {
       aria: "Mapa interactiu de la sala de NOOR", entrada: "ENTRADA", aseos: "LAVABOS",
       barras: { barra: "BARRA", bebida: "BARRA DE BEGUDES", shishas: "SHISHES" },
       mesa: "Taula", taburete: "Tamboret", mesaCorta: "Taula", tab: "Tamboret",
-      todaSala: "Tota la sala", girar: "Arrossega per a girar la sala",
+      todaSala: "Tota la sala", girar: "Arrossega per a girar · Ctrl + roda per a ampliar", ampliar: "Ampliar", reducir: "Reduir",
       elige: "Tria una zona", ayuda: "Toca una zona del mapa o tria-la ací per a veure les seues taules.", reservar: "Reservar en aquesta zona", nota: "Tries dia, hora i persones en el nostre sistema de reserves; l’equip de sala t’assigna la taula segons disponibilitat.",
       hasta: (n) => `fins a ${n} ${n === 1 ? 'persona' : 'persones'}`,
       resumen: (m, p) => `${m} ${m === 1 ? 'taula' : 'taules'} · ${p} places`,

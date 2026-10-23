@@ -11,7 +11,7 @@ window.NOOR = {
       aria: "Interaktiver Raumplan der NOOR Lounge", entrada: "EINGANG", aseos: "TOILETTEN",
       barras: { barra: "BAR", bebida: "GETRÄNKEBAR", shishas: "SHISHA" },
       mesa: "Tisch", taburete: "Barhocker", mesaCorta: "Tisch", tab: "Hocker",
-      todaSala: "Ganzer Raum", girar: "Ziehen, um den Raum zu drehen",
+      todaSala: "Ganzer Raum", girar: "Ziehen zum Drehen · Strg + Mausrad zum Zoomen", ampliar: "Vergrößern", reducir: "Verkleinern",
       elige: "Bereich wählen", ayuda: "Tippen Sie auf einen Bereich im Plan oder wählen Sie ihn hier, um die Tische zu sehen.", reservar: "In diesem Bereich reservieren", nota: "Tag, Uhrzeit und Personenzahl wählen Sie in unserem Reservierungssystem; unser Serviceteam weist Ihnen den Tisch je nach Verfügbarkeit zu.",
       hasta: (n) => `bis zu ${n} ${n === 1 ? 'Person' : 'Personen'}`,
       resumen: (m, p) => `${m} ${m === 1 ? 'Tisch' : 'Tische'} · ${p} Plätze`,

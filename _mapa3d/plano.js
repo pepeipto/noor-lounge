@@ -47,20 +47,23 @@ export const PANTALLAS = [
 export const ESPEJOS = [{ x: 477, y: 273, mira: 's', r: 0.45 }, { x: 625, y: 273, mira: 's', r: 0.45 }, { x: 1100, y: 93, mira: 's', r: 0.36 }, { x: 1312, y: 93, mira: 's', r: 0.36 }];
 export const CUADRO = { x: 1629, y: 190, mira: 'o' };
 export const FELPUDO = { x: 182, y: 300 };
+// Acera de la calle (terraza) delante de la fachada y franja de calzada
+export const ACERA = [[30, 200], [171, 200], [171, 366], [184, 366], [184, 520], [30, 520]];
+export const CALZADA = [-70, 200, 100, 320];
 
 // Mesas por id del TPV. mira = hacia dónde mira quien se sienta. Sofás con largo en px del plano.
 const as = (t, x, y, mira, extra = {}) => ({ t, x, y, mira, ...extra });
 const sofa = (x, y, largo, mira, tapiz = 'gris') => ({ t: 'sofa', x, y, largo, mira, tapiz });
 export const MESAS = {
-  // Terraza: el cortavientos acristalado de la entrada
-  TE1: { red: [232, 292, 0.28], asientos: [as('sillaNegra', 205, 292, 'e'), as('sillaNegra', 259, 292, 'o'), as('sillaNegra', 232, 320, 'n')] },
-  TE2: { red: [384, 275, 0.28], asientos: [as('sillaNegra', 357, 275, 'e'), as('sillaNegra', 411, 275, 'o'), as('sillaNegra', 384, 303, 'n')] },
+  // Terraza: en la acera, fuera de la puerta
+  TE1: { red: [100, 262, 0.3], asientos: [as('sillaNegra', 74, 262, 'e'), as('sillaNegra', 126, 262, 'o'), as('sillaNegra', 100, 290, 'n')] },
+  TE2: { red: [100, 392, 0.3], asientos: [as('sillaNegra', 74, 392, 'e'), as('sillaNegra', 126, 392, 'o'), as('sillaNegra', 100, 420, 'n')] },
   // Pantalla 98″: sofá rojo capitoné en L bajo la ventana, con mesas de madera rústica
-  1: { rect: [238, 488, 80, 58], tapa: 'rustica', huella: [184, 470, 322, 607], asientos: [] },
+  1: { rect: [238, 488, 80, 58], tapa: 'rustica', huella: [184, 470, 378, 607], asientos: [] },
   2: { rect: [238, 412, 62, 44], tapa: 'rustica', huella: [184, 395, 304, 462], asientos: [] },
   // Zona PlayStation: sillones de cuero con mesita de mármol verde, frente al sofá
-  4: { red: [372, 446, 0.2], tapa: 'verde', asientos: [as('sillon', 345, 472, 'o')] },
-  5: { red: [372, 552, 0.2], tapa: 'verde', asientos: [as('sillon', 345, 526, 'o')] },
+  4: { red: [362, 402, 0.2], tapa: 'verde', asientos: [as('sillon', 322, 412, 'o')] },
+  5: { red: [362, 452, 0.2], tapa: 'verde', asientos: [as('sillon', 322, 456, 'o')] },
   // Junto a la pared de los espejos: sofá gris de una pieza, mesa-puf y sillones de cuero
   3: { red: [477, 345, 0.3], tapa: 'puf', asientos: [{ t: 'sofaCurvo', x: 477, y: 294, largo: 116, mira: 's' }, as('sillon', 425, 352, 'e'), as('sillon', 529, 352, 'o')] },
   13: { red: [625, 345, 0.3], tapa: 'puf', asientos: [{ t: 'sofaCurvo', x: 625, y: 294, largo: 116, mira: 's' }, as('sillon', 573, 352, 'e'), as('sillon', 677, 352, 'o')] },
@@ -84,4 +87,6 @@ export const DECORADO = [
   { taburetes: [[488, 487], [488, 530]], mira: 'e' },
 ];
 // Sofá rojo en L de la entrada: tramo a lo largo de la fachada y brazo junto a la pared de abajo
-export const SOFA_ROJO = [{ t: 'sofa', x: 206, y: 498, largo: 212, mira: 'e', tapiz: 'rojo' }, { t: 'sofa', x: 284, y: 585, largo: 112, mira: 'n', tapiz: 'rojo' }];
+// y un tercer sofá suelto enfrente que cierra la U
+export const SOFA_ROJO = [{ t: 'sofa', x: 206, y: 498, largo: 212, mira: 'e', tapiz: 'rojo' }, { t: 'sofa', x: 279, y: 585, largo: 102, mira: 'n', tapiz: 'rojo' },
+  { t: 'sofa', x: 352, y: 532, largo: 118, mira: 'o', tapiz: 'rojo' }];

@@ -11,7 +11,7 @@ window.NOOR = {
       aria: "Interactive map of the NOOR lounge", entrada: "ENTRANCE", aseos: "TOILETS",
       barras: { barra: "BAR", bebida: "DRINKS BAR", shishas: "SHISHA" },
       mesa: "Table", taburete: "Bar stool", mesaCorta: "Table", tab: "Stool",
-      todaSala: "Whole room", girar: "Drag to rotate the room",
+      todaSala: "Whole room", girar: "Drag to rotate · Ctrl + scroll to zoom", ampliar: "Zoom in", reducir: "Zoom out",
       elige: "Choose an area", ayuda: "Tap an area on the map, or pick one here, to see its tables.", reservar: "Book in this area", nota: "You choose the day, time and number of guests in our booking system; our floor team assigns your table based on availability.",
       hasta: (n) => `up to ${n} ${n === 1 ? 'guest' : 'guests'}`,
       resumen: (m, p) => `${m} ${m === 1 ? 'table' : 'tables'} · ${p} seats`,
