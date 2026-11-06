@@ -50,7 +50,7 @@ export const PANTALLAS = [
   { x: 359, y: 366, ancho: 1.25, mira: 's', alto: 1.55 },    // tele de la PlayStation sobre el murete alicatado
   { x: 960, y: 93, ancho: 1.4, mira: 's', alto: 1.7 },      // tele grande del reservado gris 1
   { x: 886, y: 190, ancho: 1.1, mira: 'e', alto: 1.6 },     // tele en la mampara de espejo tras la barra alta
-  { x: 1392, y: 93, ancho: 1.3, mira: 's', alto: 1.75 },    // tele (Eurosport) sobre la mesa de juego
+  { x: 1283, y: 93, ancho: 1.0, mira: 's', alto: 1.75 },    // tele (Eurosport) sobre la mesa de juego
 ];
 export const ESPEJOS = [{ x: 445, y: 273, mira: 's', r: 0.4 }, { x: 535, y: 273, mira: 's', r: 0.4 }, { x: 1128, y: 93, mira: 's', r: 0.36 }, { x: 1312, y: 93, mira: 's', r: 0.36 }];
 export const CUADRO = { x: 1629, y: 190, mira: 'o' };
@@ -83,12 +83,12 @@ export const MESAS = {
   // Lado izquierdo, tras la barra alta y la mampara de espejo con tele:
   // reservado gris 1: un sofá gris a cada lado, sillón gris de tela y mesita redonda gris con pata en X
   9: { red: [975, 160, 0.24], tapa: 'grisX', huella: [890, 98, 1055, 265], asientos: [sofa(919, 150, 95, 'e'), sofa(1030, 150, 95, 'o'), sillonTela(975, 237, 'n')] },
-  // reservado gris 2: dos sofás grises en paralelo, uno frente al otro, con mesita redonda pata en X
-  6: { red: [1140, 150, 0.24], tapa: 'grisX', huella: [1068, 98, 1212, 210], asientos: [sofa(1092, 150, 90, 'e'), sofa(1188, 150, 90, 'o')] },
-  // banco gris sin respaldo alto con dos mesitas nido de mármol verde
-  7: { banco: [1272, 122, 110, 's'], nidos: [[1245, 168], [1298, 168]], huella: [1215, 98, 1330, 200] },
+  // mesa 6: mesita redonda gris pata en X con un solo sillón gris a la derecha (Carlos, 6/11/2026)
+  6: { red: [1092, 155, 0.24], tapa: 'grisX', huella: [1072, 98, 1158, 210], asientos: [sillonTela(1133, 155, 'o')] },
+  // mesa 7: sofá gris largo con dos mesitas nido de mármol verde; después la mesa digital, antes del pilar
+  7: { asientos: [sofa(1205, 124, 80, 's')], nidos: [[1188, 165], [1222, 165]], huella: [1162, 98, 1248, 200] },
   // Fondo: sofá rosa capitoné en L con el cuadro en la esquina, 2 mesas ovaladas gris oscuro, sillones terracota
-  11: { red: [1462, 188, 0.25], tapa: 'oval', huella: [1430, 98, 1500, 278], asientos: [sillonTela(1450, 250, 'n', 'terracota'), sillonTela(1500, 250, 'n', 'terracota')] },
+  11: { red: [1462, 188, 0.25], tapa: 'oval', huella: [1335, 98, 1500, 278], asientos: [sillonTela(1450, 250, 'n', 'terracota'), sillonTela(1500, 250, 'n', 'terracota')] },
   // y la mesa de madera clara en la esquina
   10: { rect: [1533, 205, 40, 46], tapa: 'clara', huella: [1505, 98, 1628, 255], asientos: [sofa(1598, 198, 95, 'o', 'rosa'), sillonTela(1550, 268, 'n', 'terracota')] },
   // Lado derecho al volver, junto a la barra: dos sofás grises enfrentados con mesa ovalada gris oscuro de pata en Z
@@ -97,13 +97,12 @@ export const MESAS = {
   12: { barraAlta: true, taburetes: [[720, 322], [765, 322], [808, 322], [852, 322]], mira: 'n' },
 };
 // Sofás corridos contra la pared del fondo (se reparten entre varias mesas)
-export const BANCOS = [sofa(1532, 124, 185, 's', 'rosa')];
+export const BANCOS = [sofa(1480, 124, 290, 's', 'rosa')];
 // Muebles sin número de mesa en el TPV (se dibujan pero no se reservan)
 export const DECORADO = [
-  // Mesa táctil de juego con LED (tab.at), en la pared de los espejos justo antes del sofá rosa del fondo:
+  // Mesa táctil de juego con LED (tab.at), en la pared de los espejos antes del pilar de espejo:
   // reservado gris en L detrás, el sofá rosa al lado y sillas beige delante
-  { rect: [1366, 152, 66, 42], tapa: 'juego', asientos: [sofa(1392, 125, 90, 's'), sofa(1355, 185, 50, 'e'),
-    as('silla', 1382, 228, 'n'), as('silla', 1414, 228, 'n')] },
+  { rect: [1256, 150, 56, 40], tapa: 'juego', asientos: [sofa(1283, 124, 66, 's'), as('silla', 1270, 214, 'n'), as('silla', 1300, 214, 'n')] },
   // Segunda mesa ovalada gris oscuro delante del sofá rosa
   { red: [1512, 182, 0.22], tapa: 'oval' },
   // Junto a la puerta negra de emergencia: dos sillones de cuero marrón con mesitas nido verdes
