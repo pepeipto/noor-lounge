@@ -58,8 +58,8 @@ export const CUADRO = { x: 1629, y: 190, mira: 'o' };
 export const PUERTA_EMERGENCIA = [1476, 432, 'n'];
 export const FELPUDO = { x: 182, y: 300 };
 // Acera de la calle (terraza) delante de la fachada y franja de calzada
-export const ACERA = [[30, 200], [171, 200], [171, 366], [184, 366], [184, 520], [30, 520]];
-export const CALZADA = [-70, 200, 100, 320];
+export const ACERA = [[30, 200], [171, 200], [171, 366], [184, 366], [184, 610], [30, 610]];
+export const CALZADA = [-70, 200, 100, 410];
 
 // Mesas por id del TPV. mira = hacia dónde mira quien se sienta. Sofás con largo en px del plano.
 const as = (t, x, y, mira, extra = {}) => ({ t, x, y, mira, ...extra });
@@ -67,26 +67,26 @@ const sofa = (x, y, largo, mira, tapiz = 'gris') => ({ t: 'sofa', x, y, largo, m
 // Sillón tapizado en tela (gris en los reservados del medio, terracota en el fondo), según el vídeo del 6/11/2026
 const sillonTela = (x, y, mira, tapiz = 'gris') => ({ t: 'sillon', x, y, mira, tapiz });
 export const MESAS = {
-  // Terraza: en la acera, fuera de la puerta
-  TE1: { red: [100, 262, 0.3], asientos: [as('sillaNegra', 74, 262, 'e'), as('sillaNegra', 126, 262, 'o'), as('sillaNegra', 100, 290, 'n')] },
-  TE2: { red: [100, 392, 0.3], asientos: [as('sillaNegra', 74, 392, 'e'), as('sillaNegra', 126, 392, 'o'), as('sillaNegra', 100, 420, 'n')] },
+  // Terraza: en la acera, a la altura del sofá rosa de dentro (Carlos, 6/11/2026)
+  TE1: { red: [100, 440, 0.3], asientos: [as('sillaNegra', 74, 440, 'e'), as('sillaNegra', 126, 440, 'o'), as('sillaNegra', 100, 468, 'n')] },
+  TE2: { red: [100, 545, 0.3], asientos: [as('sillaNegra', 74, 545, 'e'), as('sillaNegra', 126, 545, 'o'), as('sillaNegra', 100, 573, 'n')] },
   // Pantalla 98″: sofá rosa capitoné en L bajo la ventana, con tres mesas de madera rústica (vídeo 6/11/2026)
-  1: { rect: [238, 488, 80, 58], tapa: 'rustica', huella: [184, 470, 378, 607], asientos: [] },
-  2: { rect: [238, 412, 62, 44], tapa: 'rustica', huella: [184, 395, 304, 462], asientos: [] },
-  3: { rect: [328, 522, 50, 38], tapa: 'rustica', huella: [310, 505, 395, 607], asientos: [] },
-  // Delante del sofá: una sola mesita de mármol verde con dos sillones de cuero
-  4: { red: [362, 430, 0.25], tapa: 'verde', asientos: [as('sillon', 322, 402, 'o'), as('sillon', 322, 458, 'o')] },
+  2: { rect: [238, 404, 62, 44], tapa: 'rustica', huella: [184, 392, 310, 454], asientos: [] },
+  1: { rect: [238, 458, 62, 44], tapa: 'rustica', huella: [184, 454, 310, 508], asientos: [] },
+  3: { rect: [238, 512, 62, 44], tapa: 'rustica', huella: [184, 508, 380, 607], asientos: [] },
+  // Zona PlayStation: una mesita de mármol verde con los dos sillones de cuero mirando a la tele de la Play
+  4: { red: [370, 432, 0.22], tapa: 'verde', asientos: [as('sillon', 333, 428, 'n'), as('sillon', 407, 428, 'n')] },
   // Lado izquierdo al entrar: UNA sola mesa, sofá gris de una pieza, mesa-puf y dos sillones de cuero, bajo dos espejos
   13: { red: [490, 345, 0.3], tapa: 'puf', asientos: [{ t: 'sofaCurvo', x: 490, y: 294, largo: 130, mira: 's' }, as('sillon', 420, 352, 'e'), as('sillon', 560, 352, 'o')] },
   // Barra: fila de taburetes del frente
   ...Object.fromEntries([527, 572, 615, 700, 745, 787, 830].map((x, i) => [`T${i + 1}`, { taburete: [x, 440], mira: 's' }])),
   // Lado izquierdo, tras la barra alta y la mampara de espejo con tele:
-  // reservado gris 1 (sofá de 2 plazas, sillón gris de tela y mesita redonda gris con pata en X)
-  9: { red: [975, 172, 0.24], tapa: 'grisX', huella: [915, 98, 1005, 270], asientos: [sofa(960, 125, 85, 's'), sillonTela(960, 225, 'n')] },
-  // reservado gris 2 (sofá de 2 plazas con mesita redonda pata en X) bajo el paño de azulejo con espejo
-  6: { red: [1128, 172, 0.24], tapa: 'grisX', huella: [1080, 98, 1176, 230], asientos: [sofa(1128, 125, 85, 's')] },
+  // reservado gris 1: un sofá gris a cada lado, sillón gris de tela y mesita redonda gris con pata en X
+  9: { red: [975, 160, 0.24], tapa: 'grisX', huella: [890, 98, 1055, 265], asientos: [sofa(919, 150, 95, 'e'), sofa(1030, 150, 95, 'o'), sillonTela(975, 237, 'n')] },
+  // reservado gris 2: dos sofás grises en paralelo, uno frente al otro, con mesita redonda pata en X
+  6: { red: [1140, 150, 0.24], tapa: 'grisX', huella: [1068, 98, 1212, 210], asientos: [sofa(1092, 150, 90, 'e'), sofa(1188, 150, 90, 'o')] },
   // banco gris sin respaldo alto con dos mesitas nido de mármol verde
-  7: { banco: [1258, 122, 140, 's'], nidos: [[1225, 168], [1285, 168]], huella: [1186, 98, 1330, 200] },
+  7: { banco: [1272, 122, 110, 's'], nidos: [[1245, 168], [1298, 168]], huella: [1215, 98, 1330, 200] },
   // Fondo: sofá rosa capitoné en L con el cuadro en la esquina, 2 mesas ovaladas gris oscuro, sillones terracota
   11: { red: [1462, 188, 0.25], tapa: 'oval', huella: [1430, 98, 1500, 278], asientos: [sillonTela(1450, 250, 'n', 'terracota'), sillonTela(1500, 250, 'n', 'terracota')] },
   // y la mesa de madera clara en la esquina
@@ -109,8 +109,10 @@ export const DECORADO = [
   // Junto a la puerta negra de emergencia: dos sillones de cuero marrón con mesitas nido verdes
   { asientos: [as('sillon', 1345, 400, 'n'), as('sillon', 1400, 400, 'n')], nidos: [[1372, 410]] },
   // Sillón rosa pequeño junto a la mesa de la PlayStation
-  { asientos: [as('sillon', 440, 400, 'o', { tapiz: 'rosa' })] },
+  { asientos: [as('sillon', 462, 418, 'o', { tapiz: 'rosa' })] },
   { taburetes: [[488, 487], [488, 530]], mira: 'e' },
 ];
-// Sofá rosa en L de la entrada (vídeo 6/11/2026): tramo a lo largo de la fachada y brazo junto a la pared de abajo
-export const SOFA_ROJO = [{ t: 'sofa', x: 206, y: 498, largo: 212, mira: 'e', tapiz: 'rosa' }, { t: 'sofa', x: 300, y: 585, largo: 150, mira: 'n', tapiz: 'rosa' }];
+// Sofá rosa en U de la entrada: tramo a lo largo de la fachada y brazo junto a la pared de abajo
+// y un tercer sofá enfrente, a la derecha, que cierra la U (Carlos, 6/11/2026)
+export const SOFA_ROJO = [{ t: 'sofa', x: 206, y: 498, largo: 212, mira: 'e', tapiz: 'rosa' }, { t: 'sofa', x: 279, y: 585, largo: 102, mira: 'n', tapiz: 'rosa' },
+  { t: 'sofa', x: 352, y: 532, largo: 118, mira: 'o', tapiz: 'rosa' }];
