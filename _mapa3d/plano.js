@@ -83,8 +83,8 @@ export const MESAS = {
   // Lado izquierdo, tras la barra alta y la mampara de espejo con tele:
   // reservado gris 1: un sofá gris a cada lado, sillón gris de tela y mesita redonda gris con pata en X
   9: { red: [975, 160, 0.24], tapa: 'grisX', huella: [890, 98, 1055, 265], asientos: [sofa(919, 150, 95, 'e'), sofa(1030, 150, 95, 'o'), sillonTela(975, 237, 'n')] },
-  // mesa 6: mesita redonda gris pata en X con un solo sillón gris a la derecha (Carlos, 6/11/2026)
-  6: { red: [1092, 155, 0.24], tapa: 'grisX', huella: [1072, 98, 1158, 210], asientos: [sillonTela(1133, 155, 'o')] },
+  // mesa 6: mesita redonda gris pata en X con un solo sofá gris a la derecha, del tamaño de los de la 9 (Carlos, 6/11/2026)
+  6: { red: [1092, 150, 0.24], tapa: 'grisX', huella: [1072, 98, 1158, 210], asientos: [sofa(1133, 150, 95, 'o')] },
   // mesa 7: sofá gris largo con dos mesitas nido de mármol verde; después la mesa digital, antes del pilar
   7: { asientos: [sofa(1205, 124, 80, 's')], nidos: [[1188, 165], [1222, 165]], huella: [1162, 98, 1248, 200] },
   // Fondo: sofá rosa capitoné en L con el cuadro en la esquina, 2 mesas ovaladas gris oscuro, sillones terracota
