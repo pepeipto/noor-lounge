@@ -22,11 +22,13 @@ export const TABIQUES = [
   [[184, 366], [258, 366]], [[332, 235], [332, 297]],
   [[952, 377], [952, 455]], [[1122, 377], [1122, 455]], [[1317, 365], [1317, 432]],
 ];
-export const MAMPARAS = [[[288, 366], [430, 366]]];
+// Donde el plano marcaba una mampara de vidrio hay un murete alicatado con la tele y la PlayStation (Carlos, 6/11/2026)
+export const MAMPARAS = [];
+export const MURETE_TV = [[288, 366], [430, 366]];
 // Pilar alicatado junto a la puerta acristalada (con la consola al lado)
 export const PILAR_AZULEJO = [258, 358, 30, 24];
-// Mesa negra de la consola PlayStation
-export const CONSOLA = [192, 376, 64, 22];
+// Mesa negra de la consola PlayStation, bajo la tele del murete
+export const CONSOLA = [356, 368, 66, 20];
 
 export const PILARES = [[1007, 220, 63, 62, 'verde'], [1316, 220, 61, 62, 'espejo']];
 // Columnas de luz de acero perforado (los círculos con punto rojo del plano)
@@ -42,6 +44,7 @@ export const BARRA_ALTA = [700, 282, 184, 28];
 
 export const PANTALLAS = [
   { x: 185, y: 500, ancho: 2.0, mira: 'e', alto: 1.75 },     // tele grande sobre la ventana de la fachada
+  { x: 359, y: 366, ancho: 1.25, mira: 's', alto: 1.55 },    // tele de la PlayStation sobre el murete alicatado
   { x: 1207, y: 93, ancho: 1.6, mira: 's', alto: 1.65 },     // tele sobre el sofá largo del fondo
 ];
 export const ESPEJOS = [{ x: 477, y: 273, mira: 's', r: 0.45 }, { x: 625, y: 273, mira: 's', r: 0.45 }, { x: 1100, y: 93, mira: 's', r: 0.36 }, { x: 1312, y: 93, mira: 's', r: 0.36 }];

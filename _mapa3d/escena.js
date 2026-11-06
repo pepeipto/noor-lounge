@@ -189,6 +189,8 @@ export function iniciar(api, contenedor) {
   }
   for (const [a, b] of PL.TABIQUES) tramo(a, b, 1.1, madera, { grosor: 0.1, lado: 0 });
   for (const [a, b] of PL.MAMPARAS) vidrio(a, b);
+  // Murete alicatado de la zona PlayStation (lleva la tele colgada encima)
+  if (PL.MURETE_TV) tramo(...PL.MURETE_TV, 1.1, azulejo, { grosor: 0.12, lado: 0 });
   // Felpudo de entrada (junto a la puerta de la calle) con el texto traducido
   {
     const t = TX.cartel(T.entrada, { ancho: 512, alto: 256, fondo: '#20160f', tam: 64 });
