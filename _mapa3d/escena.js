@@ -58,7 +58,7 @@ export function iniciar(api, contenedor) {
     });
   };
   const tam = alta ? 1024 : 768;
-  const azulejo = pack(TX.azulejo(tam), { metalness: 0.3, roughness: 1, color: 0xd07070, normalScale: new THREE.Vector2(0.9, 0.9) });
+  const azulejo = pack(TX.azulejo(tam), { metalness: 0.3, roughness: 1, color: 0xfff27a, normalScale: new THREE.Vector2(0.9, 0.9) });
   const baldosa = pack(TX.baldosa(tam), { metalness: 0, roughness: 1, color: 0xd8d8d8, normalScale: new THREE.Vector2(0.6, 0.6) });
   // Paneles gris topo con ranuras diagonales (las paredes del local)
   const madera = pack(TX.madera(tam, [104, 96, 86]), { metalness: 0.05, roughness: 1, normalScale: new THREE.Vector2(1.3, 1.3) });
@@ -77,7 +77,7 @@ export function iniciar(api, contenedor) {
     maderaClara: new THREE.MeshStandardMaterial({ color: 0xc9a46a, roughness: 0.65 }),
     ledJuego: new THREE.MeshStandardMaterial({ color: 0x000000, emissive: 0x7a5cff, emissiveIntensity: 3 }),
     pantallaJuego: new THREE.MeshStandardMaterial({ color: 0x050608, emissive: 0x3a7ad0, emissiveIntensity: 0.9, roughness: 0.1 }),
-    terciopeloCamel: new THREE.MeshPhysicalMaterial({ color: 0x8a5e38, roughness: 0.85, sheen: 1, sheenRoughness: 0.45, sheenColor: new THREE.Color(0xb08050) }),
+    terciopeloCamel: new THREE.MeshPhysicalMaterial({ color: 0x9c8462, roughness: 0.85, sheen: 1, sheenRoughness: 0.45, sheenColor: new THREE.Color(0xb08050) }),
     cuero: new THREE.MeshPhysicalMaterial({ color: 0x2a1612, roughness: 0.36, clearcoat: 0.7, clearcoatRoughness: 0.3 }),
     lino: new THREE.MeshPhysicalMaterial({ color: 0x9e9787, roughness: 0.9, sheen: 0.6, sheenColor: new THREE.Color(0xd8d0c0) }),
     negroMate: new THREE.MeshStandardMaterial({ color: 0x0d0b0a, roughness: 0.55, metalness: 0.6 }),
@@ -208,6 +208,7 @@ export function iniciar(api, contenedor) {
   };
   for (const [x, y, w, h, tipo] of PL.PILARES) sala.add(caja(x, y, w, h, ALTO, tipo === 'verde' ? marmolVerde(0.5, 2.4) : M.espejo));
   sala.add(caja(...PL.PILAR_AZULEJO, ALTO, azulejo(0.4, 2.4)));
+  for (const [x0, x1, y] of PL.PANOS || []) { const p = caja(x0, y, x1 - x0, 3, ALTO - 0.02, azulejo((x1 - x0) * S / 1.2, ALTO / 1.2)); sala.add(p); cortables.push({ o: p, n: [0, -1], ocultar: true }); }
   // Mesa de la consola con los juegos encima
   {
     const [x, y, w, h] = PL.CONSOLA;
@@ -328,7 +329,7 @@ export function iniciar(api, contenedor) {
   })();
   function taburete() {
     const g = new THREE.Group();
-    g.add(malla(geoTaburete.asiento, M.terciopeloNaranja, 0, 0.77, 0));
+    g.add(malla(geoTaburete.asiento, M.terciopeloCamel, 0, 0.77, 0));
     g.add(malla(geoTaburete.respaldo, camelDoble, 0, 0.98, 0.02));
     g.add(unir(geoTaburete.patas, M.negroMate));
     return sombra(g);

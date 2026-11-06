@@ -15,7 +15,10 @@ export const CONTORNO = [[171, 235], [430, 235], [430, 272], [707, 272], [707, 2
 export const BAJOS = [8, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 // Tramos de vidrio: [índice, desde, hasta] en fracción del tramo (fachada del cortavientos y ventana)
 export const VIDRIOS = [[21, 0, 1], [19, 0.3, 0.61]];
-export const ALICATADOS = [];
+// Tramos de pared alicatados con el azulejo naranja (la barra alta)
+export const ALICATADOS = [4];
+// Paños de azulejo naranja sobre la pared de rayas: [x0, x1, y] (reservado gris 2)
+export const PANOS = [[1080, 1176, 92]];
 
 // Tabiques interiores (cortados a 1,1 m para ver dentro) y mampara de vidrio del cortavientos
 export const TABIQUES = [
