@@ -578,7 +578,7 @@ export function iniciar(api, contenedor) {
   const humos = [];
   const focosHumo = cachimbas.filter((_, i) => i % 3 === 0).slice(0, alta ? 7 : 3).map((m4) => new THREE.Vector3().setFromMatrixPosition(m4));
   for (const f of focosHumo) for (let k = 0; k < (alta ? 10 : 6); k++) {
-    const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: texHumo, color: 0xe8d6c4, transparent: true, opacity: 0, depthWrite: false }));
+    const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: texHumo, color: 0xfff6ec, transparent: true, opacity: 0, depthWrite: false, blending: THREE.AdditiveBlending }));
     s.userData = { f, t: k / (alta ? 10 : 6), giro: Math.random() * 6.28, v: 0.6 + Math.random() * 0.5 };
     sala.add(s);
     humos.push(s);
@@ -622,6 +622,9 @@ export function iniciar(api, contenedor) {
     ao = new GTAOPass(escena, camara, 1, 1);
     ao.updateGtaoMaterial({ radius: 0.45, distanceExponent: 1.4, thickness: 1.2, scale: 1.1, samples: 16 });
     ao.blendIntensity = 0.85;
+    // El humo no debe entrar en la oclusión ambiental (si entra, sale como manchas negras)
+    const ocultar = ao._overrideVisibility.bind(ao);
+    ao._overrideVisibility = () => { ocultar(); for (const h of humos) if (h.visible) { h.visible = false; ao._visibilityCache.push(h); } };
     composer.addPass(ao);
   }
   const bloom = new UnrealBloomPass(new THREE.Vector2(1, 1), 0.4, 0.5, 0.95);
@@ -879,7 +882,7 @@ export function iniciar(api, contenedor) {
       s.position.set(u.f.x + Math.sin(u.giro + t * 5) * 0.06 * t, u.f.y + 0.68 + t * 1.3, u.f.z + Math.cos(u.giro + t * 4) * 0.06 * t);
       const e = 0.12 + t * 0.55;
       s.scale.set(e, e, e);
-      s.material.opacity = Math.sin(Math.PI * t) * 0.16;
+      s.material.opacity = Math.sin(Math.PI * t) * 0.09;
       s.material.rotation = u.giro + t * 1.5;
     }
     instancias[4].material.emissiveIntensity = 2.2 + Math.sin(tiempo * 2.3) * 0.6;

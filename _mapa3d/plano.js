@@ -87,10 +87,10 @@ export const MESAS = {
   6: { red: [1092, 150, 0.24], tapa: 'grisX', huella: [1072, 98, 1158, 210], asientos: [sofa(1133, 150, 95, 'o')] },
   // mesa 7: sofá gris largo con dos mesitas nido de mármol verde; después la mesa digital, antes del pilar
   // La mesa 7 abarca todo el tramo hasta la máquina digital (Carlos, 6/11/2026): sofá largo con mesitas nido verdes,
-  // la mesa táctil con su sofá gris detrás y sillas beige, y un sofá como el de la 10 en el hueco entre la pared y el pilar
+  // un solo sofá gris alargado contra la pared con la mesa táctil delante, y un sofá rosa (como los del fondo) en el hueco entre la pared y el pilar
   // de espejo, mirando a la máquina, que separa la mesa 7 del sofá rosa del fondo
   7: { rect: [1250, 140, 56, 40], tapa: 'juego', huella: [1158, 98, 1360, 230],
-    asientos: [sofa(1195, 124, 70, 's'), sofa(1275, 124, 70, 's'), sofa(1335, 158, 110, 'o'), as('silla', 1265, 205, 'n'), as('silla', 1295, 205, 'n')],
+    asientos: [sofa(1236, 124, 152, 's'), sofa(1335, 158, 110, 'o', 'rosa')],
     nidos: [[1180, 165], [1212, 165]] },
   // Fondo: sofá rosa capitoné en L con el cuadro en la esquina, 2 mesas ovaladas gris oscuro, sillones terracota
   11: { red: [1462, 188, 0.25], tapa: 'oval', huella: [1355, 98, 1500, 278], asientos: [sillonTela(1450, 250, 'n', 'terracota'), sillonTela(1500, 250, 'n', 'terracota')] },
