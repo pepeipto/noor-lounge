@@ -21,7 +21,7 @@
     { id: '10', f: 'rect', d: [1274, 200, 66, 98], pax: 3, z: 'fondo' },
     { id: '11', f: 'rect', d: [1370, 193, 96, 130], pax: 6, z: 'fondo' },
     { id: '12', f: 'rect', d: [1122, 435, 97, 128], pax: 6, z: 'centro' },
-    { id: '13', f: 'red', d: [1417, 523, 47], pax: 2, z: 'centro' },
+    { id: '13', f: 'red', d: [1417, 523, 47], pax: 4, z: 'centro' },
     { id: '1', f: 'rect', d: [439, 705, 67, 193], pax: 4, z: 'cine' },
     { id: '3', f: 'rect', d: [695, 701, 67, 193], pax: 3, z: 'cine' },
     { id: '2', f: 'rect', d: [501, 908, 198, 63], pax: 4, z: 'cine' },
