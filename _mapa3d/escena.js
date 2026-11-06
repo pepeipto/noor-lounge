@@ -525,6 +525,7 @@ export function iniciar(api, contenedor) {
       sala.add(poner(a.g, x, y, 's'), poner(b2.g, x + 14, y + 12, 's'));
       amplia([x - 15, y - 15, x + 26, y + 26]);
       if (!alto) alto = a.alto;
+      if (def.cachimba) { const [X, Z] = pt(x, y); ponerCachimba(X, a.alto, Z, azarA() * 6.28); }
     }
     for (const a of def.asientos || []) amplia(asiento(a));
     if (def.huella) { h[0] = Math.min(h[0], def.huella[0]); h[1] = Math.min(h[1], def.huella[1]); h[2] = Math.max(h[2], def.huella[2]); h[3] = Math.max(h[3], def.huella[3]); }
