@@ -216,7 +216,7 @@ export function iniciar(api, contenedor) {
     const ext = new THREE.Group();
     ext.add(malla(new THREE.CylinderGeometry(0.08, 0.08, 0.5, 20), new THREE.MeshStandardMaterial({ color: 0xc81e1e, roughness: 0.35, metalness: 0.2 }), 0, 0.25, 0));
     ext.add(malla(new THREE.CylinderGeometry(0.03, 0.03, 0.08, 10), M.negroMate, 0, 0.54, 0));
-    ext.position.set(0.62, 0, 0.12);
+    ext.position.set(-0.62, 0, 0.12);
     g.add(ext);
     sala.add(sombra(poner(g, x, y, mira)));
   }
