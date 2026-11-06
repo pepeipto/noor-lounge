@@ -63,9 +63,9 @@ export const MESAS = {
   // Pantalla 98″: sofá rojo capitoné en L bajo la ventana, con mesas de madera rústica
   1: { rect: [238, 488, 80, 58], tapa: 'rustica', huella: [184, 470, 378, 607], asientos: [] },
   2: { rect: [238, 412, 62, 44], tapa: 'rustica', huella: [184, 395, 304, 462], asientos: [] },
-  // Zona PlayStation: sillones de cuero con mesita de mármol verde, frente al sofá
-  4: { red: [362, 402, 0.2], tapa: 'verde', asientos: [as('sillon', 322, 412, 'o')] },
-  5: { red: [362, 452, 0.2], tapa: 'verde', asientos: [as('sillon', 322, 456, 'o')] },
+  // Zona PlayStation: dos sillones de cuero con una mesita de mármol verde, frente al sofá
+  // Una sola mesita de mármol verde con dos sillones (vídeo 6/11/2026)
+  4: { red: [362, 430, 0.25], tapa: 'verde', asientos: [as('sillon', 322, 402, 'o'), as('sillon', 322, 458, 'o')] },
   // Junto a la pared de los espejos: sofá gris de una pieza, mesa-puf y sillones de cuero
   3: { red: [477, 345, 0.3], tapa: 'puf', asientos: [{ t: 'sofaCurvo', x: 477, y: 294, largo: 116, mira: 's' }, as('sillon', 425, 352, 'e'), as('sillon', 529, 352, 'o')] },
   13: { red: [625, 345, 0.3], tapa: 'puf', asientos: [{ t: 'sofaCurvo', x: 625, y: 294, largo: 116, mira: 's' }, as('sillon', 573, 352, 'e'), as('sillon', 677, 352, 'o')] },
@@ -76,20 +76,23 @@ export const MESAS = {
   6: { red: [1128, 180, 0.27], tapa: 'grisX', huella: [1088, 98, 1172, 276], asientos: [sillonTela(1128, 248, 'n')] },
   7: { red: [1263, 180, 0.27], tapa: 'grisX', huella: [1222, 98, 1306, 276], asientos: [sillonTela(1263, 248, 'n')] },
   // Fondo: sofá rosa capitoné en L, mesa ovalada gris oscuro y mesa de madera clara, sillones terracota
-  11: { red: [1415, 188, 0.3], tapa: 'oval', huella: [1355, 98, 1480, 278], asientos: [sillonTela(1385, 250, 'n', 'terracota'), sillonTela(1445, 250, 'n', 'terracota')] },
-  10: { rect: [1515, 172, 41, 53], tapa: 'clara', huella: [1495, 98, 1628, 248], asientos: [sofa(1598, 198, 95, 'o', 'rosa')] },
+  11: { red: [1470, 190, 0.3], tapa: 'oval', huella: [1430, 98, 1520, 278], asientos: [sillonTela(1455, 252, 'n', 'terracota'), sillonTela(1500, 252, 'n', 'terracota')] },
+  10: { rect: [1515, 172, 41, 53], tapa: 'clara', huella: [1510, 98, 1628, 248], asientos: [sofa(1598, 198, 95, 'o', 'rosa')] },
   // Junto a la barra, contra el azulejo: sofá gris y otro en ángulo, con mesa ovalada gris oscuro
   8: { red: [1045, 368, 0.28], tapa: 'oval', huella: [952, 330, 1122, 432], asientos: [sofa(1050, 410, 100, 'n'), sofa(976, 362, 50, 'e')] },
   // Centro: barra alta de granito pegada a la pared
   12: { barraAlta: true, taburetes: [[720, 322], [765, 322], [808, 322], [852, 322]], mira: 'n' },
 };
 // Sofás corridos contra la pared del fondo (se reparten entre varias mesas)
-export const BANCOS = [sofa(1207, 125, 262, 's'), sofa(1512, 124, 225, 's', 'rosa')];
+export const BANCOS = [sofa(1207, 125, 262, 's'), sofa(1532, 124, 185, 's', 'rosa')];
 // Muebles sin número de mesa en el TPV (se dibujan pero no se reservan)
 export const DECORADO = [
-  // Mesa táctil de juego con LED (tab.at), reservado gris en L, reservado rosa al lado y sillas beige delante
-  { rect: [1372, 336, 80, 46], tapa: 'juego', asientos: [sofa(1397, 410, 125, 'n'), sofa(1339, 359, 58, 'e'), sofa(1489, 392, 90, 'o', 'rosa'),
-    as('silla', 1395, 312, 's'), as('silla', 1432, 312, 's')] },
+  // Mesa táctil de juego con LED (tab.at), en la pared de los espejos justo antes del sofá rosa del fondo:
+  // reservado gris en L detrás, el sofá rosa al lado y sillas beige delante
+  { rect: [1366, 152, 66, 42], tapa: 'juego', asientos: [sofa(1392, 125, 90, 's'), sofa(1355, 185, 50, 'e'),
+    as('silla', 1382, 228, 'n'), as('silla', 1414, 228, 'n')] },
+  // Junto a la puerta de emergencia: sillón de cuero marrón con mesitas nido verdes
+  { asientos: [as('sillon', 1440, 400, 'n')], nidos: [[1480, 395]] },
   // Banco gris corrido con mesitas nido de mármol verde, tras el tabique bajo
   { banco: [1220, 412, 160, 'n'], nidos: [[1185, 378], [1255, 378]] },
   { taburetes: [[488, 487], [488, 530]], mira: 'e' },
