@@ -35,7 +35,7 @@ export const CONSOLA = [356, 368, 66, 20];
 
 export const PILARES = [[1007, 220, 63, 62, 'verde'], [1316, 220, 61, 62, 'espejo']];
 // Columnas de luz de acero perforado (los círculos con punto rojo del plano)
-export const COLUMNAS_LUZ = [[412, 595], [551, 285], [696, 282], [975, 110], [1364, 110], [1335, 405], [1492, 405]];
+export const COLUMNAS_LUZ = [[412, 595], [512, 285], [696, 282], [975, 110], [1364, 110], [1335, 405], [1492, 405]];
 
 // Barra en U (la caja roja del plano): tramos [x, y, ancho, fondo, tipo]. La de shishas es el tramo de arriba a la derecha.
 export const BARRAS = [
@@ -52,7 +52,7 @@ export const PANTALLAS = [
   { x: 886, y: 190, ancho: 1.1, mira: 'e', alto: 1.6 },     // tele en la mampara de espejo tras la barra alta
   { x: 1275, y: 93, ancho: 1.0, mira: 's', alto: 1.75 },    // tele (Eurosport) sobre la mesa de juego
 ];
-export const ESPEJOS = [{ x: 445, y: 273, mira: 's', r: 0.4 }, { x: 535, y: 273, mira: 's', r: 0.4 }, { x: 1128, y: 93, mira: 's', r: 0.36 }, { x: 1312, y: 93, mira: 's', r: 0.36 }];
+export const ESPEJOS = [{ x: 562, y: 273, mira: 's', r: 0.4 }, { x: 642, y: 273, mira: 's', r: 0.4 }, { x: 1128, y: 93, mira: 's', r: 0.36 }, { x: 1312, y: 93, mira: 's', r: 0.36 }];
 export const CUADRO = { x: 1629, y: 190, mira: 'o' };
 // Puerta negra de emergencia en la pared del fondo (no en la de los aseos), con el extintor al lado: [x, y, mira]
 export const PUERTA_EMERGENCIA = [1511, 352, 'o'];
@@ -77,7 +77,8 @@ export const MESAS = {
   // Zona PlayStation: una mesita de mármol verde con los dos sillones de cuero mirando a la tele de la Play
   4: { red: [370, 432, 0.22], tapa: 'verde', asientos: [as('sillon', 333, 428, 'n'), as('sillon', 407, 428, 'n')] },
   // Lado izquierdo al entrar: UNA sola mesa, sofá gris de una pieza, mesa-puf y dos sillones de cuero, bajo dos espejos
-  13: { red: [490, 345, 0.3], tapa: 'puf', asientos: [{ t: 'sofaCurvo', x: 490, y: 294, largo: 130, mira: 's' }, as('sillon', 420, 352, 'e'), as('sillon', 560, 352, 'o')] },
+  // (más pegada a la barra alta 12 y separada de la puerta para no tapar la entrada)
+  13: { red: [602, 345, 0.3], tapa: 'puf', asientos: [{ t: 'sofaCurvo', x: 602, y: 294, largo: 130, mira: 's' }, as('sillon', 534, 352, 'e'), as('sillon', 670, 352, 'o')] },
   // Barra: fila de taburetes del frente
   ...Object.fromEntries([527, 572, 615, 700, 745, 787, 830].map((x, i) => [`T${i + 1}`, { taburete: [x, 440], mira: 's' }])),
   // Lado izquierdo, tras la barra alta y la mampara de espejo con tele:
