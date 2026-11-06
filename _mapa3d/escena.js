@@ -208,14 +208,45 @@ export function iniciar(api, contenedor) {
   };
   for (const [x, y, w, h, tipo] of PL.PILARES) sala.add(caja(x, y, w, h, ALTO, tipo === 'verde' ? marmolVerde(0.5, 2.4) : M.espejo));
   sala.add(caja(...PL.PILAR_AZULEJO, ALTO, azulejo(0.4, 2.4)));
+  // Puerta negra de emergencia (con su barra) y extintor rojo al lado
+  if (PL.PUERTA_EMERGENCIA) {
+    const [x, y, mira] = PL.PUERTA_EMERGENCIA, g = new THREE.Group();
+    g.add(malla(new THREE.BoxGeometry(0.9, 2.1, 0.04), M.negroMate, 0, 1.05, 0));
+    g.add(malla(new THREE.BoxGeometry(0.7, 0.04, 0.05), M.acero, 0, 1.0, 0.03));
+    const ext = new THREE.Group();
+    ext.add(malla(new THREE.CylinderGeometry(0.08, 0.08, 0.5, 20), new THREE.MeshStandardMaterial({ color: 0xc81e1e, roughness: 0.35, metalness: 0.2 }), 0, 0.25, 0));
+    ext.add(malla(new THREE.CylinderGeometry(0.03, 0.03, 0.08, 10), M.negroMate, 0, 0.54, 0));
+    ext.position.set(0.62, 0, 0.12);
+    g.add(ext);
+    sala.add(sombra(poner(g, x, y, mira)));
+  }
   for (const [x0, x1, y] of PL.PANOS || []) { const p = caja(x0, y, x1 - x0, 3, ALTO - 0.02, azulejo((x1 - x0) * S / 1.2, ALTO / 1.2)); sala.add(p); cortables.push({ o: p, n: [0, -1], ocultar: true }); }
   // Mesa de la consola con los juegos encima
   {
     const [x, y, w, h] = PL.CONSOLA;
     sala.add(caja(x, y, w, h, 0.03, M.mesaNegra, 0.78));
     for (const [cx, cy] of [[x + 3, y + 3], [x + w - 3, y + 3], [x + 3, y + h - 3], [x + w - 3, y + h - 3]]) sala.add(caja(cx - 1, cy - 1, 2, 2, 0.78, M.negroMate));
-    sala.add(caja(x + 6, y + 4, 14, 14, 0.09, new THREE.MeshStandardMaterial({ color: 0xf2f2f2, roughness: 0.3 }), 0.81));
-    sala.add(caja(x + 30, y + 5, 10, 12, 0.12, new THREE.MeshStandardMaterial({ color: 0x1f4fb0, roughness: 0.4 }), 0.81));
+    // PS5 de pie: dos alas blancas curvadas con el cuerpo negro en medio y la luz azul
+    const blanco = new THREE.MeshStandardMaterial({ color: 0xf4f4f2, roughness: 0.25 });
+    const luzAzul = new THREE.MeshStandardMaterial({ color: 0, emissive: 0x3a7bff, emissiveIntensity: 3 });
+    const ps = new THREE.Group();
+    ps.add(malla(rbox(0.06, 0.36, 0.25, 0.012), M.negroMate, 0, 0.18, 0));
+    for (const sx of [-1, 1]) {
+      const ala = malla(rbox(0.018, 0.4, 0.27, 0.008), blanco, sx * 0.04, 0.2, 0);
+      ala.rotation.x = 0; ala.rotation.z = sx * 0.04;
+      ps.add(ala);
+      ps.add(malla(new THREE.BoxGeometry(0.004, 0.36, 0.004), luzAzul, sx * 0.03, 0.2, 0.125));
+    }
+    sala.add(sombra(poner(ps, x + 7, y + h / 2, 's', 0.81)));
+    // Dos mandos DualSense blancos
+    const mando = () => { const g = new THREE.Group(); g.add(malla(rbox(0.16, 0.035, 0.08, 0.015), blanco, 0, 0.0175, 0));
+      for (const sx of [-1, 1]) g.add(malla(rbox(0.045, 0.035, 0.07, 0.015), blanco, sx * 0.06, 0.0175, 0.04));
+      g.add(malla(new THREE.BoxGeometry(0.08, 0.002, 0.03), M.negroMate, 0, 0.036, 0.0)); return sombra(g); };
+    sala.add(poner(mando(), x + 22, y + h / 2, 's', 0.81), poner(mando(), x + 34, y + h / 2 + 2, 's', 0.81));
+    // Pila de juegos (cajas azules)
+    for (let i = 0; i < 6; i++) sala.add(caja(x + 46 + (i % 2), y + 4, 10, 13, 0.014, new THREE.MeshStandardMaterial({ color: i % 3 ? 0x1f4fb0 : 0x2b2b80, roughness: 0.4 }), 0.81 + i * 0.015));
+    // Balda de abajo con más mandos y cables
+    sala.add(caja(x, y, w, h, 0.02, M.mesaNegra, 0.25));
   }
   // Columnas de luz de acero perforado
   const perf = TX.perforado();
@@ -352,7 +383,7 @@ export function iniciar(api, contenedor) {
   // Con tapiz: sillón envolvente de tela (gris o terracota) en vez de cuero
   const telaDoble = {};
   function sillon(tela) {
-    const mat = tela ? (tela === 'terracota' ? M.telaTerracota : M.telaGris) : M.cuero;
+    const mat = tela ? ({ terracota: M.telaTerracota, rosa: M.terciopeloRosa }[tela] || M.telaGris) : M.cuero;
     const doble = tela ? (telaDoble[tela] ||= Object.assign(mat.clone(), { side: THREE.DoubleSide })) : cueroDoble;
     const g = new THREE.Group();
     g.add(malla(geoSillon.base, mat, 0, 0.22, 0));

@@ -54,6 +54,8 @@ export const PANTALLAS = [
 ];
 export const ESPEJOS = [{ x: 445, y: 273, mira: 's', r: 0.4 }, { x: 535, y: 273, mira: 's', r: 0.4 }, { x: 1128, y: 93, mira: 's', r: 0.36 }, { x: 1312, y: 93, mira: 's', r: 0.36 }];
 export const CUADRO = { x: 1629, y: 190, mira: 'o' };
+// Puerta negra de emergencia con el extintor al lado: [x, y, mira]
+export const PUERTA_EMERGENCIA = [1476, 432, 'n'];
 export const FELPUDO = { x: 182, y: 300 };
 // Acera de la calle (terraza) delante de la fachada y franja de calzada
 export const ACERA = [[30, 200], [171, 200], [171, 366], [184, 366], [184, 520], [30, 520]];
@@ -105,7 +107,9 @@ export const DECORADO = [
   // Segunda mesa ovalada gris oscuro delante del sofá rosa
   { red: [1512, 182, 0.22], tapa: 'oval' },
   // Junto a la puerta negra de emergencia: dos sillones de cuero marrón con mesitas nido verdes
-  { asientos: [as('sillon', 1400, 400, 'n'), as('sillon', 1470, 400, 'n')], nidos: [[1435, 410]] },
+  { asientos: [as('sillon', 1345, 400, 'n'), as('sillon', 1400, 400, 'n')], nidos: [[1372, 410]] },
+  // Sillón rosa pequeño junto a la mesa de la PlayStation
+  { asientos: [as('sillon', 440, 400, 'o', { tapiz: 'rosa' })] },
   { taburetes: [[488, 487], [488, 530]], mira: 'e' },
 ];
 // Sofá rosa en L de la entrada (vídeo 6/11/2026): tramo a lo largo de la fachada y brazo junto a la pared de abajo
