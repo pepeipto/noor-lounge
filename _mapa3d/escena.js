@@ -70,6 +70,13 @@ export function iniciar(api, contenedor) {
     terciopeloGris: new THREE.MeshPhysicalMaterial({ color: 0x6f6d6a, roughness: 0.88, sheen: 1, sheenRoughness: 0.5, sheenColor: new THREE.Color(0x8e8c88) }),
     terciopeloRojo: new THREE.MeshPhysicalMaterial({ color: 0x8e2430, roughness: 0.8, sheen: 0.8, sheenRoughness: 0.45, sheenColor: new THREE.Color(0xc4505c) }),
     terciopeloNaranja: new THREE.MeshPhysicalMaterial({ color: 0x9a4a1e, roughness: 0.82, sheen: 1, sheenRoughness: 0.4, sheenColor: new THREE.Color(0xc0602a) }),
+    terciopeloRosa: new THREE.MeshPhysicalMaterial({ color: 0xa8585e, roughness: 0.82, sheen: 0.9, sheenRoughness: 0.45, sheenColor: new THREE.Color(0xd08a8e) }),
+    telaTerracota: new THREE.MeshPhysicalMaterial({ color: 0xb0532e, roughness: 0.9, sheen: 0.7, sheenRoughness: 0.5, sheenColor: new THREE.Color(0xd8794a) }),
+    telaGris: new THREE.MeshPhysicalMaterial({ color: 0x8a8884, roughness: 0.9, sheen: 0.8, sheenRoughness: 0.5, sheenColor: new THREE.Color(0xa8a6a2) }),
+    grisOscuro: new THREE.MeshStandardMaterial({ color: 0x3a3a3c, roughness: 0.45, metalness: 0.1 }),
+    maderaClara: new THREE.MeshStandardMaterial({ color: 0xc9a46a, roughness: 0.65 }),
+    ledJuego: new THREE.MeshStandardMaterial({ color: 0x000000, emissive: 0x7a5cff, emissiveIntensity: 3 }),
+    pantallaJuego: new THREE.MeshStandardMaterial({ color: 0x050608, emissive: 0x3a7ad0, emissiveIntensity: 0.9, roughness: 0.1 }),
     terciopeloCamel: new THREE.MeshPhysicalMaterial({ color: 0x8a5e38, roughness: 0.85, sheen: 1, sheenRoughness: 0.45, sheenColor: new THREE.Color(0xb08050) }),
     cuero: new THREE.MeshPhysicalMaterial({ color: 0x2a1612, roughness: 0.36, clearcoat: 0.7, clearcoatRoughness: 0.3 }),
     lino: new THREE.MeshPhysicalMaterial({ color: 0x9e9787, roughness: 0.9, sheen: 0.6, sheenColor: new THREE.Color(0xd8d0c0) }),
@@ -339,22 +346,34 @@ export function iniciar(api, contenedor) {
   // Sillón de cuero marrón tipo bañera
   const cueroDoble = M.cuero.clone(); cueroDoble.side = THREE.DoubleSide;
   const geoSillon = { base: rbox(0.66, 0.36, 0.64, 0.08, 4), cojin: rbox(0.48, 0.1, 0.48, 0.05, 3), aro: new THREE.CylinderGeometry(0.33, 0.32, 0.36, 40, 1, true, Math.PI - 2.1, 4.2) };
-  function sillon() {
+  // Con tapiz: sillón envolvente de tela (gris o terracota) en vez de cuero
+  const telaDoble = {};
+  function sillon(tela) {
+    const mat = tela ? (tela === 'terracota' ? M.telaTerracota : M.telaGris) : M.cuero;
+    const doble = tela ? (telaDoble[tela] ||= Object.assign(mat.clone(), { side: THREE.DoubleSide })) : cueroDoble;
     const g = new THREE.Group();
-    g.add(malla(geoSillon.base, M.cuero, 0, 0.22, 0));
-    g.add(malla(geoSillon.cojin, M.cuero, 0, 0.44, 0.04));
-    g.add(malla(geoSillon.aro, cueroDoble, 0, 0.58, 0));
+    g.add(malla(geoSillon.base, mat, 0, 0.22, 0));
+    g.add(malla(geoSillon.cojin, mat, 0, 0.44, 0.04));
+    g.add(malla(geoSillon.aro, doble, 0, 0.58, 0));
     for (const [sx, sz] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) g.add(malla(new THREE.CylinderGeometry(0.025, 0.02, 0.05, 10), M.negroMate, sx * 0.26, 0.025, sz * 0.25));
     return sombra(g);
   }
   function mesaRect(w, d, tapa) {
-    const g = new THREE.Group(), alto = tapa === 'pantalla' ? 0.74 : 0.46;
-    const mat = { rustica: M.rustica, pantalla: M.pantallaMesa }[tapa] || M.mesaNegra;
+    const g = new THREE.Group(), alto = tapa === 'pantalla' ? 0.74 : tapa === 'juego' ? 0.78 : 0.46;
+    if (tapa === 'juego') {
+      // Mesa táctil de juego: pantalla encendida, marco negro con tira LED y pie de armario negro
+      g.add(malla(rbox(w, 0.05, d, 0.03), M.negroMate, 0, alto - 0.025, 0));
+      g.add(malla(new THREE.PlaneGeometry(w - 0.12, d - 0.12).rotateX(-Math.PI / 2), M.pantallaJuego, 0, alto + 0.002, 0));
+      g.add(malla(rbox(w + 0.01, 0.012, d + 0.01, 0.006), M.ledJuego, 0, alto - 0.05, 0));
+      g.add(malla(new THREE.BoxGeometry(w * 0.45, alto - 0.05, d * 0.55), M.negroMate, 0, (alto - 0.05) / 2, 0));
+      return { g: sombra(g), alto };
+    }
+    const mat = { rustica: M.rustica, pantalla: M.pantallaMesa, clara: M.maderaClara }[tapa] || M.mesaNegra;
     g.add(malla(rbox(w, 0.035, d, 0.01), mat, 0, alto - 0.0175, 0));
     const patas = [];
     for (const sx of [-1, 1]) for (const sz of [-1, 1]) patas.push([new THREE.BoxGeometry(0.03, alto - 0.035, 0.03), sx * (w / 2 - 0.04), (alto - 0.035) / 2, sz * (d / 2 - 0.04)]);
     // Bastidor metálico a ras de suelo, como las mesas de madera del local
-    if (tapa === 'rustica') for (const sz of [-1, 1]) patas.push([new THREE.BoxGeometry(w - 0.08, 0.025, 0.025), 0, 0.06, sz * (d / 2 - 0.04)]);
+    if (tapa === 'rustica' || tapa === 'clara') for (const sz of [-1, 1]) patas.push([new THREE.BoxGeometry(w - 0.08, 0.025, 0.025), 0, 0.06, sz * (d / 2 - 0.04)]);
     g.add(unir(patas, M.negroMate));
     return { g: sombra(g), alto };
   }
@@ -374,6 +393,21 @@ export function iniciar(api, contenedor) {
         ...[0, 1, 2, 3].map((k) => [new THREE.CylinderGeometry(0.006, 0.006, alto - 0.02, 8), Math.cos(k * 1.571) * r * 0.95, (alto - 0.02) / 2, Math.sin(k * 1.571) * r * 0.95])], M.oro));
       return { g: sombra(g), alto };
     }
+    if (tapa === 'grisX' || tapa === 'oval') {
+      // Mesa gris oscuro con pie metálico en X (redonda) o en Z (ovalada), como en el vídeo
+      const alto = 0.5, oval = tapa === 'oval';
+      const tablero = malla(new THREE.CylinderGeometry(r, r, 0.03, 56), M.grisOscuro, 0, alto - 0.015, 0);
+      if (oval) tablero.scale.set(1.5, 1, 0.85);
+      g.add(tablero);
+      const a = oval ? r * 1.1 : r * 0.55, l = Math.hypot(a * 2, alto - 0.03);
+      const ang = Math.atan2(a * 2, alto - 0.03);
+      g.add(unir([
+        [new THREE.BoxGeometry(0.03, l, 0.03), 0, (alto - 0.03) / 2, -0.06, 0, 0, ang],
+        [new THREE.BoxGeometry(0.03, l, 0.03), 0, (alto - 0.03) / 2, 0.06, 0, 0, -ang],
+        [new THREE.BoxGeometry(a * 2, 0.03, 0.2), 0, 0.015, 0],
+      ], M.negroMate));
+      return { g: sombra(g), alto };
+    }
     const alto = 0.62;
     g.add(malla(new THREE.CylinderGeometry(r, r, 0.03, 56), M.mesaNegra, 0, alto - 0.015, 0));
     const pz = [];
@@ -384,10 +418,10 @@ export function iniciar(api, contenedor) {
     g.add(unir(pz, M.negroMate));
     return { g: sombra(g), alto };
   }
-  const tapiz = (t) => (t === 'rojo' ? M.terciopeloRojo : M.terciopeloGris);
+  const tapiz = (t) => ({ rojo: M.terciopeloRojo, rosa: M.terciopeloRosa }[t] || M.terciopeloGris);
   const asiento = (a) => {
     const o = a.t === 'sofa' ? sofa(a.largo * S, tapiz(a.tapiz)) : a.t === 'sofaCurvo' ? sofaCurvo(a.largo * S)
-      : a.t === 'sillon' ? sillon() : a.t === 'sillaNegra' ? silla(true) : silla();
+      : a.t === 'sillon' ? sillon(a.tapiz) : a.t === 'sillaNegra' ? silla(true) : silla();
     sala.add(poner(o, a.x, a.y, a.mira));
     // Huella aproximada en el plano (px) para el halo de selección
     const lx = (a.largo || 50) / 2, ly = 24, girado = a.mira === 'e' || a.mira === 'o';
@@ -440,6 +474,23 @@ export function iniciar(api, contenedor) {
       amplia([x - rp, y - rp, x + rp, y + rp]); alto = mt.alto;
       const [X, Z] = pt(x, y);
       ponerCachimba(X, alto, Z, azarA() * 6.28);
+    }
+    if (def.banco) {
+      // Banco gris sin respaldo alto
+      const [x, y, largo, mira] = def.banco, L = largo * S;
+      const b = new THREE.Group();
+      b.add(malla(rbox(L, 0.42, 0.45, 0.04), M.telaGris, 0, 0.21, 0));
+      b.add(malla(rbox(L, 0.3, 0.1, 0.04), M.telaGris, 0, 0.55, -0.18));
+      sala.add(poner(sombra(b), x, y, mira));
+      amplia([x - largo / 2, y - 18, x + largo / 2, y + 18]);
+    }
+    for (const [x, y] of def.nidos || []) {
+      // Pareja de mesitas nido de mármol verde con aro dorado
+      const a = mesaRed(0.2, 'verde'), b2 = mesaRed(0.16, 'verde');
+      b2.g.scale.set(1, 0.8, 1);
+      sala.add(poner(a.g, x, y, 's'), poner(b2.g, x + 14, y + 12, 's'));
+      amplia([x - 15, y - 15, x + 26, y + 26]);
+      if (!alto) alto = a.alto;
     }
     for (const a of def.asientos || []) amplia(asiento(a));
     if (def.huella) { h[0] = Math.min(h[0], def.huella[0]); h[1] = Math.min(h[1], def.huella[1]); h[2] = Math.max(h[2], def.huella[2]); h[3] = Math.max(h[3], def.huella[3]); }

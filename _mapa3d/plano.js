@@ -54,6 +54,8 @@ export const CALZADA = [-70, 200, 100, 320];
 // Mesas por id del TPV. mira = hacia dónde mira quien se sienta. Sofás con largo en px del plano.
 const as = (t, x, y, mira, extra = {}) => ({ t, x, y, mira, ...extra });
 const sofa = (x, y, largo, mira, tapiz = 'gris') => ({ t: 'sofa', x, y, largo, mira, tapiz });
+// Sillón tapizado en tela (gris en los reservados del medio, terracota en el fondo), según el vídeo del 6/11/2026
+const sillonTela = (x, y, mira, tapiz = 'gris') => ({ t: 'sillon', x, y, mira, tapiz });
 export const MESAS = {
   // Terraza: en la acera, fuera de la puerta
   TE1: { red: [100, 262, 0.3], asientos: [as('sillaNegra', 74, 262, 'e'), as('sillaNegra', 126, 262, 'o'), as('sillaNegra', 100, 290, 'n')] },
@@ -69,21 +71,27 @@ export const MESAS = {
   13: { red: [625, 345, 0.3], tapa: 'puf', asientos: [{ t: 'sofaCurvo', x: 625, y: 294, largo: 116, mira: 's' }, as('sillon', 573, 352, 'e'), as('sillon', 677, 352, 'o')] },
   // Barra: fila de taburetes del frente
   ...Object.fromEntries([527, 572, 615, 700, 745, 787, 830].map((x, i) => [`T${i + 1}`, { taburete: [x, 440], mira: 's' }])),
-  // Sofás del fondo
-  9: { rect: [955, 124, 41, 51], tapa: 'negra', asientos: [sofa(919, 150, 95, 'e'), sofa(1030, 150, 95, 'o'), as('sillon', 975, 237, 'n')] },
-  6: { rect: [1102, 167, 52, 41], tapa: 'negra', huella: [1088, 98, 1172, 276], asientos: [sofa(1128, 248, 94, 'n')] },
-  7: { rect: [1240, 167, 51, 41], tapa: 'negra', huella: [1222, 98, 1306, 276], asientos: [sofa(1263, 248, 93, 'n')] },
-  11: { rect: [1415, 167, 51, 42], tapa: 'negra', huella: [1355, 98, 1480, 278], asientos: [as('sillon', 1382, 187, 'e'), as('sillon', 1440, 252, 'n')] },
-  10: { rect: [1515, 172, 41, 53], tapa: 'negra', huella: [1495, 98, 1628, 248], asientos: [sofa(1598, 198, 95, 'o')] },
-  8: { red: [1035, 385, 0.25], asientos: [as('sillon', 980, 395, 'e'), as('sillon', 1082, 395, 'o')] },
+  // Reservados grises del medio (vídeo 6/11/2026): sofás grises, sillón gris envolvente de tela y mesa redonda gris con pata en X
+  9: { red: [975, 160, 0.27], tapa: 'grisX', asientos: [sofa(919, 150, 95, 'e'), sofa(1030, 150, 95, 'o'), sillonTela(975, 237, 'n')] },
+  6: { red: [1128, 180, 0.27], tapa: 'grisX', huella: [1088, 98, 1172, 276], asientos: [sillonTela(1128, 248, 'n')] },
+  7: { red: [1263, 180, 0.27], tapa: 'grisX', huella: [1222, 98, 1306, 276], asientos: [sillonTela(1263, 248, 'n')] },
+  // Fondo: sofá rosa capitoné en L, mesa ovalada gris oscuro y mesa de madera clara, sillones terracota
+  11: { red: [1415, 188, 0.3], tapa: 'oval', huella: [1355, 98, 1480, 278], asientos: [sillonTela(1385, 250, 'n', 'terracota'), sillonTela(1445, 250, 'n', 'terracota')] },
+  10: { rect: [1515, 172, 41, 53], tapa: 'clara', huella: [1495, 98, 1628, 248], asientos: [sofa(1598, 198, 95, 'o', 'rosa')] },
+  // Junto a la barra, contra el azulejo: sofá gris y otro en ángulo, con mesa ovalada gris oscuro
+  8: { red: [1045, 368, 0.28], tapa: 'oval', huella: [952, 330, 1122, 432], asientos: [sofa(1050, 410, 100, 'n'), sofa(976, 362, 50, 'e')] },
   // Centro: barra alta de granito pegada a la pared
   12: { barraAlta: true, taburetes: [[720, 322], [765, 322], [808, 322], [852, 322]], mira: 'n' },
 };
 // Sofás corridos contra la pared del fondo (se reparten entre varias mesas)
-export const BANCOS = [sofa(1207, 125, 262, 's'), sofa(1512, 124, 225, 's')];
+export const BANCOS = [sofa(1207, 125, 262, 's'), sofa(1512, 124, 225, 's', 'rosa')];
 // Muebles sin número de mesa en el TPV (se dibujan pero no se reservan)
 export const DECORADO = [
-  { red: [1414, 384, 0.25], asientos: [as('sillon', 1370, 392, 'e'), as('sillon', 1458, 392, 'o')] },
+  // Mesa táctil de juego con LED (tab.at), reservado gris en L, reservado rosa al lado y sillas beige delante
+  { rect: [1372, 336, 80, 46], tapa: 'juego', asientos: [sofa(1397, 410, 125, 'n'), sofa(1339, 359, 58, 'e'), sofa(1489, 392, 90, 'o', 'rosa'),
+    as('silla', 1395, 312, 's'), as('silla', 1432, 312, 's')] },
+  // Banco gris corrido con mesitas nido de mármol verde, tras el tabique bajo
+  { banco: [1220, 412, 160, 'n'], nidos: [[1185, 378], [1255, 378]] },
   { taburetes: [[488, 487], [488, 530]], mira: 'e' },
 ];
 // Sofá rojo en L de la entrada: tramo a lo largo de la fachada y brazo junto a la pared de abajo
