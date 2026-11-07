@@ -283,7 +283,7 @@
     const zona = document.createElement('div');
     zona.className = 'mapa3d';
     caja.prepend(zona);
-    import(new URL('mapa3d.js?v=9', SCRIPT).href)
+    import(new URL('mapa3d.js?v=10', SCRIPT).href)
       .then((mod) => {
         caja.classList.add('con-3d');
         mod.iniciar(window.NOOR_MAPA, zona);

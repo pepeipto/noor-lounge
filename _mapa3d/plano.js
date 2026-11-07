@@ -111,8 +111,6 @@ export const DECORADO = [
   // Junto a la puerta negra de emergencia: dos sillones de cuero marrón con mesitas nido verdes
   // (los dos sillones uno enfrente del otro con las mesitas en medio, junto a los aseos)
   { asientos: [as('sillon', 1350, 395, 'e'), as('sillon', 1452, 395, 'o')], nidos: [[1393, 388]], cachimba: true },
-  // Sillón rosa pequeño junto a la mesa de la PlayStation
-  { asientos: [as('sillon', 462, 418, 'o', { tapiz: 'rosa' })] },
   { taburetes: [[488, 487], [488, 530]], mira: 'e' },
 ];
 // Sofá rosa en U de la entrada: tramo a lo largo de la fachada y brazo junto a la pared de abajo
