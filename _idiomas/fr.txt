@@ -62,7 +62,7 @@
 60 | alt="Mojito à la menthe à côté d'une chicha"
 61 | <h3>Cocktails et verres</h3><p>Mojitos fraise, mangue ou fruit de la passion, Espresso Martini, PornStar, Negroni et vos verres habituels, bien servis.</p>
 62 | alt="Carte des thés et boissons chaudes à partager chez NOOR Lounge"
-63 | <h3>Boissons chaudes</h3><p>Chai latte et thés à partager, agrumes et gingembre ou fruits rouges, et café.</p>
+63 | <h3>Thés et cafés</h3><p>Chai latte et thés à partager, agrumes et gingembre ou fruits rouges, noisette et café au lait.</p>
 77 | rel="noopener nofollow">Voir la carte complète (en espagnol)</a>
 78 | <span class="etiqueta aparece">Galerie</span>
 79 | <em>NOOR</em>
@@ -108,3 +108,11 @@
 126 | Choisissez votre <em>coin</em>
 127 | Touchez une zone du lounge pour voir ses tables et ses places, et réservez en une minute.
 128 | <a href="#mesas">Réserver</a>
+129 | <div class="aparece"><h3>Chichas</h3><ul><li>Rubio<b>16 €</b></li><li>Josh<b>16 €</b></li><li>Fusion<b>17 €</b></li><li>Full Black<b>19 €</b></li><li>Kazan<b>22 €</b></li><li>Especial<b>25 €</b></li><li>Kazan Especial<b>30 €</b></li><li>Fruit frais<b>40 €</b></li></ul></div>
+130 | <div class="aparece"><h3>Cocktails</h3><ul><li>Mojito classique<b>12 €</b></li><li>Mojito fraise<b>12 €</b></li><li>Mojito mangue<b>12 €</b></li><li>Mojito fruit de la passion<b>12 €</b></li><li>Mojito Red Bull coco<b>13 €</b></li><li>Piña colada<b>12 €</b></li><li>Margarita<b>12 €</b></li><li>Aperol Spritz<b>12 €</b></li><li>Bloody Mary<b>12 €</b></li><li>Negroni<b>12 €</b></li><li>Whiskey Sour<b>12 €</b></li><li>Espresso Martini<b>13 €</b></li><li>PornStar Martini<b>13 €</b></li><li>Blue Whisky<b>13 €</b></li><li>Gin Fit<b>13 €</b></li><li>Cocktail premium<b>15 €</b></li></ul></div>
+131 | <div class="aparece"><h3>Alcools et shots</h3><ul><li>Gin, rhum, vodka et whisky<b>Demander</b></li><li>Limoncello Villa Massa<b>4 €</b></li><li>Tequila<b>4 €</b></li><li>Tequila fraise<b>4 €</b></li></ul></div>
+132 | <div class="aparece"><h3>Bières</h3><ul><li>Águila double<b>3,50 €</b></li><li>Águila triple<b>7 €</b></li><li>18/70 double<b>4,50 €</b></li><li>18/70 triple<b>7,50 €</b></li><li>Amstel Oro<b>4 €</b></li><li>Amstel Oro 0,0<b>4 €</b></li><li>Heineken<b>4 €</b></li><li>Desperados<b>4 €</b></li><li>Radler<b>4 €</b></li><li>Judas<b>5 €</b></li></ul></div>
+133 | <div class="aparece"><h3>Vins et bulles</h3><ul><li>Blanc Marqués de Riscal (verre / bouteille)<b>5 / 30 €</b></li><li>Rosé La Novia Ideal (verre / bouteille)<b>5 / 30 €</b></li><li>Rouge Cune Crianza Rioja (verre / bouteille)<b>5 / 30 €</b></li><li>Coupe de cava<b>5 €</b></li><li>Veuve Clicquot Brut<b>200 €</b></li><li>Dom Pérignon<b>700 €</b></li></ul></div>
+134 | <div class="aparece"><h3>Thés et cafés</h3><ul><li>Cortado (noisette)<b>2,50 €</b></li><li>Café au lait<b>3,50 €</b></li><li>Chai latte (petit / grand)<b>8 / 14 €</b></li><li>Thé agrumes et gingembre (0,5 / 1 / 1,5 l)<b>8 / 11 / 14 €</b></li><li>Thé fruits rouges (1 / 1,5 l)<b>11 / 14 €</b></li></ul></div>
+135 | <div class="aparece"><h3>Softs</h3><ul><li>Eau<b>2,50 €</b></li><li>Eau gazeuse<b>4 €</b></li><li>Coca-Cola, Zero ou Zero Zero<b>4 €</b></li><li>Fanta orange ou citron<b>4 €</b></li><li>Aquarius orange ou citron<b>4 €</b></li><li>Fuze Tea classique ou fruit de la passion<b>4 €</b></li><li>Sprite ou tonic<b>4 €</b></li><li>Red Bull : original, cerise, citron vert ou pistache et fruits rouges<b>4 €</b></li><li>Jus d’orange, d’ananas ou de pêche<b>3,50 €</b></li></ul></div>
+136 | <div class="aparece"><h3>Et aussi</h3><ul><li>PlayStation 5<b>40 €</b></li><li>Sachet de chips<b>3 €</b></li></ul></div>

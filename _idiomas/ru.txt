@@ -62,7 +62,7 @@
 60 | alt="Мохито с мятой рядом с кальяном"
 61 | <h3>Коктейли и напитки</h3><p>Мохито с клубникой, манго или маракуйей, Espresso Martini, PornStar, Negroni и ваши любимые напитки — как положено.</p>
 62 | alt="Меню чаёв и горячих напитков на компанию в NOOR Lounge"
-63 | <h3>Горячие напитки</h3><p>Чай-латте и чаи на компанию — цитрусовый с имбирём или ягодный, — а также кофе.</p>
+63 | <h3>Чай и кофе</h3><p>Чай-латте и чаи на компанию — цитрусовый с имбирём или ягодный, кортадо и кофе с молоком.</p>
 77 | rel="noopener nofollow">Полное меню (на испанском)</a>
 78 | <span class="etiqueta aparece">Галерея</span>
 79 | <em>NOOR</em>
@@ -108,3 +108,11 @@
 126 | Выберите свой <em>уголок</em>
 127 | Нажмите на зону зала, чтобы увидеть столы и места, и забронируйте за минуту.
 128 | <a href="#mesas">Бронь</a>
+129 | <div class="aparece"><h3>Кальяны</h3><ul><li>Rubio<b>16 €</b></li><li>Josh<b>16 €</b></li><li>Fusion<b>17 €</b></li><li>Full Black<b>19 €</b></li><li>Kazan<b>22 €</b></li><li>Especial<b>25 €</b></li><li>Kazan Especial<b>30 €</b></li><li>На фрукте<b>40 €</b></li></ul></div>
+130 | <div class="aparece"><h3>Коктейли</h3><ul><li>Классический мохито<b>12 €</b></li><li>Клубничный мохито<b>12 €</b></li><li>Мохито с манго<b>12 €</b></li><li>Мохито с маракуйей<b>12 €</b></li><li>Мохито Red Bull кокос<b>13 €</b></li><li>Пина колада<b>12 €</b></li><li>Маргарита<b>12 €</b></li><li>Aperol Spritz<b>12 €</b></li><li>Bloody Mary<b>12 €</b></li><li>Negroni<b>12 €</b></li><li>Whiskey Sour<b>12 €</b></li><li>Espresso Martini<b>13 €</b></li><li>PornStar Martini<b>13 €</b></li><li>Blue Whisky<b>13 €</b></li><li>Gin Fit<b>13 €</b></li><li>Премиум-коктейль<b>15 €</b></li></ul></div>
+131 | <div class="aparece"><h3>Крепкое и шоты</h3><ul><li>Джин, ром, водка и виски<b>Уточняйте</b></li><li>Limoncello Villa Massa<b>4 €</b></li><li>Текила<b>4 €</b></li><li>Клубничная текила<b>4 €</b></li></ul></div>
+132 | <div class="aparece"><h3>Пиво</h3><ul><li>Águila doble<b>3,50 €</b></li><li>Águila triple<b>7 €</b></li><li>18/70 doble<b>4,50 €</b></li><li>18/70 triple<b>7,50 €</b></li><li>Amstel Oro<b>4 €</b></li><li>Amstel Oro 0,0<b>4 €</b></li><li>Heineken<b>4 €</b></li><li>Desperados<b>4 €</b></li><li>Radler<b>4 €</b></li><li>Judas<b>5 €</b></li></ul></div>
+133 | <div class="aparece"><h3>Вино и игристое</h3><ul><li>Белое Marqués de Riscal (бокал / бутылка)<b>5 / 30 €</b></li><li>Розовое La Novia Ideal (бокал / бутылка)<b>5 / 30 €</b></li><li>Красное Cune Crianza Rioja (бокал / бутылка)<b>5 / 30 €</b></li><li>Бокал кавы<b>5 €</b></li><li>Veuve Clicquot Brut<b>200 €</b></li><li>Dom Pérignon<b>700 €</b></li></ul></div>
+134 | <div class="aparece"><h3>Чай и кофе</h3><ul><li>Кортадо<b>2,50 €</b></li><li>Кофе с молоком<b>3,50 €</b></li><li>Чай-латте (маленький / большой)<b>8 / 14 €</b></li><li>Цитрусовый чай с имбирём (0,5 / 1 / 1,5 л)<b>8 / 11 / 14 €</b></li><li>Ягодный чай (1 / 1,5 л)<b>11 / 14 €</b></li></ul></div>
+135 | <div class="aparece"><h3>Безалкогольные напитки</h3><ul><li>Вода<b>2,50 €</b></li><li>Газированная вода<b>4 €</b></li><li>Coca-Cola, Zero или Zero Zero<b>4 €</b></li><li>Fanta апельсин или лимон<b>4 €</b></li><li>Aquarius апельсин или лимон<b>4 €</b></li><li>Fuze Tea классический или маракуйя<b>4 €</b></li><li>Sprite или тоник<b>4 €</b></li><li>Red Bull: классический, вишня, лайм или фисташка с ягодами<b>4 €</b></li><li>Сок: апельсин, ананас или персик<b>3,50 €</b></li></ul></div>
+136 | <div class="aparece"><h3>А также</h3><ul><li>PlayStation 5<b>40 €</b></li><li>Пакет чипсов<b>3 €</b></li></ul></div>

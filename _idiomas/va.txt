@@ -62,7 +62,7 @@
 60 | alt="Mojito amb herba-sana al costat d'una cachimba"
 61 | <h3>Coctelería i copes</h3><p>Mojitos de maduixa, mango o maracujà, Espresso Martini, PornStar, Negroni i les teues copes de sempre, ben servides.</p>
 62 | alt="Carta de tes i begudes calentes per a compartir a NOOR Lounge"
-63 | <h3>Begudes calentes</h3><p>Chai latte i tes per a compartir, cítric amb gingebre o fruits rojos, i café.</p>
+63 | <h3>Te i cafés</h3><p>Chai latte i tes per a compartir, cítric amb gingebre o fruits rojos, tallat i café amb llet.</p>
 77 | rel="noopener nofollow">Veure la carta completa (en castellà)</a>
 78 | <span class="etiqueta aparece">Galeria</span>
 79 | <em>NOOR</em>
@@ -108,3 +108,11 @@
 126 | Tria el teu <em>racó</em>
 127 | Toca una zona del local per a veure les seues taules i places, i reserva en un minut.
 128 | <a href="#mesas">Reserves</a>
+129 | <div class="aparece"><h3>Shishes</h3><ul><li>Rubio<b>16 €</b></li><li>Josh<b>16 €</b></li><li>Fusion<b>17 €</b></li><li>Full Black<b>19 €</b></li><li>Kazan<b>22 €</b></li><li>Especial<b>25 €</b></li><li>Kazan Especial<b>30 €</b></li><li>Fruita natural<b>40 €</b></li></ul></div>
+130 | <div class="aparece"><h3>Cocteleria</h3><ul><li>Mojito clàssic<b>12 €</b></li><li>Mojito de maduixa<b>12 €</b></li><li>Mojito de mango<b>12 €</b></li><li>Mojito de fruita de la passió<b>12 €</b></li><li>Mojito Red Bull coco<b>13 €</b></li><li>Piña colada<b>12 €</b></li><li>Margarita<b>12 €</b></li><li>Aperol Spritz<b>12 €</b></li><li>Bloody Mary<b>12 €</b></li><li>Negroni<b>12 €</b></li><li>Whiskey Sour<b>12 €</b></li><li>Espresso Martini<b>13 €</b></li><li>PornStar Martini<b>13 €</b></li><li>Blue Whisky<b>13 €</b></li><li>Gin Fit<b>13 €</b></li><li>Còctel prèmium<b>15 €</b></li></ul></div>
+131 | <div class="aparece"><h3>Copes i xupitos</h3><ul><li>Ginebra, rom, vodka i whisky<b>Pregunta</b></li><li>Limoncello Villa Massa<b>4 €</b></li><li>Tequila<b>4 €</b></li><li>Tequila de maduixa<b>4 €</b></li></ul></div>
+132 | <div class="aparece"><h3>Cerveses</h3><ul><li>Águila doble<b>3,50 €</b></li><li>Águila triple<b>7 €</b></li><li>18/70 doble<b>4,50 €</b></li><li>18/70 triple<b>7,50 €</b></li><li>Amstel Oro<b>4 €</b></li><li>Amstel Oro 0,0<b>4 €</b></li><li>Heineken<b>4 €</b></li><li>Desperados<b>4 €</b></li><li>Radler<b>4 €</b></li><li>Judas<b>5 €</b></li></ul></div>
+133 | <div class="aparece"><h3>Vins i cava</h3><ul><li>Blanc Marqués de Riscal (copa / botella)<b>5 / 30 €</b></li><li>Rosat La Novia Ideal (copa / botella)<b>5 / 30 €</b></li><li>Negre Cune Criança Rioja (copa / botella)<b>5 / 30 €</b></li><li>Copa de cava<b>5 €</b></li><li>Veuve Clicquot Brut<b>200 €</b></li><li>Dom Pérignon<b>700 €</b></li></ul></div>
+134 | <div class="aparece"><h3>Te i cafés</h3><ul><li>Cortado<b>2,50 €</b></li><li>Café amb llet<b>3,50 €</b></li><li>Chai latte (xicotet / gran)<b>8 / 14 €</b></li><li>Te cítric amb gingebre (0,5 / 1 / 1,5 l)<b>8 / 11 / 14 €</b></li><li>Te de fruits rojos (1 / 1,5 l)<b>11 / 14 €</b></li></ul></div>
+135 | <div class="aparece"><h3>Refrescos</h3><ul><li>Aigua<b>2,50 €</b></li><li>Aigua amb gas<b>4 €</b></li><li>Coca-Cola, Zero o Zero Zero<b>4 €</b></li><li>Fanta taronja o llima<b>4 €</b></li><li>Aquarius taronja o llima<b>4 €</b></li><li>Fuze Tea clàssic o fruita de la passió<b>4 €</b></li><li>Sprite o tònica<b>4 €</b></li><li>Red Bull: original, cirera, llima o pistatxo i fruits rojos<b>4 €</b></li><li>Suc de taronja, pinya o bresquilla<b>3,50 €</b></li></ul></div>
+136 | <div class="aparece"><h3>I a més</h3><ul><li>PlayStation 5<b>40 €</b></li><li>Bossa de creïlles<b>3 €</b></li></ul></div>

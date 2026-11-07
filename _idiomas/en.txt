@@ -62,7 +62,7 @@
 60 | alt="Mint mojito next to a shisha"
 61 | <h3>Cocktails and drinks</h3><p>Strawberry, mango or passion fruit mojitos, Espresso Martini, PornStar, Negroni and your usual drinks, well poured.</p>
 62 | alt="Menu of teas and hot drinks to share at NOOR Lounge"
-63 | <h3>Hot drinks</h3><p>Chai latte and teas to share, citrus and ginger or red berries, and coffee.</p>
+63 | <h3>Tea &amp; coffee</h3><p>Chai latte and teas to share, citrus and ginger or red berries, cortado and café con leche.</p>
 77 | rel="noopener nofollow">See the full menu (Spanish)</a>
 78 | <span class="etiqueta aparece">Gallery</span>
 79 | <em>NOOR</em>
@@ -108,3 +108,11 @@
 126 | Choose your <em>spot</em>
 127 | Tap an area of the lounge to see its tables and seats, and book in a minute.
 128 | <a href="#mesas">Book</a>
+129 | <div class="aparece"><h3>Shishas</h3><ul><li>Rubio<b>€16</b></li><li>Josh<b>€16</b></li><li>Fusion<b>€17</b></li><li>Full Black<b>€19</b></li><li>Kazan<b>€22</b></li><li>Especial<b>€25</b></li><li>Kazan Especial<b>€30</b></li><li>Fresh fruit<b>€40</b></li></ul></div>
+130 | <div class="aparece"><h3>Cocktails</h3><ul><li>Classic mojito<b>€12</b></li><li>Strawberry mojito<b>€12</b></li><li>Mango mojito<b>€12</b></li><li>Passion fruit mojito<b>€12</b></li><li>Red Bull coconut mojito<b>€13</b></li><li>Piña colada<b>€12</b></li><li>Margarita<b>€12</b></li><li>Aperol Spritz<b>€12</b></li><li>Bloody Mary<b>€12</b></li><li>Negroni<b>€12</b></li><li>Whiskey Sour<b>€12</b></li><li>Espresso Martini<b>€13</b></li><li>PornStar Martini<b>€13</b></li><li>Blue Whisky<b>€13</b></li><li>Gin Fit<b>€13</b></li><li>Premium cocktail<b>€15</b></li></ul></div>
+131 | <div class="aparece"><h3>Spirits & shots</h3><ul><li>Gin, rum, vodka and whisky<b>Ask</b></li><li>Limoncello Villa Massa<b>€4</b></li><li>Tequila<b>€4</b></li><li>Strawberry tequila<b>€4</b></li></ul></div>
+132 | <div class="aparece"><h3>Beers</h3><ul><li>Águila double<b>€3.50</b></li><li>Águila triple<b>€7</b></li><li>18/70 double<b>€4.50</b></li><li>18/70 triple<b>€7.50</b></li><li>Amstel Oro<b>€4</b></li><li>Amstel Oro 0.0<b>€4</b></li><li>Heineken<b>€4</b></li><li>Desperados<b>€4</b></li><li>Radler<b>€4</b></li><li>Judas<b>€5</b></li></ul></div>
+133 | <div class="aparece"><h3>Wine & bubbles</h3><ul><li>White, Marqués de Riscal (glass / bottle)<b>€5 / €30</b></li><li>Rosé, La Novia Ideal (glass / bottle)<b>€5 / €30</b></li><li>Red, Cune Crianza Rioja (glass / bottle)<b>€5 / €30</b></li><li>Glass of cava<b>€5</b></li><li>Veuve Clicquot Brut<b>€200</b></li><li>Dom Pérignon<b>€700</b></li></ul></div>
+134 | <div class="aparece"><h3>Tea & coffee</h3><ul><li>Cortado (espresso with a dash of milk)<b>€2.50</b></li><li>Café con leche (white coffee)<b>€3.50</b></li><li>Chai latte (small / large)<b>€8 / €14</b></li><li>Citrus and ginger tea (0.5 / 1 / 1.5 l)<b>€8 / €11 / €14</b></li><li>Red berry tea (1 / 1.5 l)<b>€11 / €14</b></li></ul></div>
+135 | <div class="aparece"><h3>Soft drinks</h3><ul><li>Water<b>€2.50</b></li><li>Sparkling water<b>€4</b></li><li>Coca-Cola, Zero or Zero Zero<b>€4</b></li><li>Fanta orange or lemon<b>€4</b></li><li>Aquarius orange or lemon<b>€4</b></li><li>Fuze Tea classic or passion fruit<b>€4</b></li><li>Sprite or tonic<b>€4</b></li><li>Red Bull: original, cherry, lime, or pistachio and red berries<b>€4</b></li><li>Orange, pineapple or peach juice<b>€3.50</b></li></ul></div>
+136 | <div class="aparece"><h3>Also</h3><ul><li>PlayStation 5<b>€40</b></li><li>Bag of crisps<b>€3</b></li></ul></div>
