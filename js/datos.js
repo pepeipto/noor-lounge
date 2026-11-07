@@ -30,8 +30,8 @@ window.NOOR = {
     },
     abrirMenu: 'Abrir menú',
     cerrarMenu: 'Cerrar menú',
-    abiertoAhora: 'Abierto ahora · hasta las 04:00',
-    abrimosHoy: 'Hoy abrimos a las 16:00',
+    abiertoAhora: 'Abierto ahora · hasta las {cierre}',
+    abrimosHoy: 'Hoy abrimos a las 12:00',
     hoy: 'Hoy', manana: 'Mañana',
     hoyFrase: 'hoy', mananaFrase: 'mañana',
     diaFrase: (fecha) => `el ${fecha}`,
@@ -50,7 +50,7 @@ window.NOOR = {
   respuestas: [
     {
       claves: ['horario', 'hora', 'abierto', 'abris', 'abren', 'cierra', 'cerrais', 'hoy', 'domingo', 'lunes'],
-      texto: 'Abrimos todos los días, de lunes a domingo, de 16:00 a 04:00.',
+      texto: 'Abrimos todos los días a las 12:00. De domingo a miércoles cerramos a las 03:00 y de jueves a sábado, a las 04:00.',
     },
     {
       claves: ['shisha', 'cachimba', 'hookah', 'kalyan', 'sabor', 'cazoleta', 'kazan', 'precio', 'cuesta', 'vale'],

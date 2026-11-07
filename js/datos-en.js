@@ -27,8 +27,8 @@ window.NOOR = {
     },
     abrirMenu: 'Open menu',
     cerrarMenu: 'Close menu',
-    abiertoAhora: 'Open now · until 04:00',
-    abrimosHoy: 'Opening today at 16:00',
+    abiertoAhora: 'Open now · until {cierre}',
+    abrimosHoy: 'Opening today at 12:00',
     hoy: 'Today', manana: 'Tomorrow',
     hoyFrase: 'today', mananaFrase: 'tomorrow',
     formatoDia: { weekday: 'long', day: 'numeric', month: 'long' },
@@ -48,7 +48,7 @@ window.NOOR = {
   respuestas: [
     {
       claves: ['hours', 'hour', 'open', 'opening', 'close', 'closing', 'today', 'tonight', 'sunday', 'monday', 'when'],
-      texto: 'We are open every day, Monday to Sunday, from 16:00 to 04:00.',
+      texto: 'We open every day at 12:00. Sunday to Wednesday we close at 03:00, and Thursday to Saturday at 04:00.',
     },
     {
       claves: ['shisha', 'hookah', 'kalyan', 'cachimba', 'flavour', 'flavor', 'bowl', 'kazan', 'price', 'cost', 'how much'],

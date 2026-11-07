@@ -27,8 +27,8 @@ window.NOOR = {
     },
     abrirMenu: 'Apri il menu',
     cerrarMenu: 'Chiudi il menu',
-    abiertoAhora: 'Aperto ora · fino alle 04:00',
-    abrimosHoy: 'Oggi apriamo alle 16:00',
+    abiertoAhora: 'Aperto ora · fino alle {cierre}',
+    abrimosHoy: 'Oggi apriamo alle 12:00',
     hoy: 'Oggi', manana: 'Domani',
     hoyFrase: 'oggi', mananaFrase: 'domani',
     diaFrase: (fecha) => fecha,
@@ -47,7 +47,7 @@ window.NOOR = {
   respuestas: [
     {
       claves: ['orari', 'orario', 'aperto', 'aprite', 'apre', 'chiude', 'chiudete', 'oggi', 'domenica', 'lunedi', 'quando'],
-      texto: 'Siamo aperti tutti i giorni, dal lunedì alla domenica, dalle 16:00 alle 04:00.',
+      texto: 'Apriamo tutti i giorni alle 12:00. Dalla domenica al mercoledì chiudiamo alle 03:00, dal giovedì al sabato alle 04:00.',
     },
     {
       claves: ['shisha', 'narghil', 'narghile', 'hookah', 'cachimba', 'sapor', 'gusto', 'braciere', 'kazan', 'prezz', 'costa', 'quanto'],

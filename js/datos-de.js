@@ -27,8 +27,8 @@ window.NOOR = {
     },
     abrirMenu: 'Menü öffnen',
     cerrarMenu: 'Menü schließen',
-    abiertoAhora: 'Jetzt geöffnet · bis 04:00 Uhr',
-    abrimosHoy: 'Heute ab 16:00 Uhr geöffnet',
+    abiertoAhora: 'Jetzt geöffnet · bis {cierre} Uhr',
+    abrimosHoy: 'Heute ab 12:00 Uhr geöffnet',
     hoy: 'Heute', manana: 'Morgen',
     hoyFrase: 'heute', mananaFrase: 'morgen',
     diaFrase: (fecha) => `am ${fecha}`,
@@ -47,7 +47,7 @@ window.NOOR = {
   respuestas: [
     {
       claves: ['offnungszeit', 'uhrzeit', 'geoffnet', 'offen', 'offnet', 'schliess', 'heute', 'sonntag', 'montag', 'wann'],
-      texto: 'Wir haben täglich geöffnet, von Montag bis Sonntag, von 16:00 bis 04:00 Uhr.',
+      texto: 'Wir öffnen täglich um 12:00 Uhr. Von Sonntag bis Mittwoch schließen wir um 03:00 Uhr, von Donnerstag bis Samstag um 04:00 Uhr.',
     },
     {
       claves: ['shisha', 'wasserpfeife', 'hookah', 'kalyan', 'geschmack', 'sorte', 'kopf', 'kazan', 'preis', 'kostet', 'wie viel'],

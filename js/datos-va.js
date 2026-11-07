@@ -27,8 +27,8 @@ window.NOOR = {
     },
     abrirMenu: 'Obrir el menú',
     cerrarMenu: 'Tancar el menú',
-    abiertoAhora: 'Obert ara · fins a les 04:00',
-    abrimosHoy: 'Hui obrim a les 16:00',
+    abiertoAhora: 'Obert ara · fins a les {cierre}',
+    abrimosHoy: 'Hui obrim a les 12:00',
     hoy: 'Hui', manana: 'Demà',
     hoyFrase: 'hui', mananaFrase: 'demà',
     diaFrase: (fecha) => `el ${fecha}`,
@@ -47,7 +47,7 @@ window.NOOR = {
   respuestas: [
     {
       claves: ['horari', 'hora', 'obert', 'obriu', 'obri', 'tanca', 'tanqueu', 'hui', 'diumenge', 'dilluns', 'quan'],
-      texto: 'Obrim tots els dies, de dilluns a diumenge, de 16:00 a 04:00.',
+      texto: 'Obrim tots els dies a les 12:00. De diumenge a dimecres tanquem a les 03:00 i de dijous a dissabte, a les 04:00.',
     },
     {
       claves: ['shisha', 'xixa', 'cachimba', 'hookah', 'narguil', 'sabor', 'cassoleta', 'kazan', 'preu', 'costa', 'val'],

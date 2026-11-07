@@ -1,13 +1,13 @@
 # va (valencià, normativa de l'AVL): una línia per text, «número | text». El número és el de fuentes.txt. \n = salt de línia.
-0 | content="Shisha lounge a l'Eixample, València: cachimbes de cristall tallat (Kazan, Full Black, fruita natural) i còctels des de 12 €. Obert tots els dies de 16:00 a 04:00. Reserva la teua taula."
+0 | content="Shisha lounge a l'Eixample, València: cachimbes de cristall tallat (Kazan, Full Black, fruita natural) i còctels des de 12 €. Obert tots els dies des de les 12:00. Reserva la teua taula."
 1 | NOOR Lounge · Shisha i còctels a València
-2 | content="Cachimbes de cristall tallat, cocteleria i llum càlida al Carrer Serrano Morales, 3 (l'Eixample). Tots els dies de 16:00 a 04:00."
+2 | content="Cachimbes de cristall tallat, cocteleria i llum càlida al Carrer Serrano Morales, 3 (l'Eixample). Tots els dies des de les 12:00."
 3 | content="Shisha de cristall tallat traient fum a la barra de NOOR Lounge, València"
-4 | content="Cachimbes de cristall tallat i cocteleria a l'Eixample. Tots els dies de 16:00 a 04:00."
-5 | "Shisha lounge i cocteleria a l'Eixample, València. Cachimbes de cristall tallat, còctels, tes i vins. Obert tots els dies de 16:00 a 04:00."
+4 | content="Cachimbes de cristall tallat i cocteleria a l'Eixample. Tots els dies des de les 12:00."
+5 | "Shisha lounge i cocteleria a l'Eixample, València. Cachimbes de cristall tallat, còctels, tes i vins. Obert tots els dies des de les 12:00."
 6 | "name": "Reserva de taula"
 7 | Quin horari té NOOR Lounge?
-8 | Obrim tots els dies, de dilluns a diumenge, de 16:00 a 04:00.
+8 | Obrim tots els dies a les 12:00. De diumenge a dimecres tanquem a les 03:00 i de dijous a dissabte, a les 04:00.
 9 | On és este shisha lounge de València?
 10 | Al Carrer Serrano Morales, 3, l'Eixample, 46004 València, al costat de la plaça de Cánovas.
 11 | Quant costa una cachimba?
@@ -30,7 +30,7 @@
 28 | NOOR КАЛЬЯН Lounge: shisha i còctels a València
 29 | alt="Shisha de cristall tallat traient fum sobre la barra de NOOR Lounge"
 30 | <span class="etiqueta">Shisha Lounge · València</span>
-31 | <span>4,7 ★ a Google</span><span data-abierto>Tots els dies de 16:00 a 04:00</span>
+31 | <span>4,7 ★ a Google</span><span data-abierto>Tots els dies des de les 12:00</span>
 32 | El teu shisha lounge especialitzat, ambientat en l’autèntic estil rus, amb tota mena de mescles que sorprendran el teu paladar.
 33 |  Reserva la teua taula</a>
 34 | href="#carta">Descobrir la carta</a>
@@ -45,7 +45,7 @@
 43 | Noor significa il·luminació, i som en ple centre de la ciutat, a un pas de la plaça de Cánovas. Un local en què et submergiràs i on el seu ambient càlid t'acollirà de tal manera que et sentiràs com a casa.
 44 | Una barra especialitzada en shishes i una altra en coctelleria, copes i refrescos. El nostre ampli horari ens converteix en l'opció perfecta per a vindre al matí a treballar o a relaxar-te, o a la nit per a gaudir de l'ambient nocturn de la ciutat.
 45 | <div><strong>4,7 ★</strong><span>139 opinions a Google</span></div>
-46 | <div><strong>16–04 h</strong><span>Tots els dies</span></div>
+46 | <div><strong>12:00</strong><span>Obrim tots els dies</span></div>
 47 | <div><strong>10–20 €</strong><span>Despesa mitjana per persona (Google)</span></div>
 48 | alt="Sala de NOOR, shisha lounge a València, amb barra de taulells de to coure, tamborets i cachimbes"
 49 | alt="Client gaudint d'una cachimba a la barra de NOOR Lounge"
@@ -81,7 +81,7 @@
 94 | <dt>Adreça</dt>
 95 | <dt>Telèfon</dt><dd><a href="tel:+34963120754">963 12 07 54</a></dd>
 96 | <dt>Horari <span
-97 | <td>De dilluns a diumenge</td>
+97 | <td>De diumenge a dimecres</td><td>12:00 – 03:00</td></tr><tr><td>De dijous a dissabte</td>
 98 | rel="noopener">Reservar en línia</a>
 99 | href="#reservar">Triar dia i hora</a>
 100 | <span>Veure el mapa interactiu</span>

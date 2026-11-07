@@ -92,17 +92,22 @@
     document.addEventListener('click', (e) => { if (!idiomas.contains(e.target)) mostrarIdiomas(false); });
   }
 
-  // ---------- Abierto ahora (hora de València): abre a las 16:00 y cierra a las 04:00 ----------
-  function horaValencia() {
-    const partes = new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' })
+  // ---------- Abierto ahora (hora de València): abre a las 12:00; cierra a las 03:00 (dom–mié) o a las 04:00 (jue–sáb) ----------
+  function ahoraValencia() {
+    const partes = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Madrid', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' })
       .formatToParts(new Date());
-    const v = (t) => Number(partes.find((x) => x.type === t)?.value || 0);
-    return v('hour') + v('minute') / 60;
+    const v = (t) => partes.find((x) => x.type === t)?.value;
+    const dia = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(v('weekday'));
+    return { dia, h: Number(v('hour') || 0) + Number(v('minute') || 0) / 60 };
   }
+  const cierreDe = (dia) => (dia >= 4 ? 4 : 3); // jueves (4), viernes y sábado cierran a las 04:00
   function pintarEstado() {
-    const h = horaValencia();
-    const abierto = h >= 16 || h < 4;
-    const texto = abierto ? T.abiertoAhora : T.abrimosHoy;
+    const { dia, h } = ahoraValencia();
+    const ayer = (dia + 6) % 7;
+    let abierto = false, cierre = 0;
+    if (h >= 12) { abierto = true; cierre = cierreDe(dia); }
+    else if (h < cierreDe(ayer)) { abierto = true; cierre = cierreDe(ayer); }
+    const texto = abierto ? (T.abiertoAhora || '').replace('{cierre}', '0' + cierre + ':00') : T.abrimosHoy;
     document.querySelectorAll('[data-abierto]').forEach((el) => {
       el.textContent = texto;
       el.classList.toggle('abierto', abierto);
