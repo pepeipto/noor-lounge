@@ -42,8 +42,8 @@
 40 | <span>Shisha</span><span>Kazan</span><span>Mojitos</span><span>Chai Latte</span><span>Espresso Martini</span><span>Gute Musik</span><span>Bis 4:00 Uhr</span>
 41 | <span class="etiqueta aparece">Die Lounge</span>
 42 | Mitten im <em>Herzen</em> der Stadt
-43 | Noor bedeutet Licht, und das spürt man hier. Kupferfarbene Fliesen, Sofas für lange Nächte, Säulen, die wie Glut leuchten, und eine Bar, an der Shisha und Cocktails dieselbe Sprache sprechen. Nur einen Schritt von der Plaza Cánovas entfernt.
-44 | Zum Feiern, für ein langes Gespräch oder einfach so. Täglich geöffnet, von 16:00 bis 04:00 Uhr.
+43 | Noor bedeutet Erleuchtung, und wir liegen mitten im Stadtzentrum, nur einen Schritt von der Plaza Cánovas entfernt. Ein Ort, in den du eintauchst und dessen warme Atmosphäre dich so empfängt, dass du dich wie zu Hause fühlst.
+44 | Eine Bar für Shishas und eine weitere für Cocktails, Drinks und Erfrischungsgetränke. Dank unserer langen Öffnungszeiten sind wir die perfekte Wahl, um morgens zum Arbeiten oder Entspannen vorbeizukommen oder abends das Nachtleben der Stadt zu genießen.
 45 | <div><strong>4,7 ★</strong><span>139 Google-Bewertungen</span></div>
 46 | <div><strong>16–04 Uhr</strong><span>Täglich</span></div>
 47 | <div><strong>10–20 €</strong><span>Durchschnitt pro Person (Google)</span></div>
@@ -51,9 +51,9 @@
 49 | alt="Gast genießt eine Shisha an der Bar der NOOR Lounge"
 50 | <span class="etiqueta aparece">Das Ritual</span>
 51 | Ein Ritual, bei dem die Shisha <em>das Erlebnis veredelt</em>
-52 | <h3>Ihr Geschmack</h3><p>Rubio, Fusion, Full Black, Kazan oder Josh. Sagen Sie uns, ob Sie es frisch, süß, fruchtig oder intensiv mögen – wir beraten Sie am Tisch.</p>
-53 | <h3>Frisch zubereitet</h3><p>Von Hand gestopfter Kopf, Naturkohle mit der richtigen Glut und makelloses Kristall bei jedem Service.</p>
-54 | <h3>Ihre Zeit</h3><p>Ein Cocktail, gute Musik und eine Bar, die bis vier Uhr leuchtet. Alles andere entscheiden Sie.</p>
+52 | <h3>Große Auswahl</h3><p>Mehr als 150 Sorten, kombiniert aus Rubio, Fusion und Black.</p>
+53 | <h3>Persönliche Betreuung</h3><p>Jeder Gast bekommt die Aufmerksamkeit, die er verdient, damit wir eure perfekte Mischung finden, in der Stärke, die ihr sucht.</p>
+54 | <h3>Deine Zeit, dein Zuhause</h3><p>Neben Shishas, die wir für jeden von euch frisch zubereiten, mixen wir Cocktails nach deinem Geschmack, passend zu deiner Wahl.</p>
 55 | <span class="etiqueta aparece">Die Karte</span>
 56 | Rauch, <em>Eis</em> und Feuer
 57 | Shishas, Cocktails und Heißgetränke: das Wesentliche von NOOR in drei Gesten. Fragen Sie am Tisch nach Ihrem Geschmack.
@@ -65,8 +65,8 @@
 63 | <h3>Heißgetränke</h3><p>Chai Latte und Tees zum Teilen, Zitrus mit Ingwer oder rote Beeren, dazu Kaffee.</p>
 77 | rel="noopener nofollow">Vollständige Karte (auf Spanisch)</a>
 78 | <span class="etiqueta aparece">Galerie</span>
-79 | NOOR <em>bei Nacht</em>
-80 | Glut, Kristall und Kupfer: unsere Shisha-Lounge in L'Eixample, so wie sie nach Mitternacht aussieht.
+79 | <em>NOOR</em>
+80 | Glut, Kristall und Kupfer: So ist unsere Shisha-Lounge in L'Eixample.
 81 | alt="Ecke mit Shisha und warm leuchtender Säule in der NOOR Lounge"
 82 | alt="Bar des NOOR mit beleuchteten Flaschen"
 84 | alt="Cocktail mit Schaum in der NOOR Lounge"

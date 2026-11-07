@@ -42,8 +42,8 @@
 40 | <span>Narghilè</span><span>Kazan</span><span>Mojito</span><span>Chai latte</span><span>Espresso Martini</span><span>Buona musica</span><span>Fino alle 4:00</span>
 41 | <span class="etiqueta aparece">Il lounge</span>
 42 | Nel pieno <em>cuore</em> della città
-43 | Noor significa luce, e qui si sente. Piastrelle color rame, divani fatti per allungare la notte, colonne che ardono come brace e un bancone dove narghilè e cocktail parlano la stessa lingua. A due passi da Plaza Cánovas.
-44 | Per festeggiare, per una lunga chiacchierata o per niente di particolare. Aperti ogni giorno, dalle 16:00 alle 04:00.
+43 | Noor significa illuminazione, e siamo in pieno centro città, a due passi da Plaza Cánovas. Un locale in cui ti immergerai e la cui atmosfera calda ti accoglierà al punto da farti sentire a casa.
+44 | Un bancone dedicato al narghilè e un altro a cocktail, drink e bibite. Il nostro ampio orario ci rende la scelta perfetta per venire la mattina a lavorare o a rilassarti, oppure la sera per goderti la vita notturna della città.
 45 | <div><strong>4,7 ★</strong><span>139 recensioni su Google</span></div>
 46 | <div><strong>16–04</strong><span>Tutti i giorni</span></div>
 47 | <div><strong>10–20 €</strong><span>Spesa media a persona (Google)</span></div>
@@ -51,9 +51,9 @@
 49 | alt="Cliente che si gode un narghilè al bancone del NOOR Lounge"
 50 | <span class="etiqueta aparece">Il rito</span>
 51 | Un rituale in cui il narghilè <em>eleva l’esperienza</em>
-52 | <h3>Il tuo gusto</h3><p>Rubio, Fusion, Full Black, Kazan o Josh. Dicci se lo preferisci fresco, dolce, fruttato o intenso e ti guidiamo al tavolo.</p>
-53 | <h3>Preparato al momento</h3><p>Braciere caricato a mano, carbone naturale al punto giusto e cristallo impeccabile a ogni servizio.</p>
-54 | <h3>Il tempo è tuo</h3><p>Un cocktail, buona musica e il bancone acceso fino alle quattro. Il resto lo decidi tu.</p>
+52 | <h3>Ampio menù</h3><p>Più di 150 gusti, combinati tra Rubio, Fusion e Nero.</p>
+53 | <h3>Attenzione personalizzata</h3><p>Ognuno riceve la cura e l'attenzione che merita per trovare la vostra miscela perfetta, con l'intensità che cercate.</p>
+54 | <h3>Il tuo tempo, la tua casa</h3><p>Oltre a narghilè preparati al momento per ognuno di voi, prepariamo cocktail a tuo gusto in abbinamento a ciò che hai scelto.</p>
 55 | <span class="etiqueta aparece">Il menù</span>
 56 | Fumo, <em>ghiaccio</em> e fuoco
 57 | Shisha, cocktail e bevande calde: l’essenziale di NOOR in tre gesti. Chiedi al tavolo il tuo gusto.
@@ -65,8 +65,8 @@
 63 | <h3>Bevande calde</h3><p>Chai latte e tè da condividere, agrumi e zenzero o frutti rossi, e caffè.</p>
 77 | rel="noopener nofollow">Vedi il menù completo (in spagnolo)</a>
 78 | <span class="etiqueta aparece">Galleria</span>
-79 | NOOR, <em>di notte</em>
-80 | Brace, cristallo e rame: il nostro shisha lounge nell'Eixample, così come appare dopo la mezzanotte.
+79 | <em>NOOR</em>
+80 | Brace, cristallo e rame: ecco il nostro shisha lounge a L'Eixample.
 81 | alt="Angolo con narghilè e colonna di luce calda al NOOR Lounge"
 82 | alt="Bancone del NOOR con bottiglie illuminate"
 84 | alt="Cocktail con schiuma servito al NOOR Lounge"

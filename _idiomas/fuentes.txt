@@ -42,8 +42,8 @@
 40 | <span>Shisha</span><span>Kazan</span><span>Mojitos</span><span>Chai latte</span><span>Espresso Martini</span><span>Buena música</span><span>Hasta las 4:00</span>
 41 | <span class="etiqueta aparece">El lounge</span>
 42 | En pleno <em>corazón</em> de la ciudad
-43 | Noor significa luz, y aquí se nota. Azulejo cobrizo, sofás hechos para alargar la noche, columnas que arden como brasa y una barra donde la cachimba y los cócteles hablan el mismo idioma. A un paso de la Plaza Cánovas.
-44 | Para celebrar, para una conversación larga o para nada en particular. Abrimos cada día, de 16:00 a 04:00.
+43 | Noor significa iluminación, y estamos en pleno centro de la ciudad, a un paso de la Plaza Cánovas. Un local en el que te sumergirás y cuyo ambiente cálido te acogerá de tal manera que te sentirás como en casa.
+44 | Una barra especializada en shishas y otra en coctelería, copas y refrescos. Nuestro amplio horario nos convierte en la opción perfecta para venir por la mañana a trabajar o a relajarte, o por la noche para disfrutar del ambiente nocturno de la ciudad.
 45 | <div><strong>4,7 ★</strong><span>139 opiniones en Google</span></div>
 46 | <div><strong>16–04 h</strong><span>Todos los días</span></div>
 47 | <div><strong>10–20 €</strong><span>Gasto medio por persona (Google)</span></div>
@@ -51,9 +51,9 @@
 49 | alt="Cliente disfrutando de una cachimba en la barra de NOOR Lounge"
 50 | <span class="etiqueta aparece">El ritual</span>
 51 | Un ritual en el que la cachimba <em>eleva la experiencia</em>
-52 | <h3>Tu sabor</h3><p>Rubio, Fusion, Full Black, Kazan o Josh. Dinos si lo quieres fresco, dulce, afrutado o intenso y te guiamos en mesa.</p>
-53 | <h3>Preparada al momento</h3><p>Cazoleta cargada a mano, carbón natural en su punto y cristal impecable en cada servicio.</p>
-54 | <h3>El tiempo, tuyo</h3><p>Un cóctel, buena música y la barra encendida hasta las cuatro. Lo demás lo decides tú.</p>
+52 | <h3>Amplia carta</h3><p>Más de 150 sabores, combinados entre Rubio, Fusion y Negro.</p>
+53 | <h3>Atención personalizada</h3><p>Cada persona recibe el trato y la atención que merece para dar con vuestra mezcla perfecta y con la intensidad que buscáis.</p>
+54 | <h3>Tu tiempo, tu hogar</h3><p>Además de shishas hechas al momento para cada uno de vosotros, preparamos la coctelería a tu gusto para que acompañe a lo que has pedido.</p>
 55 | <span class="etiqueta aparece">La carta</span>
 56 | Humo, <em>hielo</em> y fuego
 57 | Shishas, coctelería y bebidas calientes: lo esencial de NOOR en tres gestos. Pregunta en mesa por tu sabor.
@@ -65,8 +65,8 @@
 63 | <h3>Bebidas calientes</h3><p>Chai latte y tés para compartir, cítrico con jengibre o frutos rojos, y café.</p>
 77 | rel="noopener nofollow">Ver la carta completa</a>
 78 | <span class="etiqueta aparece">Galería</span>
-79 | NOOR, <em>de noche</em>
-80 | Brasa, cristal y cobre: nuestro lounge de shisha en L'Eixample, tal como se ve pasada la medianoche.
+79 | <em>NOOR</em>
+80 | Brasa, cristal y cobre: así es nuestro lounge de shisha en L'Eixample.
 81 | alt="Rincón con cachimba y columna de luz cálida en NOOR Lounge"
 82 | alt="Barra de NOOR con botellas iluminadas"
 84 | alt="Cóctel con espuma servido en NOOR Lounge"
