@@ -51,7 +51,7 @@ window.NOOR = {
     },
     {
       claves: ['shisha', 'xixa', 'cachimba', 'hookah', 'narguil', 'sabor', 'cassoleta', 'kazan', 'preu', 'costa', 'val'],
-      texto: 'Les nostres shishes:\n· Rubio 16 € · Josh 16 €\n· Fusion 17 €\n· Full Black 19 €\n· Kazan 22 €\n· Especial 25 €\n· Kazan Especial 30 €\n· Fruita 40 €\nEt recomanem el sabor en taula, segons els teus gustos.',
+      texto: 'Les nostres shishes:\n· Rubio 16 €\n· Fusion 17 €\n· Full Black 19 €\n· Kazan 22 €\n· Especial 25 €\n· Kazan Especial 30 €\n· Fruita 40 €\nEt recomanem el sabor en taula, segons els teus gustos.',
     },
     {
       claves: ['coctel', 'cocktail', 'mojito', 'copa', 'beure', 'beguda', 'gin', 'margarita', 'martini', 'spritz'],

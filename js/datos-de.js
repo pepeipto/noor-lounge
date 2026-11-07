@@ -51,7 +51,7 @@ window.NOOR = {
     },
     {
       claves: ['shisha', 'wasserpfeife', 'hookah', 'kalyan', 'geschmack', 'sorte', 'kopf', 'kazan', 'preis', 'kostet', 'wie viel'],
-      texto: 'Unsere Shishas:\n· Rubio 16 € · Josh 16 €\n· Fusion 17 €\n· Full Black 19 €\n· Kazan 22 €\n· Especial 25 €\n· Kazan Especial 30 €\n· Frische Frucht 40 €\nDen Geschmack empfehlen wir Ihnen gern am Tisch, ganz nach Ihrem Wunsch.',
+      texto: 'Unsere Shishas:\n· Rubio 16 €\n· Fusion 17 €\n· Full Black 19 €\n· Kazan 22 €\n· Especial 25 €\n· Kazan Especial 30 €\n· Frische Frucht 40 €\nDen Geschmack empfehlen wir Ihnen gern am Tisch, ganz nach Ihrem Wunsch.',
     },
     {
       claves: ['cocktail', 'mojito', 'trinken', 'getrank', 'drink', 'gin', 'margarita', 'martini', 'spritz'],

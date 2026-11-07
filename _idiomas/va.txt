@@ -11,7 +11,7 @@
 9 | On és este shisha lounge de València?
 10 | Al Carrer Serrano Morales, 3, l'Eixample, 46004 València, al costat de la plaça de Cánovas.
 11 | Quant costa una cachimba?
-12 | Les shishes van de 16 € (Rubio o Josh) a 30 € (Kazan Especial), i 40 € la de fruita natural.
+12 | Les shishes van de 16 € (Rubio) a 30 € (Kazan Especial), i 40 € la de fruita natural.
 13 | Com reserve taula?
 14 | En línia des d’aquesta web, d’1 a 10 persones: la reserva entra directament en el nostre sistema de taules. Per a grups de més de 10, crida’ns al 963 12 07 54.
 15 | Teniu còctels?
@@ -108,7 +108,7 @@
 126 | Tria el teu <em>racó</em>
 127 | Toca una zona del local per a veure les seues taules i places, i reserva en un minut.
 128 | <a href="#mesas">Reserves</a>
-129 | <div class="aparece"><h3>Shishes</h3><ul><li>Rubio<b>16 €</b></li><li>Josh<b>16 €</b></li><li>Fusion<b>17 €</b></li><li>Full Black<b>19 €</b></li><li>Kazan<b>22 €</b></li><li>Especial<b>25 €</b></li><li>Kazan Especial<b>30 €</b></li><li>Fruita natural<b>40 €</b></li></ul></div>
+129 | <div class="aparece"><h3>Shishes</h3><ul><li>Rubio<b>16 €</b></li><li>Fusion<b>17 €</b></li><li>Full Black<b>19 €</b></li><li>Kazan<b>22 €</b></li><li>Especial<b>25 €</b></li><li>Kazan Especial<b>30 €</b></li><li>Fruita natural<b>40 €</b></li></ul></div>
 130 | <div class="aparece"><h3>Cocteleria</h3><ul><li>Mojito clàssic<b>12 €</b></li><li>Mojito de maduixa<b>12 €</b></li><li>Mojito de mango<b>12 €</b></li><li>Mojito de fruita de la passió<b>12 €</b></li><li>Mojito Red Bull coco<b>13 €</b></li><li>Piña colada<b>12 €</b></li><li>Margarita<b>12 €</b></li><li>Aperol Spritz<b>12 €</b></li><li>Bloody Mary<b>12 €</b></li><li>Negroni<b>12 €</b></li><li>Whiskey Sour<b>12 €</b></li><li>Espresso Martini<b>13 €</b></li><li>PornStar Martini<b>13 €</b></li><li>Blue Whisky<b>13 €</b></li><li>Gin Fit<b>13 €</b></li><li>Còctel prèmium<b>15 €</b></li></ul></div>
 131 | <div class="aparece"><h3>Copes i xupitos</h3><ul><li>Ginebra, rom, vodka i whisky<b>Pregunta</b></li><li>Limoncello Villa Massa<b>4 €</b></li><li>Tequila<b>4 €</b></li><li>Tequila de maduixa<b>4 €</b></li></ul></div>
 132 | <div class="aparece"><h3>Cerveses</h3><ul><li>Águila doble<b>3,50 €</b></li><li>Águila triple<b>7 €</b></li><li>18/70 doble<b>4,50 €</b></li><li>18/70 triple<b>7,50 €</b></li><li>Amstel Oro<b>4 €</b></li><li>Amstel Oro 0,0<b>4 €</b></li><li>Heineken<b>4 €</b></li><li>Desperados<b>4 €</b></li><li>Radler<b>4 €</b></li><li>Judas<b>5 €</b></li></ul></div>

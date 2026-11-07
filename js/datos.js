@@ -54,7 +54,7 @@ window.NOOR = {
     },
     {
       claves: ['shisha', 'cachimba', 'hookah', 'kalyan', 'sabor', 'cazoleta', 'kazan', 'precio', 'cuesta', 'vale'],
-      texto: 'Nuestras shishas:\n· Rubio 16 € · Josh 16 €\n· Fusion 17 €\n· Full Black 19 €\n· Kazan 22 €\n· Especial 25 €\n· Kazan Especial 30 €\n· Fruta 40 €\nTe recomendamos el sabor en mesa, según tus gustos.',
+      texto: 'Nuestras shishas:\n· Rubio 16 €\n· Fusion 17 €\n· Full Black 19 €\n· Kazan 22 €\n· Especial 25 €\n· Kazan Especial 30 €\n· Fruta 40 €\nTe recomendamos el sabor en mesa, según tus gustos.',
     },
     {
       claves: ['coctel', 'cocktail', 'mojito', 'copa', 'beber', 'bebida', 'gin', 'margarita', 'martini', 'spritz'],

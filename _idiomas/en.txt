@@ -11,7 +11,7 @@
 9 | Where is this shisha lounge in Valencia?
 10 | At Carrer Serrano Morales, 3, L'Eixample, 46004 València, next to Plaza Cánovas.
 11 | How much is a shisha?
-12 | Shishas range from €16 (Rubio or Josh) to €30 (Kazan Especial), and €40 for a fresh fruit bowl.
+12 | Shishas range from €16 (Rubio) to €30 (Kazan Especial), and €40 for a fresh fruit bowl.
 13 | How do I book a table?
 14 | Online from this website, for 1 to 10 people: your booking goes straight into our table system. For groups of more than 10, call us on +34 963 12 07 54.
 15 | Do you serve cocktails?
@@ -108,7 +108,7 @@
 126 | Choose your <em>spot</em>
 127 | Tap an area of the lounge to see its tables and seats, and book in a minute.
 128 | <a href="#mesas">Book</a>
-129 | <div class="aparece"><h3>Shishas</h3><ul><li>Rubio<b>€16</b></li><li>Josh<b>€16</b></li><li>Fusion<b>€17</b></li><li>Full Black<b>€19</b></li><li>Kazan<b>€22</b></li><li>Especial<b>€25</b></li><li>Kazan Especial<b>€30</b></li><li>Fresh fruit<b>€40</b></li></ul></div>
+129 | <div class="aparece"><h3>Shishas</h3><ul><li>Rubio<b>€16</b></li><li>Fusion<b>€17</b></li><li>Full Black<b>€19</b></li><li>Kazan<b>€22</b></li><li>Especial<b>€25</b></li><li>Kazan Especial<b>€30</b></li><li>Fresh fruit<b>€40</b></li></ul></div>
 130 | <div class="aparece"><h3>Cocktails</h3><ul><li>Classic mojito<b>€12</b></li><li>Strawberry mojito<b>€12</b></li><li>Mango mojito<b>€12</b></li><li>Passion fruit mojito<b>€12</b></li><li>Red Bull coconut mojito<b>€13</b></li><li>Piña colada<b>€12</b></li><li>Margarita<b>€12</b></li><li>Aperol Spritz<b>€12</b></li><li>Bloody Mary<b>€12</b></li><li>Negroni<b>€12</b></li><li>Whiskey Sour<b>€12</b></li><li>Espresso Martini<b>€13</b></li><li>PornStar Martini<b>€13</b></li><li>Blue Whisky<b>€13</b></li><li>Gin Fit<b>€13</b></li><li>Premium cocktail<b>€15</b></li></ul></div>
 131 | <div class="aparece"><h3>Spirits & shots</h3><ul><li>Gin, rum, vodka and whisky<b>Ask</b></li><li>Limoncello Villa Massa<b>€4</b></li><li>Tequila<b>€4</b></li><li>Strawberry tequila<b>€4</b></li></ul></div>
 132 | <div class="aparece"><h3>Beers</h3><ul><li>Águila double<b>€3.50</b></li><li>Águila triple<b>€7</b></li><li>18/70 double<b>€4.50</b></li><li>18/70 triple<b>€7.50</b></li><li>Amstel Oro<b>€4</b></li><li>Amstel Oro 0.0<b>€4</b></li><li>Heineken<b>€4</b></li><li>Desperados<b>€4</b></li><li>Radler<b>€4</b></li><li>Judas<b>€5</b></li></ul></div>

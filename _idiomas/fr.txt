@@ -11,7 +11,7 @@
 9 | Où se trouve ce lounge à chicha à Valence ?
 10 | Au Carrer Serrano Morales, 3, L'Eixample, 46004 València, à côté de la Plaza Cánovas.
 11 | Combien coûte une chicha ?
-12 | Les chichas vont de 16 € (Rubio ou Josh) à 30 € (Kazan Especial), et 40 € pour celle au fruit frais.
+12 | Les chichas vont de 16 € (Rubio) à 30 € (Kazan Especial), et 40 € pour celle au fruit frais.
 13 | Comment réserver une table ?
 14 | En ligne depuis ce site, de 1 à 10 personnes : la réservation arrive directement dans notre système de tables. Pour les groupes de plus de 10, appelez-nous au +34 963 12 07 54.
 15 | Proposez-vous des cocktails ?
@@ -108,7 +108,7 @@
 126 | Choisissez votre <em>coin</em>
 127 | Touchez une zone du lounge pour voir ses tables et ses places, et réservez en une minute.
 128 | <a href="#mesas">Réserver</a>
-129 | <div class="aparece"><h3>Chichas</h3><ul><li>Rubio<b>16 €</b></li><li>Josh<b>16 €</b></li><li>Fusion<b>17 €</b></li><li>Full Black<b>19 €</b></li><li>Kazan<b>22 €</b></li><li>Especial<b>25 €</b></li><li>Kazan Especial<b>30 €</b></li><li>Fruit frais<b>40 €</b></li></ul></div>
+129 | <div class="aparece"><h3>Chichas</h3><ul><li>Rubio<b>16 €</b></li><li>Fusion<b>17 €</b></li><li>Full Black<b>19 €</b></li><li>Kazan<b>22 €</b></li><li>Especial<b>25 €</b></li><li>Kazan Especial<b>30 €</b></li><li>Fruit frais<b>40 €</b></li></ul></div>
 130 | <div class="aparece"><h3>Cocktails</h3><ul><li>Mojito classique<b>12 €</b></li><li>Mojito fraise<b>12 €</b></li><li>Mojito mangue<b>12 €</b></li><li>Mojito fruit de la passion<b>12 €</b></li><li>Mojito Red Bull coco<b>13 €</b></li><li>Piña colada<b>12 €</b></li><li>Margarita<b>12 €</b></li><li>Aperol Spritz<b>12 €</b></li><li>Bloody Mary<b>12 €</b></li><li>Negroni<b>12 €</b></li><li>Whiskey Sour<b>12 €</b></li><li>Espresso Martini<b>13 €</b></li><li>PornStar Martini<b>13 €</b></li><li>Blue Whisky<b>13 €</b></li><li>Gin Fit<b>13 €</b></li><li>Cocktail premium<b>15 €</b></li></ul></div>
 131 | <div class="aparece"><h3>Alcools et shots</h3><ul><li>Gin, rhum, vodka et whisky<b>Demander</b></li><li>Limoncello Villa Massa<b>4 €</b></li><li>Tequila<b>4 €</b></li><li>Tequila fraise<b>4 €</b></li></ul></div>
 132 | <div class="aparece"><h3>Bières</h3><ul><li>Águila double<b>3,50 €</b></li><li>Águila triple<b>7 €</b></li><li>18/70 double<b>4,50 €</b></li><li>18/70 triple<b>7,50 €</b></li><li>Amstel Oro<b>4 €</b></li><li>Amstel Oro 0,0<b>4 €</b></li><li>Heineken<b>4 €</b></li><li>Desperados<b>4 €</b></li><li>Radler<b>4 €</b></li><li>Judas<b>5 €</b></li></ul></div>

@@ -51,7 +51,7 @@ window.NOOR = {
     },
     {
       claves: ['shisha', 'narghil', 'narghile', 'hookah', 'cachimba', 'sapor', 'gusto', 'braciere', 'kazan', 'prezz', 'costa', 'quanto'],
-      texto: 'I nostri narghilè:\n· Rubio 16 € · Josh 16 €\n· Fusion 17 €\n· Full Black 19 €\n· Kazan 22 €\n· Especial 25 €\n· Kazan Especial 30 €\n· Frutta fresca 40 €\nTi consigliamo il gusto al tavolo, in base alle tue preferenze.',
+      texto: 'I nostri narghilè:\n· Rubio 16 €\n· Fusion 17 €\n· Full Black 19 €\n· Kazan 22 €\n· Especial 25 €\n· Kazan Especial 30 €\n· Frutta fresca 40 €\nTi consigliamo il gusto al tavolo, in base alle tue preferenze.',
     },
     {
       claves: ['cocktail', 'mojito', 'bere', 'bevanda', 'drink', 'gin', 'margarita', 'martini', 'spritz'],

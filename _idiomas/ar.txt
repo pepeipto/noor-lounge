@@ -11,7 +11,7 @@
 9 | أين تقع صالة الشيشة هذه في فالنسيا؟
 10 | في Carrer Serrano Morales, 3، حي L'Eixample، ‏46004 فالنسيا، بجوار ساحة Plaza Cánovas.
 11 | كم سعر الشيشة؟
-12 | تتراوح أسعار الشيشة بين 16 € ‏(Rubio أو Josh) و30 € ‏(Kazan Especial)، و40 € للشيشة على الفاكهة الطازجة.
+12 | تتراوح أسعار الشيشة بين 16 € ‏(Rubio) و30 € ‏(Kazan Especial)، و40 € للشيشة على الفاكهة الطازجة.
 13 | كيف أحجز طاولة؟
 14 | عبر الإنترنت من هذا الموقع، من شخص إلى 10 أشخاص: يصل الحجز مباشرة إلى نظام الطاولات لدينا. للمجموعات التي تزيد على 10 أشخاص، اتصل بنا على ‎+34 963 12 07 54.
 15 | هل تقدّمون الكوكتيلات؟
@@ -108,7 +108,7 @@
 126 | اختر <em>ركنك</em>
 127 | اضغط على منطقة في الصالة لترى طاولاتها ومقاعدها، واحجز في دقيقة.
 128 | <a href="#mesas">الحجز</a>
-129 | <div class="aparece"><h3>الشيشة</h3><ul><li>Rubio<b>16 €</b></li><li>Josh<b>16 €</b></li><li>Fusion<b>17 €</b></li><li>Full Black<b>19 €</b></li><li>Kazan<b>22 €</b></li><li>Especial<b>25 €</b></li><li>Kazan Especial<b>30 €</b></li><li>على الفاكهة الطازجة<b>40 €</b></li></ul></div>
+129 | <div class="aparece"><h3>الشيشة</h3><ul><li>Rubio<b>16 €</b></li><li>Fusion<b>17 €</b></li><li>Full Black<b>19 €</b></li><li>Kazan<b>22 €</b></li><li>Especial<b>25 €</b></li><li>Kazan Especial<b>30 €</b></li><li>على الفاكهة الطازجة<b>40 €</b></li></ul></div>
 130 | <div class="aparece"><h3>الكوكتيلات</h3><ul><li>موهيتو كلاسيكي<b>12 €</b></li><li>موهيتو بالفراولة<b>12 €</b></li><li>موهيتو بالمانجو<b>12 €</b></li><li>موهيتو بفاكهة الباشن<b>12 €</b></li><li>موهيتو ريد بُل بجوز الهند<b>13 €</b></li><li>Piña colada<b>12 €</b></li><li>Margarita<b>12 €</b></li><li>Aperol Spritz<b>12 €</b></li><li>Bloody Mary<b>12 €</b></li><li>Negroni<b>12 €</b></li><li>Whiskey Sour<b>12 €</b></li><li>Espresso Martini<b>13 €</b></li><li>PornStar Martini<b>13 €</b></li><li>Blue Whisky<b>13 €</b></li><li>Gin Fit<b>13 €</b></li><li>كوكتيل بريميوم<b>15 €</b></li></ul></div>
 131 | <div class="aparece"><h3>المشروبات الروحية والشوتات</h3><ul><li>جين، رم، فودكا وويسكي<b>اسأل</b></li><li>Limoncello Villa Massa<b>4 €</b></li><li>Tequila<b>4 €</b></li><li>تكيلا بالفراولة<b>4 €</b></li></ul></div>
 132 | <div class="aparece"><h3>البيرة</h3><ul><li>Águila doble<b>3,50 €</b></li><li>Águila triple<b>7 €</b></li><li>18/70 doble<b>4,50 €</b></li><li>18/70 triple<b>7,50 €</b></li><li>Amstel Oro<b>4 €</b></li><li>Amstel Oro 0,0<b>4 €</b></li><li>Heineken<b>4 €</b></li><li>Desperados<b>4 €</b></li><li>Radler<b>4 €</b></li><li>Judas<b>5 €</b></li></ul></div>

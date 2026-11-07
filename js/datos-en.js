@@ -52,7 +52,7 @@ window.NOOR = {
     },
     {
       claves: ['shisha', 'hookah', 'kalyan', 'cachimba', 'flavour', 'flavor', 'bowl', 'kazan', 'price', 'cost', 'how much'],
-      texto: 'Our shishas:\n· Rubio €16 · Josh €16\n· Fusion €17\n· Full Black €19\n· Kazan €22\n· Especial €25\n· Kazan Especial €30\n· Fresh fruit €40\nWe will recommend a flavour at your table, to your taste.',
+      texto: 'Our shishas:\n· Rubio €16\n· Fusion €17\n· Full Black €19\n· Kazan €22\n· Especial €25\n· Kazan Especial €30\n· Fresh fruit €40\nWe will recommend a flavour at your table, to your taste.',
     },
     {
       claves: ['cocktail', 'mojito', 'drink', 'gin', 'margarita', 'martini', 'spritz', 'negroni'],

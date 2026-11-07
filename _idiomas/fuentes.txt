@@ -11,7 +11,7 @@
 9 | ¿Dónde está este shisha lounge en Valencia?
 10 | En Carrer Serrano Morales, 3, L'Eixample, 46004 València, junto a la Plaza Cánovas.
 11 | ¿Cuánto cuesta una cachimba?
-12 | Las shishas van de 16 € (Rubio o Josh) a 30 € (Kazan Especial), y 40 € la de fruta natural.
+12 | Las shishas van de 16 € (Rubio) a 30 € (Kazan Especial), y 40 € la de fruta natural.
 13 | ¿Cómo reservo mesa?
 14 | Online desde esta web, de 1 a 10 personas: la reserva entra directamente en nuestro sistema de mesas. Para grupos de más de 10, llámanos al 963 12 07 54.
 15 | ¿Tenéis cócteles?
@@ -108,7 +108,7 @@
 126 | Elige tu <em>rincón</em>
 127 | Toca una zona del local para ver sus mesas y plazas, y reserva en un minuto.
 128 | <a href="#mesas">Reservas</a>
-129 | <div class="aparece"><h3>Shishas</h3><ul><li>Rubio<b>16 €</b></li><li>Josh<b>16 €</b></li><li>Fusion<b>17 €</b></li><li>Full Black<b>19 €</b></li><li>Kazan<b>22 €</b></li><li>Especial<b>25 €</b></li><li>Kazan Especial<b>30 €</b></li><li>Fruta natural<b>40 €</b></li></ul></div>
+129 | <div class="aparece"><h3>Shishas</h3><ul><li>Rubio<b>16 €</b></li><li>Fusion<b>17 €</b></li><li>Full Black<b>19 €</b></li><li>Kazan<b>22 €</b></li><li>Especial<b>25 €</b></li><li>Kazan Especial<b>30 €</b></li><li>Fruta natural<b>40 €</b></li></ul></div>
 130 | <div class="aparece"><h3>Coctelería</h3><ul><li>Mojito clásico<b>12 €</b></li><li>Mojito de fresa<b>12 €</b></li><li>Mojito de mango<b>12 €</b></li><li>Mojito de maracuyá<b>12 €</b></li><li>Mojito Red Bull coco<b>13 €</b></li><li>Piña colada<b>12 €</b></li><li>Margarita<b>12 €</b></li><li>Aperol Spritz<b>12 €</b></li><li>Bloody Mary<b>12 €</b></li><li>Negroni<b>12 €</b></li><li>Whiskey Sour<b>12 €</b></li><li>Espresso Martini<b>13 €</b></li><li>PornStar Martini<b>13 €</b></li><li>Blue Whisky<b>13 €</b></li><li>Gin Fit<b>13 €</b></li><li>Cóctel premium<b>15 €</b></li></ul></div>
 131 | <div class="aparece"><h3>Copas y chupitos</h3><ul><li>Ginebra, ron, vodka y whisky<b>Consultar</b></li><li>Limoncello Villa Massa<b>4 €</b></li><li>Tequila<b>4 €</b></li><li>Tequila de fresa<b>4 €</b></li></ul></div>
 132 | <div class="aparece"><h3>Cervezas</h3><ul><li>Águila doble<b>3,50 €</b></li><li>Águila triple<b>7 €</b></li><li>18/70 doble<b>4,50 €</b></li><li>18/70 triple<b>7,50 €</b></li><li>Amstel Oro<b>4 €</b></li><li>Amstel Oro 0,0<b>4 €</b></li><li>Heineken<b>4 €</b></li><li>Desperados<b>4 €</b></li><li>Radler<b>4 €</b></li><li>Judas<b>5 €</b></li></ul></div>

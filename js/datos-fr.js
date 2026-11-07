@@ -51,7 +51,7 @@ window.NOOR = {
     },
     {
       claves: ['chicha', 'shisha', 'narguil', 'hookah', 'cachimba', 'saveur', 'gout', 'foyer', 'kazan', 'prix', 'combien', 'coute'],
-      texto: 'Nos chichas :\n· Rubio 16 € · Josh 16 €\n· Fusion 17 €\n· Full Black 19 €\n· Kazan 22 €\n· Especial 25 €\n· Kazan Especial 30 €\n· Fruit frais 40 €\nNous vous conseillons la saveur à table, selon vos goûts.',
+      texto: 'Nos chichas :\n· Rubio 16 €\n· Fusion 17 €\n· Full Black 19 €\n· Kazan 22 €\n· Especial 25 €\n· Kazan Especial 30 €\n· Fruit frais 40 €\nNous vous conseillons la saveur à table, selon vos goûts.',
     },
     {
       claves: ['cocktail', 'mojito', 'boire', 'boisson', 'verre', 'gin', 'margarita', 'martini', 'spritz'],

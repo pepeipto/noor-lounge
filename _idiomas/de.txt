@@ -11,7 +11,7 @@
 9 | Wo befindet sich diese Shisha-Lounge in Valencia?
 10 | In der Carrer Serrano Morales, 3, L'Eixample, 46004 València, direkt an der Plaza Cánovas.
 11 | Was kostet eine Shisha?
-12 | Unsere Shishas kosten zwischen 16 € (Rubio oder Josh) und 30 € (Kazan Especial), die Shisha mit frischer Frucht 40 €.
+12 | Unsere Shishas kosten zwischen 16 € (Rubio) und 30 € (Kazan Especial), die Shisha mit frischer Frucht 40 €.
 13 | Wie reserviere ich einen Tisch?
 14 | Online über diese Website, für 1 bis 10 Personen: Die Reservierung landet direkt in unserem Tischsystem. Für Gruppen ab 11 Personen rufen Sie uns unter +34 963 12 07 54 an.
 15 | Gibt es Cocktails?
@@ -108,7 +108,7 @@
 126 | Wählen Sie Ihren <em>Platz</em>
 127 | Tippen Sie auf einen Bereich der Lounge, um Tische und Plätze zu sehen, und reservieren Sie in einer Minute.
 128 | <a href="#mesas">Reservieren</a>
-129 | <div class="aparece"><h3>Shishas</h3><ul><li>Rubio<b>16 €</b></li><li>Josh<b>16 €</b></li><li>Fusion<b>17 €</b></li><li>Full Black<b>19 €</b></li><li>Kazan<b>22 €</b></li><li>Especial<b>25 €</b></li><li>Kazan Especial<b>30 €</b></li><li>Frische Frucht<b>40 €</b></li></ul></div>
+129 | <div class="aparece"><h3>Shishas</h3><ul><li>Rubio<b>16 €</b></li><li>Fusion<b>17 €</b></li><li>Full Black<b>19 €</b></li><li>Kazan<b>22 €</b></li><li>Especial<b>25 €</b></li><li>Kazan Especial<b>30 €</b></li><li>Frische Frucht<b>40 €</b></li></ul></div>
 130 | <div class="aparece"><h3>Cocktails</h3><ul><li>Klassischer Mojito<b>12 €</b></li><li>Erdbeer-Mojito<b>12 €</b></li><li>Mango-Mojito<b>12 €</b></li><li>Maracuja-Mojito<b>12 €</b></li><li>Mojito Red Bull Kokos<b>13 €</b></li><li>Piña colada<b>12 €</b></li><li>Margarita<b>12 €</b></li><li>Aperol Spritz<b>12 €</b></li><li>Bloody Mary<b>12 €</b></li><li>Negroni<b>12 €</b></li><li>Whiskey Sour<b>12 €</b></li><li>Espresso Martini<b>13 €</b></li><li>PornStar Martini<b>13 €</b></li><li>Blue Whisky<b>13 €</b></li><li>Gin Fit<b>13 €</b></li><li>Premium-Cocktail<b>15 €</b></li></ul></div>
 131 | <div class="aparece"><h3>Spirituosen & Shots</h3><ul><li>Gin, Rum, Wodka und Whisky<b>Auf Anfrage</b></li><li>Limoncello Villa Massa<b>4 €</b></li><li>Tequila<b>4 €</b></li><li>Erdbeer-Tequila<b>4 €</b></li></ul></div>
 132 | <div class="aparece"><h3>Bier</h3><ul><li>Águila Doble<b>3,50 €</b></li><li>Águila Triple<b>7 €</b></li><li>18/70 Doble<b>4,50 €</b></li><li>18/70 Triple<b>7,50 €</b></li><li>Amstel Oro<b>4 €</b></li><li>Amstel Oro 0,0<b>4 €</b></li><li>Heineken<b>4 €</b></li><li>Desperados<b>4 €</b></li><li>Radler<b>4 €</b></li><li>Judas<b>5 €</b></li></ul></div>
